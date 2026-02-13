@@ -6,3 +6,7 @@ body {
   margin: 0;
   font-family: serif;
 }
+
+html, body {
+  cursor: url("../images/cursor.png") 12 12, auto;
+}
