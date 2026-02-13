@@ -10,3 +10,9 @@ body {
 html, body {
   cursor: url("../images/cursor.png") 16 16, auto;
 }
+
+.hero-image {
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
