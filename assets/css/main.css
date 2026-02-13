@@ -30,15 +30,15 @@ html, body {
 }
 
 .hero-image-main {
-  padding-left: -1;       /* 🔑 pega al borde izquierdo */
-  padding-bottom: 0;
-  padding-top: 5;
+  padding-left: 0rem;       /* 🔑 pega al borde izquierdo */
+  padding-bottom: 0rem;
+  padding-top: 5rem;
 }
 
 .hero-image-main img {
   width: 100%;
   height: 100%;        /* aca modifique */
-  max-height: 90vh;      /* 🔑 un poco más grande */
+  max-height: 92vh;      /* 🔑 un poco más grande */
   object-fit: contain;
   display: block;
 }
@@ -53,13 +53,13 @@ html, body {
 
 .hero-text h1 {
   font-size: 2.7rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .hero-claim {
   font-style: italic;
   font-size: 1.1rem;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
   line-height: 1.55;
 }
 
