@@ -4,10 +4,17 @@
   padding: 0;
 }
 
+/* COLORES BASE */
+:root {
+  --bg: #F6F4EF;          /* fondo más claro */
+  --text: #1F2E2A;        /* verde oscuro */
+}
+
+/* BODY */
 body {
   font-family: serif;
-  background-color: #F2EFEA;
-  color: #1A1A1A;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 /* CURSOR */
@@ -18,8 +25,9 @@ html, body {
 /* HERO GRID */
 .hero {
   display: grid;
-  grid-template-columns: 55% 25% 20%;
+  grid-template-columns: 52% 28% 20%;
   min-height: 100vh;
+  background-color: var(--bg);
 }
 
 /* IMAGEN GRANDE */
@@ -38,9 +46,8 @@ html, body {
 
 /* TEXTO */
 .hero-text {
-  padding: 10rem 3rem 0 3rem;
-  background-color: #F2EFEA;
-  z-index: 2;
+  padding: 11rem 3rem 0 3rem;
+  background-color: var(--bg);
 }
 
 .hero-text h1 {
@@ -82,11 +89,13 @@ html, body {
 /* IMAGEN CHICA */
 .hero-image-secondary {
   padding-top: 4rem;
-  padding-right: 3rem;
+  padding-right: 0;        /* 🔑 toca borde derecho */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .hero-image-secondary img {
-  width: 100%;
+  width: 85%;
   height: auto;
   display: block;
 }
