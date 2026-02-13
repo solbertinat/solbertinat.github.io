@@ -1,18 +1,52 @@
-html, body {
-  cursor: url("../images/cursor.png") 16 16, auto;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   font-family: serif;
+  background-color: #F2EFEA;
+  color: #1A1A1A;
 }
 
+/* CURSOR CON IMAGEN */
 html, body {
-  cursor: url("../images/cursor.png") 16 16, auto;
+  cursor: url("../images/cursor.png") 12 12, auto;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  min-height: 100vh;
+  align-items: center;
 }
 
 .hero-image {
+  height: 85vh;
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.hero-text {
+  padding: 4rem;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.roles {
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.statement {
+  font-style: italic;
+  font-size: 1.2rem;
 }
