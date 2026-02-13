@@ -3,6 +3,10 @@ body {
   font-family: serif;
 }
 
+html, body {
+  cursor: none;
+}
+
 /* Cursor personalizado */
 .custom-cursor {
   position: fixed;
@@ -10,14 +14,10 @@ body {
   left: 0;
   width: 24px;
   height: 24px;
-  background-color: rgba(210, 40, 40, 0.9);
+  background-color: red;
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 10000;
+  z-index: 99999;
 }
 
-/* Oculta el cursor nativo */
-body {
-  cursor: none;
-}
