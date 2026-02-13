@@ -20,30 +20,29 @@ html, body {
   display: grid;
   grid-template-columns: auto 1fr;
   min-height: 100vh;
+  align-items: stretch;
 }
 
 /* IMAGEN */
 .hero-image {
   height: 100vh;
-  display: flex;
-  align-items: stretch;
 }
 
 .hero-image img {
   height: 100vh;
   width: auto;
-  max-width: 42vw;      /* 🔑 CLAVE: limita el ancho */
+  max-width: 44vw;
   object-fit: contain;
   display: block;
 }
 
 /* TEXTO */
 .hero-text {
-  padding: 6rem 4rem;
+  padding: 8rem 4rem 4rem 3rem; /* ⬅ más abajo y más cerca */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  transform: translateY(3rem); /* baja el bloque */
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .hero-text h1 {
