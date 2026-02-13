@@ -1,3 +1,4 @@
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,11 +16,12 @@ html, body {
   cursor: url("../images/cursor.png") 12 12, auto;
 }
 
-/* HERO */
+/* HERO GRID */
 .hero {
   display: grid;
-  grid-template-columns: 62% 38%;
+  grid-template-columns: 58% 24% 18%;
   min-height: 100vh;
+  align-items: start;
 }
 
 /* IMAGEN GRANDE */
@@ -32,34 +34,13 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
-  display: block;
-}
-
-/* COLUMNA DERECHA */
-.hero-right {
-  position: relative;
-  padding-left: 3rem;
-}
-
-/* IMAGEN CHICA */
-.hero-image-secondary {
-  position: absolute;
-  top: 2.5rem;
-  right: 2.5rem;
-  width: 220px;
-}
-
-.hero-image-secondary img {
-  width: 100%;
-  height: auto;
+  object-position: top center; /* NO corta cabeza */
   display: block;
 }
 
 /* TEXTO */
 .hero-text {
-  max-width: 360px;
-  padding-top: 11rem;
+  padding: 9rem 3rem 0 3rem;
 }
 
 .hero-text h1 {
@@ -69,7 +50,7 @@ html, body {
 
 .hero-claim {
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin-bottom: 1rem;
   opacity: 0.85;
 }
@@ -104,3 +85,14 @@ html, body {
   transform: scaleX(0.3);
 }
 
+/* IMAGEN CHICA */
+.hero-image-secondary {
+  padding-top: 4rem;
+  padding-right: 3rem;
+}
+
+.hero-image-secondary img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
