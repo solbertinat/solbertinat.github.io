@@ -18,29 +18,48 @@ html, body {
 /* HERO */
 .hero {
   display: grid;
-  grid-template-columns: 68% 32%;
+  grid-template-columns: 62% 38%;
   min-height: 100vh;
 }
 
-/* IMAGEN */
-.hero-image {
+/* IMAGEN GRANDE */
+.hero-image-main {
   height: 100vh;
   overflow: hidden;
 }
 
-.hero-image img {
+.hero-image-main img {
   width: 100%;
-  height: 105%;              /* 🔑 recorte MÍNIMO */
+  height: 100%;
   object-fit: cover;
-  object-position: top;      /* 🔑 NUNCA corta arriba */
+  object-position: top center;
+  display: block;
+}
+
+/* COLUMNA DERECHA */
+.hero-right {
+  position: relative;
+  padding-left: 3rem;
+}
+
+/* IMAGEN CHICA */
+.hero-image-secondary {
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  width: 220px;
+}
+
+.hero-image-secondary img {
+  width: 100%;
+  height: auto;
   display: block;
 }
 
 /* TEXTO */
 .hero-text {
-  padding-left: 3rem;
-  padding-right: 4rem;
-  padding-top: 11rem;        /* 🔑 baja el texto */
+  max-width: 360px;
+  padding-top: 11rem;
 }
 
 .hero-text h1 {
@@ -59,13 +78,29 @@ html, body {
   font-size: 0.75rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.8rem;
 }
 
 .hero-text a {
   text-decoration: none;
   color: inherit;
   font-size: 0.9rem;
-  border-bottom: 1px solid currentColor;
+  position: relative;
+}
+
+.hero-text a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.hero-text a:hover::after {
+  transform: scaleX(0.3);
 }
 
