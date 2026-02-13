@@ -26,9 +26,9 @@ html, body {
 
 .hero-image {
   background-image: url("../images/hero.jpg");
-  background-size: auto 100%;   /* prioriza altura */
-  background-repeat: no-repeat; /* 👈 CLAVE */
+  background-size: auto 100%;
   background-position: left center;
+  background-repeat: no-repeat !important;
 }
 
 .hero-text {
