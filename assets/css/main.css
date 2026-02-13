@@ -79,3 +79,22 @@ html, body {
 .hero-text a:hover::after {
   transform: scaleX(0.3);
 }
+
+/* entrada */
+.hero-image,
+.hero-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-text {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
