@@ -1,4 +1,3 @@
-/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,9 +18,8 @@ html, body {
 /* HERO GRID */
 .hero {
   display: grid;
-  grid-template-columns: 58% 24% 18%;
+  grid-template-columns: 55% 25% 20%;
   min-height: 100vh;
-  align-items: start;
 }
 
 /* IMAGEN GRANDE */
@@ -34,13 +32,15 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center; /* NO corta cabeza */
+  object-position: top center;
   display: block;
 }
 
 /* TEXTO */
 .hero-text {
-  padding: 9rem 3rem 0 3rem;
+  padding: 10rem 3rem 0 3rem;
+  background-color: #F2EFEA;
+  z-index: 2;
 }
 
 .hero-text h1 {
@@ -77,12 +77,6 @@ html, body {
   width: 100%;
   height: 1px;
   background-color: currentColor;
-  transition: transform 0.3s ease;
-  transform-origin: left;
-}
-
-.hero-text a:hover::after {
-  transform: scaleX(0.3);
 }
 
 /* IMAGEN CHICA */
