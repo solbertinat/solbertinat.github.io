@@ -30,16 +30,14 @@ html, body {
 }
 
 .hero-image-main {
-  display: flex;
-  align-items: flex-end; /* sigue tocando abajo */
   padding-left: 0;       /* 🔑 pega al borde izquierdo */
   padding-bottom: 0;
 }
 
 .hero-image-main img {
   width: 100%;
-  height: 80%;        /* aca modifique */
-  max-height: 92vh;      /* 🔑 un poco más grande */
+  height: 100%;        /* aca modifique */
+  max-height: 110vh;      /* 🔑 un poco más grande */
   object-fit: contain;
   display: block;
 }
