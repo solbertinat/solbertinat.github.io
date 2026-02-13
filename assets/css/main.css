@@ -22,73 +22,54 @@ html, body {
 }
 
 /* HERO */
-/* HERO */
 .hero {
   display: grid;
-  grid-template-columns: 42% 38% 20%;
+  grid-template-columns: 46% 34% 20%;
   min-height: 100vh;
   background-color: #F6F5F0;
 }
 
-/* IMAGEN GRANDE IZQUIERDA */
 .hero-image-main {
   display: flex;
-  align-items: flex-end; /* toca abajo */
-  padding-left: 0;
+  align-items: flex-end; /* sigue tocando abajo */
+  padding-left: 0;       /* 🔑 pega al borde izquierdo */
   padding-bottom: 0;
 }
 
 .hero-image-main img {
   width: 100%;
   height: auto;
-  max-height: 85vh;   /* 🔑 entra entera */
-  object-fit: contain; /* 🔑 NO recorta */
+  max-height: 92vh;      /* 🔑 un poco más grande */
+  object-fit: contain;
   display: block;
 }
 
 /* TEXTO */
 .hero-text {
-  padding-top: 14rem;   /* más abajo */
-  padding-left: 2.5rem; /* más a la izquierda */
+  padding-top: 16rem;    /* 🔑 más abajo */
+  padding-left: 1.8rem;  /* 🔑 más cerca de la imagen */
   padding-right: 3rem;
-  max-width: 420px;
+  max-width: 360px;      /* 🔑 más compacto */
 }
 
 .hero-text h1 {
-  font-size: 2.9rem;   /* un poco más chico */
-  margin-bottom: 1.6rem;
+  font-size: 2.7rem;
+  margin-bottom: 1.2rem;
 }
 
 .hero-claim {
   font-style: italic;
-  font-size: 1.15rem;
-  margin-bottom: 1.2rem;
-  line-height: 1.6;    /* 🔑 vuelve el aire lindo */
+  font-size: 1.1rem;
+  margin-bottom: 0.9rem;
+  line-height: 1.55;
 }
 
 .hero-roles {
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-bottom: 3rem;
-  line-height: 1.8;
-}
-
-.hero-text a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 0.9rem;
-  position: relative;
-}
-
-.hero-text a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 1px;
-  background-color: currentColor;
+  margin-bottom: 2.4rem;
+  line-height: 1.6;
 }
 
 /* IMAGEN DERECHA */
@@ -97,12 +78,12 @@ html, body {
   justify-content: flex-end;
   align-items: flex-start;
   padding-top: 2.5rem;
-  padding-right: 1.5rem; /* más cerca del borde */
+  padding-right: 0; /* 🔑 toca borde derecho */
 }
 
 .hero-image-secondary img {
   width: 100%;
-  max-width: 300px; /* 🔑 más grande */
+  max-width: 270px; /* 🔑 apenas más chica */
   height: auto;
   display: block;
 }
