@@ -42,6 +42,7 @@ html, body {
   width: 100%;
   height: 100%;        /* aca modifique */
   max-height: 92vh;      /* 🔑 un poco más grande */
+  display: block;
 }
 
 /* TEXTO */
