@@ -35,13 +35,13 @@ html, body {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 34vw;          /* controla tamaño REAL */
-  max-height: 80vh;
+  height: 88vh;      /* 🔑 controla que no se “caiga” */
+  width: auto;
 }
 
 .hero-image-main img {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  width: auto;
   display: block;
 }
 
@@ -78,7 +78,7 @@ html, body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  padding-top: 4rem;
+  padding-top: 3rem;
 }
 
 .hero-image-secondary img {
