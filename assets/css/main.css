@@ -18,10 +18,11 @@ html, body {
 /* HERO */
 .hero {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 68% 32%;
   min-height: 100vh;
 }
 
+/* IMAGEN */
 .hero-image {
   height: 100vh;
   overflow: hidden;
@@ -29,9 +30,9 @@ html, body {
 
 .hero-image img {
   width: 100%;
-  height: 110%;
+  height: 105%;              /* 🔑 recorte MÍNIMO */
   object-fit: cover;
-  object-position: top center; /* 🔑 clave */
+  object-position: top;      /* 🔑 NUNCA corta arriba */
   display: block;
 }
 
@@ -39,7 +40,7 @@ html, body {
 .hero-text {
   padding-left: 3rem;
   padding-right: 4rem;
-  padding-top: 9.5rem;
+  padding-top: 11rem;        /* 🔑 baja el texto */
 }
 
 .hero-text h1 {
@@ -65,21 +66,6 @@ html, body {
   text-decoration: none;
   color: inherit;
   font-size: 0.9rem;
-  position: relative;
+  border-bottom: 1px solid currentColor;
 }
 
-.hero-text a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 1px;
-  background-color: currentColor;
-  transition: transform 0.3s ease;
-  transform-origin: left;
-}
-
-.hero-text a:hover::after {
-  transform: scaleX(0.3);
-}
