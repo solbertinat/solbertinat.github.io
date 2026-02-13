@@ -31,16 +31,16 @@ html, body {
 
 /* IMAGEN IZQUIERDA */
 .hero-image-main {
-  display: flex;
+  display: block;
   align-items: flex-end;   /* toca abajo */
   margin-left: 0;
-  padding-left: 0;
+  margin-right: auto;
 }
 
 .hero-image-main img {
   width: 100%;
   height: auto;            /* 🔑 CLAVE */
-  max-height: 90vh;        /* entra entera */
+  max-height: 92vh;        /* entra entera */
   object-fit: contain;     /* no recorta */
   display: block;
 }
@@ -48,7 +48,7 @@ html, body {
 /* TEXTO */
 .hero-text {
   padding-top: 18rem;
-  padding-left: 1rem;
+  padding-left: 0rem;
   padding-right: 3rem;
   max-width: 400px;
 }
@@ -78,7 +78,7 @@ html, body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  padding-top: 2.5rem;
+  padding-top: 4rem;
   padding-right: 0; /* toca borde derecho */
 }
 
