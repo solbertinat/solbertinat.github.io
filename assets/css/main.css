@@ -4,21 +4,5 @@ body {
 }
 
 html, body {
-  cursor: none;
+  cursor: url("assets/images/cursor-sun.png") 16 16, auto;
 }
-
-/* Cursor orgánico */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  background-color: rgba(210, 40, 40, 0.9);
-  pointer-events: none;
-  z-index: 99999;
-  transform: translate(-50%, -50%);
-  border-radius: 58% 42% 63% 37% / 48% 55% 45% 52%;
-  transition: transform 0.15s ease-out;
-}
-
