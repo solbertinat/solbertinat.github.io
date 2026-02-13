@@ -32,9 +32,9 @@ html, body {
 /* IMAGEN IZQUIERDA */
 .hero-image-main {
   display: flex;
-  align-items: flex-end;   /* 🔑 la baja */
+  align-items: flex-end;     /* abajo */
   justify-content: flex-start;
-  margin-left: 0;
+  width: 100%;               
 }
 
 .hero-image-main img {
@@ -48,7 +48,7 @@ html, body {
 /* TEXTO */
 .hero-text {
   padding-top: 18rem;
-  padding-left: 0.5rem;   /* 🔑 más a la izquierda */
+  padding-left: 0rem; 
   padding-right: 3rem;
   max-width: 400px;
 }
