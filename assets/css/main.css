@@ -22,47 +22,73 @@ html, body {
 }
 
 /* HERO */
+/* HERO */
 .hero {
   display: grid;
-  grid-template-columns: 48% 32% 20%;
+  grid-template-columns: 42% 38% 20%;
   min-height: 100vh;
-  background-color: var(--bg);
-  position: relative;
+  background-color: #F6F5F0;
 }
 
 /* IMAGEN GRANDE IZQUIERDA */
 .hero-image-main {
   display: flex;
-  align-items: flex-end;     /* toca el borde inferior */
-  padding-left: 0;           /* toca borde izquierdo */
+  align-items: flex-end; /* toca abajo */
+  padding-left: 0;
   padding-bottom: 0;
 }
 
 .hero-image-main img {
-  width: 78%;                /* 🔑 tamaño editorial */
+  width: 100%;
   height: auto;
-  object-fit: contain;       /* 🔑 NO recorta */
+  max-height: 85vh;   /* 🔑 entra entera */
+  object-fit: contain; /* 🔑 NO recorta */
   display: block;
 }
 
 /* TEXTO */
 .hero-text {
-  padding-top: 14rem;        /* baja el bloque */
-  padding-left: 2.5rem;      /* alinea con imagen */
+  padding-top: 14rem;   /* más abajo */
+  padding-left: 2.5rem; /* más a la izquierda */
   padding-right: 3rem;
+  max-width: 420px;
 }
 
 .hero-text h1 {
-  font-size: 2.6rem;         /* más editorial */
-  margin-bottom: 1rem;
+  font-size: 2.9rem;   /* un poco más chico */
+  margin-bottom: 1.6rem;
 }
 
 .hero-claim {
-  font-size: 1.05rem;
+  font-style: italic;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;    /* 🔑 vuelve el aire lindo */
 }
 
 .hero-roles {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.hero-text a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.hero-text a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
 }
 
 /* IMAGEN DERECHA */
@@ -71,13 +97,12 @@ html, body {
   justify-content: flex-end;
   align-items: flex-start;
   padding-top: 2.5rem;
-  padding-right: 0;
+  padding-right: 1.5rem; /* más cerca del borde */
 }
 
 .hero-image-secondary img {
-  width: auto;
-  height: 240px;             /* 🔑 controla tamaño real */
+  width: 100%;
+  max-width: 300px; /* 🔑 más grande */
+  height: auto;
   display: block;
 }
-
-
