@@ -1,39 +1,108 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>Sol Bertinat</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/main.css" />
-</head>
+body {
+  font-family: serif;
+  background-color: #F2EFEA;
+  color: #1A1A1A;
+}
 
-<body>
+/* CURSOR */
+html, body {
+  cursor: url("../images/cursor.png") 12 12, auto;
+}
 
-  <section class="hero">
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  min-height: 100vh;
+}
 
-    <!-- IMAGEN -->
-    <div class="hero-image">
-      <img src="assets/images/hero.jpg" alt="Proyecto editorial de Sol Bertinat">
-    </div>
+/* IMAGEN */
+.hero-image {
+  height: 100vh;
+  overflow: hidden;
+}
 
-    <!-- TEXTO -->
-    <div class="hero-text">
-      <h1>Sol Bertinat</h1>
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-      <p class="hero-claim">
-        Entre lo preciso y lo sensible.
-      </p>
+/* TEXTO */
+.hero-text {
+  padding: 6rem 4rem 4rem 2.5rem;
+  align-self: center;
+}
 
-      <p class="hero-roles">
-        Fotografía · Estilismo · Dirección creativa
-      </p>
+/* TYPO */
+.hero-text h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+}
 
-      <a href="#work">Ver trabajos</a>
-    </div>
+.hero-claim {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  opacity: 0.85;
+}
 
-  </section>
+.hero-roles {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
 
-</body>
-</html>
+/* LINK */
+.hero-text a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.hero-text a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.hero-text a:hover::after {
+  transform: scaleX(0.3);
+}
+
+/* ANIMACIONES (AISLADAS, SIN ROMPER LAYOUT) */
+.hero-image,
+.hero-text {
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero-text {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
