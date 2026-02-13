@@ -33,7 +33,7 @@ html, body {
 .hero-image-main {
   display: flex;
   align-items: flex-end;   /* toca abajo */
-  justify-content: flex-start; /* toca izquierda */
+  margin-left: 0;
   padding-left: 0;
 }
 
@@ -47,8 +47,8 @@ html, body {
 
 /* TEXTO */
 .hero-text {
-  padding-top: 20rem;
-  padding-left: 1.2rem;
+  padding-top: 18rem;
+  padding-left: 1rem;
   padding-right: 3rem;
   max-width: 400px;
 }
