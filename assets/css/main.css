@@ -12,8 +12,8 @@
 /* BODY */
 body {
   font-family: serif;
-  background-color: #F5F3EE; /* un pelín más claro */
-  color: #1F3D36; /* verde oscuro elegante */
+  background-color: #F8F7F3;
+  color: #1F2E2A;
 }
 
 /* CURSOR */
@@ -39,8 +39,8 @@ html, body {
 }
 
 .hero-image-main img {
-  width: 100%;
-  max-height: 90vh;      /* 🔑 deja de ser gigante */
+  width: 92%;              /* 🔑 deja aire a la derecha */
+  max-height: 82vh;        /* 🔑 baja presencia */
   object-fit: cover;
   object-position: top center;
   display: block;
@@ -99,6 +99,6 @@ html, body {
 
 .hero-image-secondary img {
   width: 100%;
-  max-width: 260px;   /* 🔑 escala correcta */
-  display: block;
+  max-width: 300px;
 }
+
