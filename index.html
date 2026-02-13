@@ -1,24 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Sol Bertinat</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body>
+<body style="margin:0;">
 
-<section class="hero">
+<section
+  style="
+    display:grid;
+    grid-template-columns: 65vw 1fr;
+    height:100vh;
+    background:#F2EFEA;
+  "
+>
 
-  <div class="hero-image">
-    <img src="assets/images/hero.jpg" alt="Sol Bertinat hero">
+  <!-- IMAGEN -->
+  <div
+    style="
+      height:100vh;
+      overflow:hidden;
+    "
+  >
+    <img
+      src="assets/images/hero.jpg"
+      alt="Sol Bertinat hero"
+      style="
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:top center;
+        display:block;
+      "
+    >
   </div>
 
-  <div class="hero-text">
-    <h1>Sol Bertinat</h1>
-    <p class="hero-claim">Entre lo preciso y lo sensible.</p>
-    <p class="hero-roles">Fotografía · Estilismo · Dirección creativa</p>
-    <a href="#work">Ver trabajos</a>
+  <!-- TEXTO -->
+  <div
+    style="
+      padding-left:2.5rem;
+      padding-right:4rem;
+      padding-top:11rem;
+    "
+  >
+    <h1 style="font-size:3.2rem; margin-bottom:1.2rem;">
+      Sol Bertinat
+    </h1>
+
+    <p style="font-style:italic; font-size:1.2rem; margin-bottom:1rem;">
+      Entre lo preciso y lo sensible.
+    </p>
+
+    <p
+      style="
+        font-size:0.75rem;
+        letter-spacing:0.18em;
+        text-transform:uppercase;
+        margin-bottom:2.5rem;
+      "
+    >
+      Fotografía · Estilismo · Dirección creativa
+    </p>
+
+    <a
+      href="#work"
+      style="
+        text-decoration:none;
+        color:inherit;
+        font-size:0.9rem;
+        border-bottom:1px solid currentColor;
+      "
+    >
+      Ver trabajos
+    </a>
   </div>
 
 </section>
