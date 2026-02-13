@@ -20,7 +20,7 @@ html, body {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   min-height: 100vh;
-  align-items: center;
+  align-items: stretch; /* 👈 CLAVE */
 }
 
 .hero-image {
@@ -28,8 +28,8 @@ html, body {
   background-size: cover;
   background-position: center;
 
-  margin: 3rem 0;          /* aire arriba y abajo */
-  border-radius: 0 2rem 2rem 0; /* forma orgánica sutil */
+  margin: 3rem 0;
+  border-radius: 0 2rem 2rem 0;
 }
 
 .hero-text {
