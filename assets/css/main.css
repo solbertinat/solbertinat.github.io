@@ -38,7 +38,7 @@ html, body {
 
 .hero-image-main img {
   width: 100%;
-  height: auto;
+  height: 80%;        /* aca modifique */
   max-height: 92vh;      /* 🔑 un poco más grande */
   object-fit: contain;
   display: block;
@@ -49,18 +49,18 @@ html, body {
   padding-top: 16rem;    /* 🔑 más abajo */
   padding-left: 1.8rem;  /* 🔑 más cerca de la imagen */
   padding-right: 3rem;
-  max-width: 360px;      /* 🔑 más compacto */
+  max-width: 400px;      /* 🔑 más compacto */
 }
 
 .hero-text h1 {
   font-size: 2.7rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .hero-claim {
   font-style: italic;
   font-size: 1.1rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
   line-height: 1.55;
 }
 
@@ -68,7 +68,7 @@ html, body {
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.8rem;
   line-height: 1.6;
 }
 
@@ -78,12 +78,12 @@ html, body {
   justify-content: flex-end;
   align-items: flex-start;
   padding-top: 2.5rem;
-  padding-right: 0; /* 🔑 toca borde derecho */
+  padding-right: -1; /* 🔑 toca borde derecho */
 }
 
 .hero-image-secondary img {
   width: 100%;
-  max-width: 270px; /* 🔑 apenas más chica */
+  max-width: 210px; /* 🔑 apenas más chica */
   height: auto;
   display: block;
 }
