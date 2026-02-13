@@ -29,28 +29,28 @@ html, body {
   background-color: #F6F5F0;
 }
 
+/* IMAGEN IZQUIERDA */
 .hero-image-main {
- img.alinear-izquierda {
-  display: block;
-  margin-left: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-top: 5;
+  display: flex;
+  align-items: flex-end;   /* toca abajo */
+  justify-content: flex-start; /* toca izquierda */
+  padding-left: 0;
 }
 
 .hero-image-main img {
   width: 100%;
-  height: 100%;        /* aca modifique */
-  max-height: 92vh;      /* 🔑 un poco más grande */
+  height: auto;            /* 🔑 CLAVE */
+  max-height: 90vh;        /* entra entera */
+  object-fit: contain;     /* no recorta */
   display: block;
 }
 
 /* TEXTO */
 .hero-text {
-  padding-top: 20rem;    /* 🔑 más abajo */
-  padding-left: 1.2rem;  /* 🔑 más cerca de la imagen */
+  padding-top: 20rem;
+  padding-left: 1.2rem;
   padding-right: 3rem;
-  max-width: 400px;      /* 🔑 más compacto */
+  max-width: 400px;
 }
 
 .hero-text h1 {
@@ -79,12 +79,14 @@ html, body {
   justify-content: flex-end;
   align-items: flex-start;
   padding-top: 2.5rem;
-  padding-right: -1; /* 🔑 toca borde derecho */
+  padding-right: 0; /* toca borde derecho */
 }
 
 .hero-image-secondary img {
   width: 100%;
-  max-width: 210px; /* 🔑 apenas más chica */
+  max-width: 210px;
   height: auto;
   display: block;
 }
+
+
