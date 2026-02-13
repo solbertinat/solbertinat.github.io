@@ -26,7 +26,7 @@ html, body {
 
 .hero-image {
   background-image: url("../images/hero.jpg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 
   border-radius: 0 2rem 2rem 0;
