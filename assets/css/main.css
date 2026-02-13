@@ -30,6 +30,9 @@ html, body {
 }
 
 .hero-image-main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
   padding-left: 0rem;       /* 🔑 pega al borde izquierdo */
   padding-bottom: 0rem;
   padding-top: 5rem;
@@ -45,8 +48,8 @@ html, body {
 
 /* TEXTO */
 .hero-text {
-  padding-top: 16rem;    /* 🔑 más abajo */
-  padding-left: 1.8rem;  /* 🔑 más cerca de la imagen */
+  padding-top: 26rem;    /* 🔑 más abajo */
+  padding-left: 1.2rem;  /* 🔑 más cerca de la imagen */
   padding-right: 3rem;
   max-width: 400px;      /* 🔑 más compacto */
 }
@@ -59,7 +62,7 @@ html, body {
 .hero-claim {
   font-style: italic;
   font-size: 1.1rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1rem;
   line-height: 1.55;
 }
 
