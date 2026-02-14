@@ -37,7 +37,7 @@ html, body {
   bottom: -5px;          /* apoyo editorial */
   width: 30vw;            /* tamaño controlado */
   max-width: 520px;       /* no explota en pantallas grandes */
-  height: 85vh;
+  height: 92vh;
   overflow: hidden;       /* 🔑 recorte real */
 }
 
