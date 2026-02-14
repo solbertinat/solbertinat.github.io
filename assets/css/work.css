@@ -6,14 +6,17 @@
 }
 
 .work {
-  padding: 10rem 4rem 8rem;
+  padding: 12rem 4rem 9rem;   /* más aire arriba */
   background-color: #F8F7F3;
 }
 
+/* TÍTULO */
 .work-title {
   font-family: var(--font-serif);
-  font-size: 2.4rem;
-  margin-bottom: 4rem;
+  font-size: 4.6rem;          /* 🔑 MUCHO más grande */
+  font-weight: 400;
+  color: var(--text);         /* mismo verde oscuro del home */
+  margin-bottom: 6rem;        /* más separación del grid */
 }
 
 /* =========================
@@ -23,7 +26,7 @@
 .work-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 3rem 2.5rem;           /* más aire entre trabajos */
 }
 
 /* =========================
@@ -37,14 +40,17 @@
   color: inherit;
 }
 
-/* FRAME REAL */
+/* FRAME REAL (más chico visualmente) */
 .work-image {
   width: 100%;
-  aspect-ratio: 3 / 4;       /* vertical editorial */
-  overflow: hidden;          /* 🔑 recorte real */
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
   position: relative;
+  transform: scale(0.92);     /* 🔑 achica el “peso” */
+  transform-origin: top left;
 }
 
+/* imagen */
 .work-image img {
   width: 100%;
   height: 100%;
@@ -112,7 +118,7 @@
 ========================= */
 
 .work-item:hover .work-image img {
-  transform: scale(1.08);   /* zoom interno */
+  transform: scale(1.08);     /* zoom interno */
 }
 
 .work-item:hover .work-overlay {
@@ -124,9 +130,25 @@
 ========================= */
 
 @media (max-width: 900px) {
+  .work-title {
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+  }
+
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
   }
+
+  .work-image {
+    transform: scale(0.96);   /* menos reducción en mobile */
+  }
+
+  .work {
+    padding: 7rem 2rem;
+  }
+}
+
 
   .work {
     padding: 6rem 2rem;
