@@ -86,34 +86,36 @@ html, body {
 }
 
 .hero-text h1 {
- font-family: 'Playfair Display', serif;
+font-family: 'Fraunces', serif;
   font-style: italic;
-  font-size: 2.9rem;
-  letter-spacing: 0.03em;
-  margin-bottom: 1rem;
+  font-weight: 300;
+  font-size: 3.4rem;       /* 🔑 más grande */
+  letter-spacing: 0.04em;
+  margin-bottom: 1.2rem;
 }
 
 .hero-claim {
-   font-family: 'Cormorant Garamond', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-size: 1.25rem;     /* 🔑 más grande */
+  line-height: 1.65;
+  margin-bottom: 1.8rem;
+
 }
 
 .hero-roles {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 1.8rem;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;     /* 🔑 sube apenas */
+  letter-spacing: 0.2em;
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
 }
 
 /* VER TRABAJOS */
 .hero-text a {
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
+ font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text);
   text-decoration: none;
