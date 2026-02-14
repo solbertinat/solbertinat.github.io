@@ -34,6 +34,7 @@ html, body {
 .hero-image-main {
   position: absolute;
   left: 0;
+  transform: translateX(0); /* ancla visual */
   bottom: -12px;   /* 🔑 probá entre -8px y -16px */
   height: 85vh;
 }
@@ -46,7 +47,8 @@ html, body {
   height: 100%;
   width: auto;
   display: block;
-  transition: transform 1.4s cubic-bezier(.19,1,.22,1);
+  transform-origin: center bottom; /* 🔑 NO lateral */
+  transition: transform 1.6s cubic-bezier(.19,1,.22,1);
 }
 
 /* Overlay blanco */
@@ -62,11 +64,15 @@ html, body {
 
 /* Hover imagen izquierda */
 .hero-image-main:hover img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .hero-image-main:hover::after {
   opacity: 1;
+}
+
+.hero-image-main {
+  bottom: -10px; /* podés ajustar entre -6 y -12 */
 }
 
 /* ========== TEXTO ========== */
