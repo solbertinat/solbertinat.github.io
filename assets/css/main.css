@@ -7,11 +7,13 @@
 :root {
   --bg: #F7F6F1;
   --text: #1F2E2A;
+  --font-serif: serif;
+  --font-sans: 'Inter', sans-serif;
 }
 
 /* BODY */
 body {
-  font-family: serif;
+  font-family: var(--font-serif);
   background-color: #F8F7F3;
   color: var(--text);
 }
@@ -19,6 +21,7 @@ body {
 /* CURSOR */
 html, body {
   cursor: url("../images/cursor.png") 12 12, auto;
+  overflow-x: hidden;
 }
 
 /* HERO */
@@ -28,20 +31,21 @@ html, body {
   background-color: #F6F5F0;
   display: grid;
   grid-template-columns: 34% 46% 20%;
+  overflow: hidden;
 }
 
-/* ========== IMAGEN IZQUIERDA (DEFINITIVA) ========== */
+/* ========== IMAGEN IZQUIERDA (HERO MAIN) ========== */
 .hero-image-main {
   position: absolute;
   left: 0;
-  bottom: -7px;          /* apoyo editorial */
-  width: 30vw;            /* tamaño controlado */
-  max-width: 520px;       /* no explota en pantallas grandes */
+  bottom: -7px;
+  width: 30vw;
+  max-width: 520px;
   height: 90vh;
-  overflow: hidden;       /* 🔑 recorte real */
+  overflow: hidden;
+  opacity: 0;
 }
 
-/* imagen dentro del marco */
 .hero-image-main img {
   width: 100%;
   height: 100%;
@@ -77,6 +81,7 @@ html, body {
   padding-top: 19rem;
   padding-left: 0.3rem;
   max-width: 380px;
+  opacity: 0;
 }
 
 .hero-text h1 {
@@ -92,6 +97,7 @@ html, body {
 }
 
 .hero-roles {
+  font-family: var(--font-sans);
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -101,7 +107,7 @@ html, body {
 
 /* VER TRABAJOS */
 .hero-text a {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -139,16 +145,15 @@ html, body {
   display: flex;
   justify-content: flex-end;
   padding-top: 2.15rem;
+  opacity: 0;
 }
 
-/* frame */
 .hero-image-secondary .frame {
-  width: 210px;          /* 🔑 marco fijo */
-  overflow: hidden;      /* 🔑 recorte real */
+  width: 210px;
+  overflow: hidden;
   position: relative;
 }
 
-/* imagen */
 .hero-image-secondary img {
   width: 100%;
   height: auto;
@@ -156,7 +161,7 @@ html, body {
   transition: transform 1.4s cubic-bezier(.19,1,.22,1);
 }
 
-/* overlay */
+/* overlay blanco */
 .hero-image-secondary .frame::after {
   content: "";
   position: absolute;
@@ -176,10 +181,32 @@ html, body {
   opacity: 1;
 }
 
-/* barra lateral para subir y bajar */
-html, body {
-  overflow-x: hidden;
+/* ========== ANIMACIÓN DE ENTRADA ========== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-body {
-  overflow-y: hidden;
+
+body.animate-hero .hero-image-main,
+body.animate-hero .hero-text,
+body.animate-hero .hero-image-secondary {
+  animation: fadeUp 1.4s cubic-bezier(.19,1,.22,1) forwards;
+}
+
+body.animate-hero .hero-image-main {
+  animation-delay: 0.1s;
+}
+
+body.animate-hero .hero-text {
+  animation-delay: 0.35s;
+}
+
+body.animate-hero .hero-image-secondary {
+  animation-delay: 0.55s;
 }
