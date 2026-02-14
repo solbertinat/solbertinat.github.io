@@ -7,18 +7,6 @@
   <link rel="stylesheet" href="assets/css/main.css?v=999">
 </head>
 
-<script>
-  if (!sessionStorage.getItem('heroAnimated')) {
-    document.body.classList.add('animate-hero');
-    sessionStorage.setItem('heroAnimated', 'true');
-  } else {
-    document.querySelectorAll(
-      '.hero-image-main, .hero-text, .hero-image-secondary'
-    ).forEach(el => el.style.opacity = 1);
-  }
-</script>
-
-
 <body>
 
 <section class="hero">
@@ -40,12 +28,30 @@
   </div>
 
   <div class="hero-image-secondary">
-  <div class="frame">
-    <img src="assets/images/tenis.jpg" alt="">
+    <div class="frame">
+      <img src="assets/images/tenis.jpg" alt="">
+    </div>
   </div>
-</div>
 
 </section>
+
+<!-- SCRIPT CORRECTO -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(
+      '.hero-image-main, .hero-text, .hero-image-secondary'
+    );
+
+    if (!sessionStorage.getItem('heroAnimated')) {
+      document.body.classList.add('animate-hero');
+      sessionStorage.setItem('heroAnimated', 'true');
+    } else {
+      elements.forEach(el => {
+        if (el) el.style.opacity = 1;
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
