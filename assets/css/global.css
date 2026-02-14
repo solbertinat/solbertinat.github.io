@@ -1,0 +1,28 @@
+/* ========== RESET ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== VARIABLES ========== */
+:root {
+  --bg: #F7F6F1;
+  --text: #1F2E2A;
+  --font-serif: serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* ========== BODY ========== */
+body {
+  font-family: var(--font-serif);
+  background-color: #F8F7F3;
+  color: var(--text);
+}
+
+/* ========== CURSOR + SCROLL ========== */
+html,
+body {
+  cursor: url("../images/cursor.png") 12 12, auto;
+  overflow-x: hidden;
+}
