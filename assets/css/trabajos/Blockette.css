@@ -1,33 +1,44 @@
 /* ========== BLOCKETTE PROJECT ========== */
 
+/* VARIABLES */
+:root {
+  --blockette-bg: #1F2B2E;   /* azul petróleo */
+  --blockette-bg-alt: #3A1E24; /* bordó profundo para galería */
+  --blockette-text: #F7F6F1;
+}
 
-
+/* HERO */
 .blockette-hero {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  overflow: visible;   /* 🔑 no hidden */
+  overflow: visible;
 }
 
 .blockette-hero img {
   width: 100%;
-  height: auto;        /* 🔑 clave */
+  height: auto;
   display: block;
 }
 
-/* INFO */
-:root {
-  --blockette-bg: #1F2B2E;   /* azul petróleo */
-  --blockette-text: #F7F6F1;
-}
-
+/* INFO SECTION */
 .blockette-info {
-  padding: 6rem 4rem;
   background-color: var(--blockette-bg);
   color: var(--blockette-text);
-  max-width: 900px;
+  padding: 6rem 4rem;
 }
 
+/* GRID TEXTO + IMAGEN */
+.blockette-info-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* TEXTO */
 .blockette-title {
   font-family: var(--font-serif);
   font-size: 3.2rem;
@@ -48,21 +59,28 @@
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.6;
-  max-width: 600px;
+  max-width: 520px;
+}
+
+/* IMAGEN LATERAL */
+.blockette-info-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* GALLERY */
 .blockette-gallery {
-  background-color: #2F2B2B;
-  padding: 4rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 4rem;
+  background-color: var(--blockette-bg-alt);
+  padding: 6rem 4rem 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
 }
 
 .blockette-gallery img {
   width: 100%;
-  max-width: 700px;
+  max-width: 1100px;
   margin: 0 auto;
   display: block;
 }
@@ -73,12 +91,17 @@
     padding: 4rem 2rem;
   }
 
+  .blockette-info-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
   .blockette-gallery {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
+    gap: 4rem;
   }
 
   .blockette-title {
     font-size: 2.4rem;
   }
 }
-
