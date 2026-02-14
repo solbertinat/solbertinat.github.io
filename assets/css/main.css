@@ -91,7 +91,7 @@ font-family: 'Fraunces', serif;
   font-weight: 300;
   font-size: 3.4rem;       /* 🔑 más grande */
   letter-spacing: 0.04em;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
 }
 
 .hero-claim {
@@ -99,7 +99,7 @@ font-family: 'Fraunces', serif;
   font-style: italic;
   font-size: 1.25rem;     /* 🔑 más grande */
   line-height: 1.65;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.2rem;
 
 }
 
@@ -108,7 +108,7 @@ font-family: 'Fraunces', serif;
   font-size: 0.82rem;     /* 🔑 sube apenas */
   letter-spacing: 0.2em;
   line-height: 1.7;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.8rem;
 }
 
 /* VER TRABAJOS */
