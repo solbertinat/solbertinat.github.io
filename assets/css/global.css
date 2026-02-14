@@ -26,3 +26,13 @@ body {
   cursor: url("../images/cursor.png") 12 12, auto;
   overflow-x: hidden;
 }
+
+/* Scroll sin barra visible */
+html, body {
+  overflow-y: scroll;
+  scrollbar-width: none;        /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;                /* Chrome / Safari */
+}
