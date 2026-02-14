@@ -34,9 +34,10 @@ html, body {
 .hero-image-main {
   position: absolute;
   left: 0;
-  transform: translateX(0); /* ancla visual */
-  bottom: -12px;   /* 🔑 probá entre -8px y -16px */
+  bottom: -10px;        /* bajada fina */
+  width: 34vw;          /* 🔑 marco explícito */
   height: 85vh;
+  overflow: hidden;     /* 🔑 recorte real */
 }
 
 .hero-image-main img {
@@ -44,10 +45,11 @@ html, body {
 }
 
 .hero-image-main img {
+  width: 100%;
   height: 100%;
-  width: auto;
+  object-fit: cover;    /* ahora sí */
   display: block;
-  transform-origin: center bottom; /* 🔑 NO lateral */
+  transform-origin: center center;
   transition: transform 1.6s cubic-bezier(.19,1,.22,1);
 }
 
@@ -178,4 +180,12 @@ html, body {
 
 .hero-image-secondary .frame:hover::after {
   opacity: 1;
+}
+
+/* barra lateral para subir y bajar */
+html, body {
+  overflow-x: hidden;
+}
+body {
+  overflow-y: hidden;
 }
