@@ -34,10 +34,10 @@ html, body {
 .hero-image-main {
   position: absolute;
   left: 0;
-  bottom: -5px;          /* apoyo editorial */
+  bottom: -7px;          /* apoyo editorial */
   width: 30vw;            /* tamaño controlado */
   max-width: 520px;       /* no explota en pantallas grandes */
-  height: 92vh;
+  height: 90vh;
   overflow: hidden;       /* 🔑 recorte real */
 }
 
