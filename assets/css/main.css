@@ -35,7 +35,7 @@ html, body {
   position: absolute;
   left: 0;
   bottom: 0;              /* 🔑 SIEMPRE toca abajo */
-  height: 85vh;           /* controla tamaño */
+  height: 94vh;           /* controla tamaño */
   width: auto;
   overflow: hidden;       /* 🔑 recorte del zoom */
 }
@@ -136,7 +136,8 @@ html, body {
   justify-content: flex-end;
   align-items: flex-start;
   padding-top: 2.15rem;
-  overflow: hidden;       /* 🔑 recorte del zoom */
+  width: 100%;          /* 🔑 define marco */
+  overflow: hidden;
   position: relative;
 }
 
