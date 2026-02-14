@@ -1,154 +1,86 @@
-/* ===============================
-   BLOCKETTE PROJECT
-   =============================== */
+/* ===== BLOCKETTE LAYOUT ===== */
 
-/* VARIABLES */
 :root {
-  --blockette-bg: #1A3442;      /* azul petróleo frío */
+  --blockette-bg: #163847; /* azul más limpio, menos verdoso */
   --blockette-text: #F7F6F1;
 }
 
-/* BODY OVERRIDE (solo para este proyecto) */
-body {
+.blockette-layout {
+  position: relative;
   background-color: var(--blockette-bg);
+  padding: 6rem 5vw 10rem;
+  min-height: 100vh;
+}
+
+/* texto */
+.blockette-text {
+  width: 28%;
   color: var(--blockette-text);
 }
 
-/* ===============================
-   INFO
-   =============================== */
-
-.blockette-info {
-  padding: 7rem 6rem 6rem;
-  max-width: 1100px;
-}
-
-.blockette-title {
+.blockette-text h1 {
   font-family: var(--font-serif);
-  font-size: 3.4rem;
-  margin-bottom: 1.4rem;
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
 }
 
 .blockette-meta {
-  display: flex;
-  gap: 2rem;
   font-family: var(--font-sans);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  margin-bottom: 2.6rem;
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
-.blockette-description {
+.blockette-text p {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1.7;
-  max-width: 640px;
+  max-width: 320px;
 }
 
-/* ===============================
-   COLLAGE
-   =============================== */
-
-.blockette-gallery {
-  padding: 6rem 6rem 8rem;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 3.5rem 2.5rem;
-}
-
-/* BASE */
-.blockette-gallery img {
-  width: 100%;
-  height: auto;
+/* imágenes */
+.blockette-layout img {
+  position: absolute;
   display: block;
+  height: auto;
 }
 
-/* ===============================
-   POSICIONAMIENTO EDITORIAL
-   Ajustá si querés milímetros finos
-   =============================== */
+/* ===== POSICIONES EXACTAS ===== */
 
-/* imagen grande derecha arriba */
-.blockette-gallery img:nth-child(1) {
-  grid-column: 7 / 13;
-}
+.img-1 { width: 26%; top: 5%; right: 8%; }
+.img-2 { width: 22%; top: 22%; left: 36%; }
+.img-3 { width: 14%; top: 32%; left: 52%; }
+.img-4 { width: 20%; top: 28%; right: 10%; }
 
-/* retrato cercano izquierdo */
-.blockette-gallery img:nth-child(2) {
-  grid-column: 1 / 6;
-}
+.img-5 { width: 20%; top: 48%; left: 30%; }
+.img-6 { width: 18%; top: 55%; left: 44%; }
+.img-7 { width: 26%; top: 50%; right: 8%; }
 
-/* imagen chica vertical */
-.blockette-gallery img:nth-child(3) {
-  grid-column: 6 / 8;
-}
+.img-8 { width: 36%; top: 70%; left: 20%; }
+.img-9 { width: 18%; top: 78%; left: 12%; }
+.img-10 { width: 22%; top: 82%; right: 10%; }
 
-/* piernas / raqueta */
-.blockette-gallery img:nth-child(4) {
-  grid-column: 8 / 13;
-}
-
-/* sentada con pelota */
-.blockette-gallery img:nth-child(5) {
-  grid-column: 1 / 5;
-}
-
-/* look camiseta */
-.blockette-gallery img:nth-child(6) {
-  grid-column: 5 / 8;
-}
-
-/* pelota en la cabeza */
-.blockette-gallery img:nth-child(7) {
-  grid-column: 8 / 13;
-}
-
-/* imagen horizontal dominante */
-.blockette-gallery img:nth-child(8) {
-  grid-column: 2 / 12;
-}
-
-/* detalle silla roja */
-.blockette-gallery img:nth-child(9) {
-  grid-column: 1 / 5;
-}
-
-/* sentada con raqueta */
-.blockette-gallery img:nth-child(10) {
-  grid-column: 8 / 12;
-}
-
-/* ===============================
-   RESPONSIVE
-   =============================== */
-
-@media (max-width: 1000px) {
-  .blockette-info {
-    padding: 5rem 3rem 4rem;
+/* responsive mínimo */
+@media (max-width: 900px) {
+  .blockette-layout {
+    padding: 4rem 2rem;
   }
 
-  .blockette-gallery {
-    grid-template-columns: 1fr;
-    padding: 4rem 3rem 6rem;
-    gap: 3rem;
+  .blockette-layout img {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    top: auto;
+    left: auto;
+    right: auto;
   }
 
-  .blockette-gallery img {
-    grid-column: auto !important;
-  }
-
-  .blockette-title {
-    font-size: 2.6rem;
+  .blockette-text {
+    width: 100%;
+    margin-bottom: 4rem;
   }
 }
 
-@media (max-width: 600px) {
-  .blockette-info {
-    padding: 4rem 2rem 3rem;
-  }
-
-  .blockette-gallery {
-    padding: 3rem 2rem 5rem;
-  }
-}
