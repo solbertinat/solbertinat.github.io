@@ -34,10 +34,12 @@ html, body {
 .hero-image-main {
   position: absolute;
   left: 0;
-  bottom: 0;              /* 🔑 SIEMPRE toca abajo */
-  height: 92vh;           /* controla tamaño */
-  width: auto;
-  overflow: hidden;       /* 🔑 recorte del zoom */
+  bottom: -12px;   /* 🔑 probá entre -8px y -16px */
+  height: 85vh;
+}
+
+.hero-image-main img {
+  transform-origin: left bottom;
 }
 
 .hero-image-main img {
