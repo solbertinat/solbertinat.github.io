@@ -136,33 +136,44 @@ html, body {
   justify-content: flex-end;
   align-items: flex-start;
   padding-top: 2.15rem;
-  width: 100%;          /* 🔑 define marco */
-  overflow: hidden;
   position: relative;
 }
 
-.hero-image-secondary img {
-  max-width: 210px;
-  width: 100%;
-  height: auto;
+.hero-image-secondary::before {
+  content: "";
   display: block;
-  transition: transform 0.8s cubic-bezier(.19,1,.22,1);
+  width: 210px;          /* 🔑 marco fijo */
+  height: auto;
+}
+
+.hero-image-secondary img {
+  position: absolute;    /* 🔑 queda dentro del frame */
+  top: 2.15rem;
+  right: 0;
+  width: 210px;
+  height: auto;
+  overflow: hidden;
+  display: block;
+  transition: transform 1.2s cubic-bezier(.19,1,.22,1);
 }
 
 /* overlay blanco */
 .hero-image-secondary::after {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 2.15rem;
+  right: 0;
+  width: 210px;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.35);
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.8s ease;
   pointer-events: none;
 }
 
 /* hover imagen derecha */
 .hero-image-secondary:hover img {
-  transform: scale(1.07);
+  transform: scale(1.06);
 }
 
 .hero-image-secondary:hover::after {
