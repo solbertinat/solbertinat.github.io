@@ -7,6 +7,18 @@
   <link rel="stylesheet" href="assets/css/main.css?v=999">
 </head>
 
+<script>
+  if (!sessionStorage.getItem('heroAnimated')) {
+    document.body.classList.add('animate-hero');
+    sessionStorage.setItem('heroAnimated', 'true');
+  } else {
+    document.querySelectorAll(
+      '.hero-image-main, .hero-text, .hero-image-secondary'
+    ).forEach(el => el.style.opacity = 1);
+  }
+</script>
+
+
 <body>
 
 <section class="hero">
