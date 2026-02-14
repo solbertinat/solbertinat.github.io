@@ -35,7 +35,7 @@ html, body {
   position: absolute;
   left: 0;
   bottom: 0;              /* 🔑 SIEMPRE toca abajo */
-  height: 94vh;           /* controla tamaño */
+  height: 92vh;           /* controla tamaño */
   width: auto;
   overflow: hidden;       /* 🔑 recorte del zoom */
 }
