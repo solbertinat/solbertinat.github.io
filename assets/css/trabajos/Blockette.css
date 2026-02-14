@@ -1,5 +1,7 @@
 /* ========== BLOCKETTE PROJECT ========== */
 
+
+
 .blockette-hero {
   position: relative;
   width: 100%;
@@ -14,10 +16,15 @@
 }
 
 /* INFO */
+:root {
+  --blockette-bg: #1F2B2E;   /* azul petróleo */
+  --blockette-text: #F7F6F1;
+}
+
 .blockette-info {
   padding: 6rem 4rem;
-  background-color: #2F2B2B; /* oscuro, elegante, no verde */
-  color: #F8F7F3;
+  background-color: var(--blockette-bg);
+  color: var(--blockette-text);
   max-width: 900px;
 }
 
