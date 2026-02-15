@@ -56,8 +56,15 @@
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
-  .contact-section {
-    padding: 120px 24px;
+
+  .contact-inner,
+  .contact-inner {
+    padding: 0 24px;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
 }
 
