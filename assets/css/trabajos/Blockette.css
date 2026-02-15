@@ -1,11 +1,6 @@
 /* =====================================================
-   BLOCKETTE — PROYECTO EDITORIAL
-   Sol Bertinat
+   BLOCKETTE — LAYOUT EDITORIAL MANUAL
 ===================================================== */
-
-/* =========================
-   VARIABLES
-========================= */
 
 :root {
   --blockette-bg: #183A4A;
@@ -13,47 +8,45 @@
 }
 
 /* =========================
-   BASE DE PÁGINA
+   BASE
 ========================= */
 
 body {
   background-color: var(--blockette-bg);
   color: var(--blockette-text);
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
-/* ocultar scrollbar sin romper scroll */
-body::-webkit-scrollbar {
-  width: 0;
-}
-body {
-  scrollbar-width: none;
-}
+body::-webkit-scrollbar { width: 0; }
+body { scrollbar-width: none; }
 
 /* =========================
-   HERO
+   HERO SUPERIOR
 ========================= */
 
 .blockette-hero {
+  position: relative;
   width: 100%;
-  height: 85vh;
-  overflow: hidden;
+  height: 100vh;
 }
 
 .blockette-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: auto;
+  object-fit: contain;
 }
 
 /* =========================
-   INFO EDITORIAL
+   INFO
 ========================= */
 
 .blockette-info {
   max-width: 420px;
-  padding: 80px 60px 120px 60px;
+  padding: 80px 60px 140px 60px;
 }
 
 .blockette-title {
@@ -64,7 +57,6 @@ body {
 
 .blockette-meta {
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -76,75 +68,134 @@ body {
 .blockette-description {
   font-size: 14px;
   line-height: 1.7;
-  opacity: 0.9;
 }
 
 /* =========================
-   GALERÍA EDITORIAL MANUAL
+   GALERÍA — CONTENEDOR
 ========================= */
 
 .blockette-gallery {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 180px;
-  gap: 40px;
-
-  padding: 0 60px 160px 60px;
-
-  grid-template-areas:
-    ".  a  a  a  .  ."
-    ".  a  a  a  .  ."
-    ".  b  b  .  c  ."
-    ".  d  .  .  c  ."
-    ".  d  .  .  .  ."
-    ".  e  e  e  e  ."
-    ".  e  e  e  e  ."
-    ".  .  f  .  g  g"
-    ".  .  f  .  g  g"
-    ".  .  .  .  .  ."
-    ".  h  h  h  .  ."
-    ".  h  h  h  .  .";
+  position: relative;
+  width: 100%;
+  height: 4200px; /* alto editorial controlado */
 }
 
+/* REGLA GENERAL */
 .blockette-gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  position: absolute;
+  object-fit: contain;
+  height: auto;
+  max-width: none;
 }
 
 /* =========================
-   ASIGNACIÓN EDITORIAL
+   POSICIONAMIENTO EDITORIAL
 ========================= */
 
-.blockette-gallery img:nth-child(1) { grid-area: a; } /* Blockette (11) */
-.blockette-gallery img:nth-child(2) { grid-area: b; } /* Blockette (2) */
-.blockette-gallery img:nth-child(3) { grid-area: c; } /* Blockette (7) */
-.blockette-gallery img:nth-child(4) { grid-area: d; } /* Blockette (4) */
-.blockette-gallery img:nth-child(5) { grid-area: e; } /* Blockette (13) */
-.blockette-gallery img:nth-child(6) { grid-area: f; } /* Blockette (6) */
-.blockette-gallery img:nth-child(7) { grid-area: g; } /* Blockette (12) */
-.blockette-gallery img:nth-child(8) { grid-area: h; } /* Blockette (1) */
+/* 1 — blockette (12) */
+.blockette-gallery img:nth-child(1) {
+  top: 0;
+  right: 0;
+  width: 38vw;
+}
+
+/* 2 — blockette (13) */
+.blockette-gallery img:nth-child(2) {
+  top: 60vh;
+  left: 0;
+  width: 38vw;
+}
+
+/* 3 — blockette (14) */
+.blockette-gallery img:nth-child(3) {
+  top: calc(60vh + 38vh);
+  left: 28vw;
+  width: 18vw;
+  z-index: 2;
+}
+
+/* 4 — blockette (1) */
+.blockette-gallery img:nth-child(4) {
+  top: 70vh;
+  right: 6vw;
+  width: 30vw;
+}
+
+/* 5 — blockette (5) */
+.blockette-gallery img:nth-child(5) {
+  top: 130vh;
+  left: 8vw;
+  width: 20vw;
+  z-index: 2;
+}
+
+/* 6 — blockette (7) */
+.blockette-gallery img:nth-child(6) {
+  top: 150vh;
+  left: 20vw;
+  width: 30vw;
+}
+
+/* 7 — blockette (2) */
+.blockette-gallery img:nth-child(7) {
+  top: 120vh;
+  right: 0;
+  width: 42vw;
+}
+
+/* 8 — blockette (8) */
+.blockette-gallery img:nth-child(8) {
+  top: 200vh;
+  left: 0;
+  width: 100vw;
+}
+
+/* 9 — blockette (9) */
+.blockette-gallery img:nth-child(9) {
+  top: 185vh;
+  left: 6vw;
+  width: 22vw;
+  z-index: 2;
+}
+
+/* 10 — blockette (10) */
+.blockette-gallery img:nth-child(10) {
+  top: 260vh;
+  left: 18vw;
+  width: 42vw;
+}
+
+/* 11 — blockette (4) */
+.blockette-gallery img:nth-child(11) {
+  top: 255vh;
+  right: 0;
+  width: 30vw;
+}
+
+/* 12 — blockette (11) */
+.blockette-gallery img:nth-child(12) {
+  top: 235vh;
+  left: 52vw;
+  width: 26vw;
+  z-index: 3;
+}
 
 /* =========================
-   RESPONSIVE
+   MOBILE — LECTURA LIMPIA
 ========================= */
 
 @media (max-width: 768px) {
-
-  .blockette-info {
-    padding: 60px 24px 80px 24px;
-  }
-
   .blockette-gallery {
-    grid-template-columns: 1fr;
-    grid-template-areas: none;
-    gap: 32px;
-    padding: 0 24px 120px 24px;
+    position: static;
+    height: auto;
+    padding: 0 24px 120px;
   }
 
   .blockette-gallery img {
-    height: auto;
+    position: static;
+    width: 100%;
+    margin-bottom: 32px;
   }
 }
+
 
