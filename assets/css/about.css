@@ -48,17 +48,16 @@
 .about-text h2 {
   font-family: var(--font-serif);
   font-weight: 400;
-
-  /* 🔑 un poco más chico */
   font-size: clamp(5rem, 14vw, 18rem);
   color: #1F2E2A;
-
   line-height: 0.95;
 
   position: absolute;
-  right: 0;          /* 🔑 toca el borde derecho */
-  bottom: 0rem;  /* 🔑 un poco más arriba */
+  right: 0;          /* 🔑 pegado al borde derecho */
+  top: 50%;          /* 🔑 referencia vertical */
+  transform: translateY(35%); /* 🔑 lo baja visualmente */
 }
+
 
 /* TEXTO PRINCIPAL */
 .about-text p {
