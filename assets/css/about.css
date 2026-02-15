@@ -4,34 +4,62 @@
 }
 
 /* =========================
-   ABOUT.
+   ABOUT
 ========================= */
 
 .about-section {
   width: 100%;
-  background-color: #db8ca4;
-  padding: 160px 0;
+  background-color: #db8ca4; /* rosa claro, desaturado */
+  padding: 18rem 0 20rem;
 }
 
+/* CONTENEDOR GENERAL */
 .about-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 80px; /* control real del ancho */
+  padding: 0 80px;
+
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+
+  align-items: end; /* 🔑 ancla abajo */
 }
 
+/* BLOQUE TEXTO */
+.about-text {
+  max-width: 420px; /* 🔑 más angosto */
+}
+
+/* TÍTULO */
 .about-text h2 {
   font-family: var(--font-serif);
-  font-size: 36px;
-  margin-bottom: 32px;
+  font-weight: 400;
+
+  /* 🔑 escala similar a Work pero menor */
+  font-size: clamp(3.5rem, 8vw, 6rem);
+
+  line-height: 0.95;
+  margin-bottom: 3rem;
 }
 
+/* TEXTO PRINCIPAL */
 .about-text p {
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 16px; /* 🔑 un punto más */
+  line-height: 1.85;
   margin-bottom: 24px;
+}
+
+/* BLOQUE IMAGEN (placeholder) */
+.about-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background-color: rgba(0,0,0,0.08); /* placeholder visual */
+}
+
+/* HIGHLIGHTS */
+.about-highlights {
+  margin-top: 4rem;
 }
 
 .about-highlights h3 {
@@ -42,6 +70,7 @@
   opacity: 0.8;
 }
 
+/* LISTADO CON SÍMBOLO */
 .about-highlights ul {
   list-style: none;
   padding: 0;
@@ -51,8 +80,18 @@
 .about-highlights li {
   font-size: 14px;
   margin-bottom: 12px;
+  padding-left: 1.2rem;
+  position: relative;
 }
 
+.about-highlights li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  opacity: 0.6;
+}
+
+/* LINK CV */
 .cv-link {
   font-size: 13px;
   letter-spacing: 0.12em;
@@ -62,18 +101,24 @@
   opacity: 0.9;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 768px) {
 
-  .about-inner,
-  .contact-inner {
-    padding: 0 24px;
+  .about-section {
+    padding: 12rem 0;
   }
 
   .about-inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 64px;
+    padding: 0 24px;
+    align-items: start;
+  }
+
+  .about-text {
+    max-width: 100%;
   }
 }
-
