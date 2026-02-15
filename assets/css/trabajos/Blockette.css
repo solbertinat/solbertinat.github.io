@@ -3,7 +3,7 @@
 ===================================================== */
 
 :root {
-  --blockette-bg: #183A4A;
+  --blockette-bg: ##0e293b;
   --blockette-text: #F7F6F1;
 }
 
@@ -90,18 +90,21 @@ body { scrollbar-width: none; }
 ========================= */
 
 .layout_blockette {
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden; /* evita cualquier desborde residual */
   padding: 120px 0;
   display: flex;
   justify-content: center;
 }
 
 .layout_blockette img {
-  width: 100vw;                 /* corresponde al ancho de pantalla */
-  max-height: 90vh;             /* entra completo */
+  width: 100%;
+  max-width: 100vw;   /* FUERZA a no superar el viewport */
   height: auto;
+  max-height: none;   /* importante: no limitar por altura */
   display: block;
 }
+
 
 /* =========================
    ANIMACIÓN
