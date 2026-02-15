@@ -86,10 +86,12 @@ body { scrollbar-width: none; }
    LAYOUT EDITORIAL FINAL
 ========================= */
 
+/* =========================
+   LAYOUT EDITORIAL FINAL
+========================= */
+
 .layout_blockette {
   width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
   padding: 120px 0;
   display: flex;
   justify-content: center;
@@ -97,7 +99,7 @@ body { scrollbar-width: none; }
 
 .layout_blockette img {
   width: 100%;
-  max-width: 100vw !important; /* pisa global.css */
+  max-width: 1440px;   /* coincide con el ancho real del archivo */
   height: auto;
   display: block;
 }
