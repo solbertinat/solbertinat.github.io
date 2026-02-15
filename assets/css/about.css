@@ -29,7 +29,7 @@
   line-height: 0.95;
 
   position: absolute;
-  right: 0;                 /* 🔑 AHORA sí toca el borde */
+  right: -0.5rem;                 /* 🔑 AHORA sí toca el borde */
   top: 50%;
   transform: translateY(65%); /* 🔑 controla cuánto baja */
 
