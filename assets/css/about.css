@@ -4,7 +4,7 @@
 
 .about-spacer {
   height: 40vh;
-  background-color: #F6F5F0; /* mismo color que el hero */
+  background-color: #F6F5F0;
 }
 
 /* =========================
@@ -13,39 +13,15 @@
 
 .about-section {
   width: 100%;
-  height: 100vh;                 /* 🔑 todo entra en una pantalla */
-  background-color: #e6c3cc;     /* rosa empolvado */
+  height: 100vh;
+  background-color: #e6c3cc;
   display: flex;
-  align-items: center;           /* centra el bloque */
-  position: relative;
-}
-
-/* CONTENEDOR GENERAL */
-.about-inner {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 80px;
-
-  display: grid;
-  grid-template-columns: 4fr 3fr; /* 🔑 4/7 izquierda – 3/7 derecha */
-  gap: 100px;
-
   align-items: center;
-  position: relative;            /* para anclar el título */
+  position: relative; /* 🔑 referencia real del título */
 }
 
-/* =========================
-   BLOQUE IZQUIERDO — TEXTO
-========================= */
-
-.about-text {
-  max-width: 480px;
-  justify-self: center;          /* 🔑 centrado en el 2/3 */
-}
-
-/* TÍTULO (CIERRE, NO HEADER) */
-.about-text h2 {
+/* TÍTULO ABOUT (FUERA DEL GRID) */
+.about-title {
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: clamp(5rem, 14vw, 18rem);
@@ -53,13 +29,39 @@
   line-height: 0.95;
 
   position: absolute;
-  right: 0;          /* 🔑 pegado al borde derecho */
-  top: 50%;          /* 🔑 referencia vertical */
-  transform: translateY(50%); /* 🔑 lo baja visualmente */
+  right: 0;                 /* 🔑 AHORA sí toca el borde */
+  top: 50%;
+  transform: translateY(65%); /* 🔑 controla cuánto baja */
+
+  pointer-events: none;
 }
 
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
 
-/* TEXTO PRINCIPAL */
+.about-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
+
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  gap: 100px;
+
+  align-items: center;
+}
+
+/* =========================
+   BLOQUE IZQUIERDO — TEXTO
+========================= */
+
+.about-text {
+  max-width: 530px;
+  justify-self: center;
+}
+
 .about-text p {
   font-size: 16px;
   line-height: 1.85;
@@ -67,23 +69,16 @@
 }
 
 /* =========================
-   BLOQUE DERECHO — IMAGEN + HIGHLIGHTS
+   BLOQUE DERECHO — HIGHLIGHTS
 ========================= */
 
 .about-side {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* mantiene el eje X */
-  justify-content: flex-start; /* 🔑 se van arriba */
-  padding-top: 4rem;     /* 🔑 aire superior */
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 4rem;
   gap: 3.5rem;
-}
-
-/* IMAGEN (placeholder por ahora) */
-.about-image {
-  width: 70%;
-  aspect-ratio: 3 / 4;
-  background-color: rgba(0,0,0,0.08);
 }
 
 /* =========================
@@ -130,42 +125,4 @@
   opacity: 0.9;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 768px) {
-
-  .about-spacer {
-    height: 20vh;
-  }
-
-  .about-section {
-    height: auto;
-    padding: 10rem 0;
-  }
-
-  .about-inner {
-    grid-template-columns: 1fr;
-    gap: 64px;
-    padding: 0 24px;
-  }
-
-  .about-text {
-    max-width: 100%;
-    justify-self: start;
-  }
-
-  .about-text h2 {
-    position: static;
-    margin-bottom: 4rem;
-  }
-
-  .about-side {
-    align-items: flex-start;
-  }
-
-  .about-image {
-    width: 60%;
-  }
-}
+/* ===*
