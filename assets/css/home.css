@@ -179,3 +179,13 @@ body.animate-hero .hero-image-secondary {
 body.animate-hero .hero-image-main { animation-delay: 0.1s; }
 body.animate-hero .hero-text { animation-delay: 0.35s; }
 body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
+
+
+html, body {
+  overflow-y: scroll;
+  scrollbar-width: none;        /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none;                /* Chrome / Safari */
+}
