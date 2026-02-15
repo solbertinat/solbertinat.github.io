@@ -77,7 +77,7 @@ body { scrollbar-width: none; }
 .blockette-gallery {
   position: relative;
   width: 100%;
-  height: 4200px; /* alto editorial controlado */
+  height: 4500px; /* Aumentado para acomodar todas las imágenes */
 }
 
 /* REGLA GENERAL */
@@ -92,92 +92,100 @@ body { scrollbar-width: none; }
    POSICIONAMIENTO EDITORIAL
 ========================= */
 
-/* 1 — blockette (12) */
+/* 1 — blockette (12): Hero galería, tope arriba-derecha, ocupa toda la página */
 .blockette-gallery img:nth-child(1) {
   top: 0;
   right: 0;
-  width: 38vw;
+  width: 52vw;
+  z-index: 1;
 }
 
-/* 2 — blockette (13) */
+/* 2 — blockette (13): Tope izquierda, similar tamaño a 1 */
 .blockette-gallery img:nth-child(2) {
-  top: 60vh;
+  top: 50vh;
   left: 0;
-  width: 38vw;
+  width: 48vw;
+  z-index: 1;
 }
 
-/* 3 — blockette (14) */
+/* 3 — blockette (14): Pequeña, superpuesta borde derecho de 2, a 3/5 de altura de 2 */
 .blockette-gallery img:nth-child(3) {
-  top: calc(60vh + 38vh);
-  left: 28vw;
+  top: calc(50vh + 60vh);
+  left: 35vw;
+  width: 16vw;
+  z-index: 3;
+}
+
+/* 4 — blockette (1): Poco más chica que 2, centrada entre 3 y margen derecho */
+.blockette-gallery img:nth-child(4) {
+  top: calc(50vh + 8vh);
+  right: 4vw;
+  width: 40vw;
+  z-index: 2;
+}
+
+/* 5 — blockette (5): Casi mismo tamaño que 3, aire vertical para nueva sección */
+.blockette-gallery img:nth-child(5) {
+  top: 140vh;
+  left: 0;
   width: 18vw;
   z-index: 2;
 }
 
-/* 4 — blockette (1) */
-.blockette-gallery img:nth-child(4) {
-  top: 70vh;
-  right: 6vw;
-  width: 30vw;
+/* 6 — blockette (7): Mismo tamaño que 4, esquina sup-izq bajo 5 */
+.blockette-gallery img:nth-child(6) {
+  top: 158vh;
+  left: 16vw;
+  width: 38vw;
+  z-index: 1;
 }
 
-/* 5 — blockette (5) */
-.blockette-gallery img:nth-child(5) {
-  top: 130vh;
-  left: 8vw;
-  width: 20vw;
+/* 7 — blockette (2): Poco más grande que 4, tope margen derecho, a altura de 2/3 de 6 */
+.blockette-gallery img:nth-child(7) {
+  top: 128vh;
+  right: 0;
+  width: 46vw;
   z-index: 2;
 }
 
-/* 6 — blockette (7) */
-.blockette-gallery img:nth-child(6) {
-  top: 150vh;
-  left: 20vw;
-  width: 30vw;
-}
-
-/* 7 — blockette (2) */
-.blockette-gallery img:nth-child(7) {
-  top: 120vh;
-  right: 0;
-  width: 42vw;
-}
-
-/* 8 — blockette (8) */
+/* 8 — blockette (8): Horizontal, tope ambos márgenes, aire bajo 6 */
 .blockette-gallery img:nth-child(8) {
-  top: 200vh;
+  top: 212vh;
   left: 0;
   width: 100vw;
+  z-index: 1;
 }
 
-/* 9 — blockette (9) */
+/* 9 — blockette (9): Casi cuarto inferior bajo 8, poco más grande que 5 */
 .blockette-gallery img:nth-child(9) {
-  top: 185vh;
-  left: 6vw;
-  width: 22vw;
-  z-index: 2;
-}
-
-/* 10 — blockette (10) */
-.blockette-gallery img:nth-child(10) {
-  top: 260vh;
-  left: 18vw;
-  width: 42vw;
-}
-
-/* 11 — blockette (4) */
-.blockette-gallery img:nth-child(11) {
-  top: 255vh;
-  right: 0;
-  width: 30vw;
-}
-
-/* 12 — blockette (11) */
-.blockette-gallery img:nth-child(12) {
-  top: 235vh;
-  left: 52vw;
-  width: 26vw;
+  top: 190vh;
+  left: 3vw;
+  width: 24vw;
   z-index: 3;
+}
+
+/* 10 — blockette (10): Tamaño como 7, centrado entre margen izq y foto 12 */
+.blockette-gallery img:nth-child(10) {
+  top: 278vh;
+  left: 12vw;
+  width: 44vw;
+  z-index: 1;
+}
+
+/* 11 — blockette (4): Tope margen derecho, casi tamaño 6, poco más arriba que 10 */
+.blockette-gallery img:nth-child(11) {
+  top: 273vh;
+  right: 0;
+  width: 36vw;
+  z-index: 1;
+}
+
+/* 12 — blockette (11): Poco más grande que 9, superpone esquina sup-der de 11 */
+.blockette-gallery img:nth-child(12) {
+  top: 250vh;
+  left: 52vw;
+  width: 28vw;
+  z-index: 4;
 }
 
 /* =========================
@@ -197,5 +205,3 @@ body { scrollbar-width: none; }
     margin-bottom: 32px;
   }
 }
-
-
