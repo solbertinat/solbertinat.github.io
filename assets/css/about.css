@@ -1,1 +1,71 @@
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+  width: 100%;
+  background-color: #122f40;
+  padding: 160px 12vw;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 80px;
+}
+
+.about-text h2 {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  margin-bottom: 32px;
+}
+
+.about-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.about-highlights h3 {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+
+.about-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.about-highlights li {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.cv-link {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 120px 24px;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
 
