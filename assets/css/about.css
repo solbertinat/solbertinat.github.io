@@ -4,9 +4,8 @@
 
 .about-spacer {
   height: 40vh;
-  background-color: #F6F5F0; /* MISMO color que el home */
+  background-color: #F6F5F0; /* mismo color que el hero */
 }
-
 
 /* =========================
    ABOUT
@@ -14,79 +13,94 @@
 
 .about-section {
   width: 100%;
-  background-color: #e6c3cc; /* rosa claro, empolvado, desaturado */
-  padding: 14rem 0 18rem;
+  height: 100vh;                 /* 🔑 todo entra en una pantalla */
+  background-color: #e6c3cc;     /* rosa empolvado */
+  display: flex;
+  align-items: center;           /* centra el bloque */
+  position: relative;
 }
 
 /* CONTENEDOR GENERAL */
 .about-inner {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 80px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr; /* 🔑 2/3 + 1/3 */
   gap: 100px;
 
-  align-items: end;          /* 🔑 ancla abajo */
-  justify-items: end;        /* 🔑 empuja composición a la derecha */
+  align-items: center;
+  position: relative;            /* para anclar el título */
 }
 
-/* TEXTO */
+/* =========================
+   BLOQUE IZQUIERDO — TEXTO
+========================= */
+
 .about-text {
-  max-width: 360px;          /* 🔑 más angosto */
+  max-width: 420px;
+  justify-self: center;          /* 🔑 centrado en el 2/3 */
 }
 
-/* TÍTULO */
+/* TÍTULO (CIERRE, NO HEADER) */
 .about-text h2 {
   font-family: var(--font-serif);
   font-weight: 400;
 
-  /* 🔑 ESCALA MUY GRANDE */
   font-size: clamp(6rem, 18vw, 22rem);
-
-  /* 🔑 COLOR FORZADO (mismo verde del home) */
   color: #1F2E2A;
 
   line-height: 0.95;
-  margin-bottom: 6rem;
+
+  position: absolute;
+  right: 80px;
+  bottom: -2rem;                 /* 🔑 abajo a la derecha */
 }
 
 /* TEXTO PRINCIPAL */
 .about-text p {
-  font-size: 16px;           /* un punto más */
+  font-size: 16px;
   line-height: 1.85;
   margin-bottom: 24px;
 }
 
+/* =========================
+   BLOQUE DERECHO — IMAGEN + HIGHLIGHTS
+========================= */
+
+.about-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;           /* 🔑 centrado en el tercio */
+  justify-content: center;
+  gap: 3.5rem;
+}
+
 /* IMAGEN (placeholder por ahora) */
 .about-image {
-  width: 100%;
+  width: 70%;
   aspect-ratio: 3 / 4;
   background-color: rgba(0,0,0,0.08);
-  justify-self: start;       /* contrapunto visual */
 }
 
 /* =========================
    HIGHLIGHTS
 ========================= */
 
-.about-highlights {
-  margin-top: 4rem;
-}
-
 .about-highlights h3 {
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   opacity: 0.8;
 }
 
 .about-highlights ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 32px 0;
+  margin: 0;
 }
 
 .about-highlights li {
@@ -105,6 +119,8 @@
 
 /* LINK CV */
 .cv-link {
+  display: inline-block;
+  margin-top: 24px;
   font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -112,7 +128,6 @@
   color: inherit;
   opacity: 0.9;
 }
-
 
 /* =========================
    RESPONSIVE
@@ -125,6 +140,7 @@
   }
 
   .about-section {
+    height: auto;
     padding: 10rem 0;
   }
 
@@ -132,11 +148,23 @@
     grid-template-columns: 1fr;
     gap: 64px;
     padding: 0 24px;
-    align-items: start;
-    justify-items: start;
   }
 
   .about-text {
     max-width: 100%;
+    justify-self: start;
+  }
+
+  .about-text h2 {
+    position: static;
+    margin-bottom: 4rem;
+  }
+
+  .about-side {
+    align-items: flex-start;
+  }
+
+  .about-image {
+    width: 60%;
   }
 }
