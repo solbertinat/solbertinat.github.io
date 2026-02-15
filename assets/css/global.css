@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+.layout_blockette img {
+  max-width: 100vw !important;
+}
+
 /* ========== VARIABLES ========== */
 :root {
   --bg: #F7F6F1;
