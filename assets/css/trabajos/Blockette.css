@@ -151,3 +151,15 @@ body { scrollbar-width: none; }
   }
 }
 
+/* ===== DEBUG FORZADO LAYOUT ===== */
+.layout_blockette {
+  background: red;
+}
+
+.layout_blockette img {
+  background: yellow;
+  outline: 5px solid lime;
+  width: 50vw !important;
+  max-width: 50vw !important;
+}
+
