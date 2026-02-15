@@ -40,7 +40,7 @@
 ========================= */
 
 .about-text {
-  max-width: 420px;
+  max-width: 480px;
   justify-self: center;          /* 🔑 centrado en el 2/3 */
 }
 
@@ -57,7 +57,7 @@
 
   position: absolute;
   right: 0;          /* 🔑 toca el borde derecho */
-  bottom: -1.5rem;  /* 🔑 un poco más arriba */
+  bottom: 0rem;  /* 🔑 un poco más arriba */
 }
 
 /* TEXTO PRINCIPAL */
