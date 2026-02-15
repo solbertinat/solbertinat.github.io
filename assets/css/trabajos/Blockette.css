@@ -40,8 +40,8 @@ body { scrollbar-width: none; }
 
 .blockette-text h1 {
   font-family: var(--font-serif);
-  font-size: 70px;
-  margin-bottom: 18px;
+  font-size: 60px;
+  margin-bottom: 20px;
 }
 
 .blockette-meta {
