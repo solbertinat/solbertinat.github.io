@@ -1,5 +1,5 @@
 /* =====================================================
-   BLOCKETTE — VERSIÓN FINAL
+   BLOCKETTE — VERSIÓN FINAL ESTABLE
 ===================================================== */
 
 :root {
@@ -28,7 +28,7 @@ body { scrollbar-width: none; }
   min-height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: start;                 /* ancla arriba */
   padding: 80px 60px;
   gap: 60px;
 }
@@ -40,14 +40,12 @@ body { scrollbar-width: none; }
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
-   margin-left: 12;
 }
 
 .blockette-text h1 {
   font-family: var(--font-serif);
   font-size: 42px;
   margin-bottom: 12px;
-   margin-left: 12;
 }
 
 .blockette-meta {
@@ -59,26 +57,26 @@ body { scrollbar-width: none; }
   text-transform: uppercase;
   opacity: 0.75;
   margin-bottom: 32px;
-   margin-left: 12;
 }
 
 .blockette-text p {
   font-size: 14px;
   line-height: 1.7;
-   margin-left: 12;
 }
 
 /* IMAGEN PORTADA */
 
 .blockette-cover-image {
   display: flex;
-  justify-content: flex-end;
-   margin-top: 0;
-   margin-right: 0;
+  justify-content: flex-end;          /* ancla derecha */
+  align-items: flex-start;            /* ancla arriba */
 }
 
 .blockette-cover-image img {
+  max-height: calc(100vh - 160px);    /* cierra visualmente abajo */
+  max-width: 100%;
   width: auto;
+  height: auto;
   object-fit: contain;
 
   opacity: 0;
@@ -88,16 +86,19 @@ body { scrollbar-width: none; }
 }
 
 /* =========================
-   LAYOUT FINAL (IMAGEN)
+   LAYOUT EDITORIAL FINAL
 ========================= */
 
 .layout_blockette {
-  width: 80%;
+  width: 100%;
   padding: 120px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .layout_blockette img {
-  width: 80%;
+  width: 100%;
+  max-width: 1200px;   /* ajustá acá si la querés más chica */
   height: auto;
   display: block;
 }
@@ -125,10 +126,5 @@ body { scrollbar-width: none; }
   }
 
   .blockette-cover-image {
-    justify-content: center;
-  }
+    justify-content:
 
-  .layout_blockette {
-    padding: 80px 0;
-  }
-}
