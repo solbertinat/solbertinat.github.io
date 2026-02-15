@@ -1,7 +1,12 @@
+/* =========================
+   TRANSICIÓN HOME → ABOUT
+========================= */
+
 .about-spacer {
-  height: 35vh;
-  background-color: #0e293b; /* color base del site / home */
+  height: 40vh;
+  background-color: #F6F5F0; /* MISMO color que el home */
 }
+
 
 /* =========================
    ABOUT
@@ -9,8 +14,8 @@
 
 .about-section {
   width: 100%;
-  background-color: #db8ca4; /* rosa claro, desaturado */
-  padding: 18rem 0 20rem;
+  background-color: #e6c3cc; /* rosa claro, empolvado, desaturado */
+  padding: 14rem 0 18rem;
 }
 
 /* CONTENEDOR GENERAL */
@@ -23,41 +28,43 @@
   grid-template-columns: 1fr 1fr;
   gap: 100px;
 
-  align-items: end; /* 🔑 ancla abajo */
+  align-items: end;          /* 🔑 ancla abajo */
+  justify-items: end;        /* 🔑 empuja composición a la derecha */
 }
 
-/* BLOQUE TEXTO */
+/* TEXTO */
 .about-text {
-  max-width: 420px; /* 🔑 más angosto */
+  max-width: 360px;          /* 🔑 más angosto */
 }
 
 /* TÍTULO */
 .about-text h2 {
   font-family: var(--font-serif);
   font-weight: 400;
-
-  /* 🔑 escala similar a Work pero menor */
-  font-size: clamp(3.5rem, 8vw, 6rem);
-
+  font-size: clamp(4rem, 14vw, 8rem);
   line-height: 0.95;
   margin-bottom: 3rem;
 }
 
 /* TEXTO PRINCIPAL */
 .about-text p {
-  font-size: 16px; /* 🔑 un punto más */
+  font-size: 16px;           /* un punto más */
   line-height: 1.85;
   margin-bottom: 24px;
 }
 
-/* BLOQUE IMAGEN (placeholder) */
+/* IMAGEN (placeholder por ahora) */
 .about-image {
   width: 100%;
   aspect-ratio: 3 / 4;
-  background-color: rgba(0,0,0,0.08); /* placeholder visual */
+  background-color: rgba(0,0,0,0.08);
+  justify-self: start;       /* contrapunto visual */
 }
 
-/* HIGHLIGHTS */
+/* =========================
+   HIGHLIGHTS
+========================= */
+
 .about-highlights {
   margin-top: 4rem;
 }
@@ -70,7 +77,6 @@
   opacity: 0.8;
 }
 
-/* LISTADO CON SÍMBOLO */
 .about-highlights ul {
   list-style: none;
   padding: 0;
@@ -80,7 +86,7 @@
 .about-highlights li {
   font-size: 14px;
   margin-bottom: 12px;
-  padding-left: 1.2rem;
+  padding-left: 1.4rem;
   position: relative;
 }
 
@@ -101,14 +107,19 @@
   opacity: 0.9;
 }
 
+
 /* =========================
    RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
 
+  .about-spacer {
+    height: 20vh;
+  }
+
   .about-section {
-    padding: 12rem 0;
+    padding: 10rem 0;
   }
 
   .about-inner {
@@ -116,6 +127,7 @@
     gap: 64px;
     padding: 0 24px;
     align-items: start;
+    justify-items: start;
   }
 
   .about-text {
