@@ -50,3 +50,20 @@ body::-webkit-scrollbar {
 html {
   scroll-behavior: smooth;
 }
+
+/* =========================
+   CURSOR GLOBAL — FIX FINAL
+========================= */
+
+html,
+body,
+section,
+div,
+main,
+header,
+footer,
+a,
+button {
+  cursor: url("../images/cursor.png") 12 12, auto !important;
+}
+
