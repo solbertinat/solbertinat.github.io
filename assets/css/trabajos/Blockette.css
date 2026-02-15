@@ -1,19 +1,14 @@
-/* Corrected CSS positioning for the gallery layout */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
+.blockette {
+    max-width: 100%; /* Ensure the block does not exceed the parent's width */
 }
 
-.gallery img {
-    max-width: 100%;
-    height: auto;
-    margin: 5px;
+.img-container {
+    width: 100%; /* Adjust image container to fit its parent */
+    max-width: 800px; /* Specify maximum width for images */
+    overflow: hidden; /* Ensure any overflow is hidden */
 }
 
-.carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+.img-container img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
 }
