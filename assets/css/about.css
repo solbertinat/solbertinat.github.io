@@ -55,7 +55,7 @@
   position: absolute;
   right: 0;          /* 🔑 pegado al borde derecho */
   top: 50%;          /* 🔑 referencia vertical */
-  transform: translateY(35%); /* 🔑 lo baja visualmente */
+  transform: translateY(50%); /* 🔑 lo baja visualmente */
 }
 
 
