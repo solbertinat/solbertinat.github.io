@@ -60,8 +60,10 @@
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
-  .about-section {
-    padding: 120px 24px;
+
+  .about-inner,
+  .contact-inner {
+    padding: 0 24px;
   }
 
   .about-inner {
