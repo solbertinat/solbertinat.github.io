@@ -4,7 +4,11 @@
 
 .about-spacer {
   height: 40vh;
-  background-color: #F6F5F0;
+  background: linear-gradient(
+    to bottom,
+    #F6F5F0 0%,
+    #e6c3cc 100%
+  );
 }
 
 /* =========================
@@ -31,7 +35,7 @@
   position: absolute;
   right: -0.5rem;                 /* 🔑 AHORA sí toca el borde */
   top: 50%;
-  transform: translateY(65%); /* 🔑 controla cuánto baja */
+  transform: translateY(75%); /* 🔑 controla cuánto baja */
 
   pointer-events: none;
 }
@@ -65,7 +69,7 @@
 .about-text p {
   font-size: 16px;
   line-height: 1.85;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 /* =========================
@@ -126,3 +130,12 @@
 }
 
 /* ===*
+
+.about-work-spacer {
+  height: 40vh;
+  background: linear-gradient(
+    to bottom,
+    #e6c3cc 0%,
+    #F6F5F0 100%
+  );
+}
