@@ -2,15 +2,16 @@
    CONTACT
 ========================= */
 
-.contact-section {
+..contact-section {
   width: 100%;
   background-color: #0b1f2c;
-  padding: 160px 12vw;
+  padding: 160px 0;
 }
 
 .contact-inner {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 80px;
 }
 
 .contact-inner h2 {
