@@ -27,7 +27,7 @@ body {
 /* ========== CURSOR + SCROLL ========== */
 html,
 body {
-  cursor: url("../images/cursor.png") 16 16, auto;
+  cursor: url("../images/cursor.png") 12 12, auto;
   overflow-x: hidden;
 }
 * {
