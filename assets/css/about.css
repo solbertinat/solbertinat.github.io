@@ -49,14 +49,15 @@
   font-family: var(--font-serif);
   font-weight: 400;
 
-  font-size: clamp(6rem, 18vw, 22rem);
+  /* 🔑 un poco más chico */
+  font-size: clamp(5rem, 14vw, 18rem);
   color: #1F2E2A;
 
   line-height: 0.95;
 
   position: absolute;
-  right: 80px;
-  bottom: -2rem;                 /* 🔑 abajo a la derecha */
+  right: 0;          /* 🔑 toca el borde derecho */
+  bottom: -1.5rem;  /* 🔑 un poco más arriba */
 }
 
 /* TEXTO PRINCIPAL */
@@ -73,8 +74,9 @@
 .about-side {
   display: flex;
   flex-direction: column;
-  align-items: center;           /* 🔑 centrado en el tercio */
-  justify-content: center;
+  align-items: center;   /* mantiene el eje X */
+  justify-content: flex-start; /* 🔑 se van arriba */
+  padding-top: 4rem;     /* 🔑 aire superior */
   gap: 3.5rem;
 }
 
