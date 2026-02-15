@@ -25,7 +25,7 @@ body { scrollbar-width: none; }
 ========================= */
 
 .blockette-cover {
-  min-height: 100vh;
+  min-height: 90vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -40,14 +40,14 @@ body { scrollbar-width: none; }
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
-   margin-left: 6;
+   margin-left: 12;
 }
 
 .blockette-text h1 {
   font-family: var(--font-serif);
   font-size: 42px;
   margin-bottom: 12px;
-   margin-left: 6;
+   margin-left: 12;
 }
 
 .blockette-meta {
@@ -59,13 +59,13 @@ body { scrollbar-width: none; }
   text-transform: uppercase;
   opacity: 0.75;
   margin-bottom: 32px;
-   margin-left: 6;
+   margin-left: 12;
 }
 
 .blockette-text p {
   font-size: 14px;
   line-height: 1.7;
-   margin-left: 6;
+   margin-left: 12;
 }
 
 /* IMAGEN PORTADA */
@@ -92,12 +92,12 @@ body { scrollbar-width: none; }
 ========================= */
 
 .layout_blockette {
-  width: 100%;
+  width: 80%;
   padding: 120px 0;
 }
 
 .layout_blockette img {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: block;
 }
