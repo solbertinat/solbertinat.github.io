@@ -27,8 +27,14 @@ body {
 /* ========== CURSOR + SCROLL ========== */
 html,
 body {
-  cursor: url("assets/images/cursor.png") 12 12, auto;
+  cursor: url("../images/cursor.png") 12 12, auto;
   overflow-x: hidden;
+}
+* {
+  cursor: inherit;
+}
+a {
+  cursor: inherit;
 }
 
 /* Scroll sin barra visible */
