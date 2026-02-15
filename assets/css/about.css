@@ -41,9 +41,15 @@
 .about-text h2 {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(4rem, 14vw, 8rem);
+
+  /* 🔑 ESCALA MUY GRANDE */
+  font-size: clamp(6rem, 18vw, 22rem);
+
+  /* 🔑 COLOR FORZADO (mismo verde del home) */
+  color: #1F2E2A;
+
   line-height: 0.95;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 /* TEXTO PRINCIPAL */
