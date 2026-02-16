@@ -59,13 +59,11 @@
 
 .hero-text h1 {
   font-size: 3.6rem;
-  font-weight: 500;
+  font-weight: 100;
   letter-spacing: 0.03em;
   margin-bottom: 1.6rem;
 
   font-family: var(--font-serif);
-  font-weight: 50;
-  font-size: clamp(6rem, 18vw, 22rem);
   color: #1F2E2A;
 }
 
