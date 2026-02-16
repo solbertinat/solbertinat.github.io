@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 105vh;
   background-color: #F6F5F0;
   display: grid;
   grid-template-columns: 34% 46% 20%;
