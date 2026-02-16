@@ -59,6 +59,41 @@
 }
 
 /* =========================
+   CÍRCULO DIFUMINADO
+========================= */
+
+.work::after {
+  content: "";
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+
+  /* círculo que se disuelve */
+  background: radial-gradient(
+    circle,
+    rgba(238, 255, 99, 0.9) 0%,
+    rgba(238, 255, 99, 0.45) 30%,
+    rgba(238, 255, 99, 0.15) 55%,
+    rgba(238, 255, 99, 0) 70%
+  );
+
+  top: 8rem;        /* ajustable */
+  right: 6rem;     /* ajustable */
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* contenido del work siempre arriba */
+.work > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================
    GRID
 ========================= */
 
