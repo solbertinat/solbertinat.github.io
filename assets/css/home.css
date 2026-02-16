@@ -64,7 +64,7 @@
   margin-bottom: 1.6rem;
 
   font-family: var(--font-serif);
-  font-weight: 200;
+  font-weight: 50;
   font-size: clamp(6rem, 18vw, 22rem);
   color: #1F2E2A;
 }
