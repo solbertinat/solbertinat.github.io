@@ -1,15 +1,19 @@
 /* ========== WORK ========== */
 
 :root {
-  --photo-color: #E35C8A;   /* rosa */
-  --style-color: #8F1021;   /* bordó */
+  --photo-color: #E35C8A;
+  --style-color: #8c1d2c;
 }
 
-/* CONTENEDOR */
+/* =========================
+   CONTENEDOR
+========================= */
+
 .work {
   position: relative;
   padding: 14rem 4rem 10rem;
   background-color: #F8F7F3;
+  overflow: hidden;
 }
 
 /* =========================
@@ -19,9 +23,7 @@
 .work::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  inset: 0 0 auto 0;
   height: 35vh;
 
   background: linear-gradient(
@@ -34,30 +36,6 @@
   z-index: 0;
 }
 
-/* contenido del work adelante */
-.work > * {
-  position: relative;
-  z-index: 1;
-}
-
-
-
-/* TÍTULO WORK */
-.work-title {
-  font-family: var(--font-serif);
-  font-weight: 400;
-
-  /* 🔑 ESCALA MUY GRANDE */
-  font-size: clamp(6rem, 18vw, 22rem);
-
-  /* 🔑 COLOR FORZADO (mismo verde del home) */
-  color: #1F2E2A;
-
-  line-height: 0.95;
-  margin-bottom: 2rem;
-  margin-top: 6rem;
-}
-
 /* =========================
    CÍRCULO DIFUMINADO
 ========================= */
@@ -66,32 +44,43 @@
   content: "";
   position: absolute;
 
-  width: 420px;
-  height: 420px;
+  width: 520px;
+  height: 520px;
   border-radius: 50%;
 
-  /* círculo que se disuelve */
   background: radial-gradient(
     circle,
-    rgba(238, 255, 99, 0.9) 0%,
-    rgba(238, 255, 99, 0.45) 30%,
-    rgba(238, 255, 99, 0.15) 55%,
+    rgba(238, 255, 99, 0.85) 0%,
+    rgba(238, 255, 99, 0.45) 25%,
+    rgba(238, 255, 99, 0.2) 45%,
     rgba(238, 255, 99, 0) 70%
   );
 
-  top: 8rem;        /* ajustable */
-  right: 6rem;     /* ajustable */
+  top: 10rem;
+  right: 4rem;
 
   pointer-events: none;
-  z-index: 0;
+  z-index: 1; /* 🔑 ahora queda ARRIBA del degradé */
 }
 
-/* contenido del work siempre arriba */
+/* contenido del work adelante */
 .work > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
+/* =========================
+   TÍTULO
+========================= */
+
+.work-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(6rem, 18vw, 22rem);
+  color: #1F2E2A;
+  line-height: 0.95;
+  margin: 6rem 0 3rem;
+}
 
 /* =========================
    GRID
@@ -99,8 +88,8 @@
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3.5rem 3rem;
+  grid-template-columns: repeat(6, 1fr); /* 🔑 6 columnas */
+  gap: 3rem 2.5rem;
 }
 
 /* =========================
@@ -114,16 +103,16 @@
   color: inherit;
 }
 
-/* FRAME REAL (más chico visualmente) */
+/* FRAME */
 .work-image {
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
 
-  /* 🔑 hace que las imágenes “pesen” menos */
-  transform: scale(0.88);
-  transform-origin: top left;
+  /* 🔑 achicamos menos para que no “desaparezca” */
+  transform: scale(0.94);
+  transform-origin: center;
 }
 
 /* IMAGEN */
@@ -150,8 +139,8 @@
   align-items: center;
 
   text-align: center;
-  padding: 2rem;
-  transition: opacity 0.5s ease;
+  padding: 1.5rem;
+  transition: opacity 0.45s ease;
 }
 
 /* COLORES SEGÚN ROL */
@@ -169,23 +158,23 @@
 
 .work-name {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
-  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
   color: #fff;
 }
 
 .work-role {
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
   color: #fff;
 }
 
 .work-year {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #fff;
@@ -207,10 +196,16 @@
    RESPONSIVE
 ========================= */
 
+@media (max-width: 1200px) {
+  .work-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (max-width: 900px) {
   .work-title {
     font-size: clamp(4rem, 18vw, 10rem);
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 
   .work-grid {
@@ -218,21 +213,16 @@
     gap: 2.5rem;
   }
 
-  .work-image {
-    transform: scale(0.95);
-  }
-
-
-  html, body {
-  overflow-y: scroll;
-  scrollbar-width: none;        /* Firefox */
-}
-
-body::-webkit-scrollbar {
-  display: none;                /* Chrome / Safari */
-}
-
   .work {
     padding: 8rem 2rem;
+  }
+
+  html, body {
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
   }
 }
