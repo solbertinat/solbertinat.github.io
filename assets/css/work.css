@@ -37,10 +37,37 @@
 }
 
 /* =========================
+   TÍTULO
+========================= */
+
+.work-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(6rem, 18vw, 22rem);
+  color: #1F2E2A;
+  line-height: 0.95;
+  margin: 6rem 0 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.work-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3rem 2.5rem;
+  z-index: 2;
+}
+
+/* =========================
    CÍRCULO DIFUMINADO
 ========================= */
 
-.work::after {
+.work-grid::before {
   content: "";
   position: absolute;
 
@@ -56,40 +83,17 @@
     rgba(238, 255, 99, 0) 70%
   );
 
-  top: 10rem;
-  right: 4rem;
+  top: -8rem;
+  right: -4rem;
 
   pointer-events: none;
-  z-index: 1; /* 🔑 ahora queda ARRIBA del degradé */
+  z-index: 0;
 }
 
-/* contenido del work adelante */
-.work > * {
+/* items del grid arriba del círculo */
+.work-grid > * {
   position: relative;
-  z-index: 2;
-}
-
-/* =========================
-   TÍTULO
-========================= */
-
-.work-title {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: clamp(6rem, 18vw, 22rem);
-  color: #1F2E2A;
-  line-height: 0.95;
-  margin: 6rem 0 3rem;
-}
-
-/* =========================
-   GRID
-========================= */
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 🔑 6 columnas */
-  gap: 3rem 2.5rem;
+  z-index: 1;
 }
 
 /* =========================
@@ -109,9 +113,7 @@
   aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
-
-  /* 🔑 achicamos menos para que no “desaparezca” */
-  transform: scale(0.94);
+  transform: scale(0.98);
   transform-origin: center;
 }
 
