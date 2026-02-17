@@ -12,27 +12,27 @@
 
 .work {
   position: relative;
-  padding: 14rem 4rem 12rem;
+  padding: 12rem 4rem 12rem;   /* 🔑 menos aire arriba */
   background-color: #F8F7F3;
   overflow: hidden;
 }
 
 /* =========================
-   TÍTULO — VERTICAL, FIJO Y VISIBLE
+   TÍTULO — VERTICAL ESPEJADO
 ========================= */
 
 .work-title {
   position: absolute;
-  top: 6rem;          /* 🔑 baja lo justo para que no se corte */
+  top: 0;              /* 🔑 tope real de la sección */
   left: 0;
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(6.75rem, 18vw, 24.75rem);
+  font-size: clamp(6rem, 16vw, 22rem); /* 🔑 apenas más chico */
   color: #1F2E2A;
   line-height: 0.9;
 
-  transform: rotate(90deg) translateY(-100%);
+  transform: rotate(-90deg) scaleX(-1); /* 🔑 espejado correcto */
   transform-origin: top left;
 
   white-space: nowrap;
@@ -41,7 +41,7 @@
 }
 
 /* =========================
-   CÍRCULO DIFUMINADO (REFERENCIA: WORK)
+   CÍRCULO DIFUMINADO
 ========================= */
 
 .work::after {
@@ -63,7 +63,7 @@
 
   top: 50%;
   right: -55rem;
-  transform: translateY(-50%);   /* 🔑 mitad real del bloque */
+  transform: translateY(-50%);
 
   pointer-events: none;
   z-index: 1;
@@ -77,10 +77,10 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.6rem 1.8rem;
+  gap: 1.4rem 1.6rem;      /* 🔑 más compacto */
 
-  margin-left: 22rem;
-  margin-top: -1rem;
+  margin-left: 20rem;     /* 🔑 acompaña el título */
+  margin-top: -3rem;      /* 🔑 sube la grilla */
   margin-right: 3rem;
 
   z-index: 3;
@@ -170,6 +170,7 @@
   .work-grid {
     grid-template-columns: repeat(3, 1fr);
     margin-left: 0;
+    margin-top: 0;
   }
 
   .work-title {
@@ -183,7 +184,6 @@
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
-    margin-top: 4rem;
   }
 
   .work {
