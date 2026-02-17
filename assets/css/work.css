@@ -26,16 +26,16 @@
 
 .work-title {
   position: absolute;
-  top: 10rem;
-  left: 4rem;
+  bottom: 0px;
+  left: 0px;
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(6rem, 16vw, 22rem);
+  font-size: clamp(7.5rem, 20vw, 27.5rem);
   color: #1F2E2A;
   line-height: 0.9;
 
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   transform-origin: top left;
 
   white-space: nowrap;
@@ -61,7 +61,7 @@
    CÍRCULO DIFUMINADO
 ========================= */
 .work-grid::before {
-  top: -6rem;        /* 🔑 sube apenas */
+  bottom: 5px;        /* 🔑 sube apenas */
 }
 
 .work-grid::before {
