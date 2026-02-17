@@ -27,8 +27,8 @@
 
 .work-title {
   position: absolute;
-  top: 4rem;              /* ajustá fino si querés */
-  left: -6rem;            /* hace que “toque” el borde */
+  top: 60rem;              /* ajustá fino si querés */
+  left: 0rem;            /* hace que “toque” el borde */
 
   font-family: var(--font-serif);
   font-weight: 300;
@@ -52,7 +52,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 3rem 2.5rem;
-  z-index: 2;
+  z-index: 6;
 }
 
 /* =========================
