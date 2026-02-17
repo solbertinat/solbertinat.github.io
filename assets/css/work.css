@@ -23,8 +23,8 @@
 
 .work-title {
   position: absolute;
-  top: 12;          /* aire desde arriba del work */
-  left: 10;          /* entra dentro del bloque, no se corta */
+  top: 0px;          /* aire desde arriba del work */
+  left: 10px;          /* entra dentro del bloque, no se corta */
 
   font-family: var(--font-serif);
   font-weight: 300;
