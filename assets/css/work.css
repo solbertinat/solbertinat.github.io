@@ -21,6 +21,10 @@
    TÍTULO — VERTICAL ANCLADO
 ========================= */
 
+.work {
+  position: relative; /* referencia real */
+}
+
 .work-title {
   position: absolute;
   top: 0px;          /* aire desde arriba del work */
