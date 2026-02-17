@@ -26,8 +26,8 @@
 
 .work-title {
   position: absolute;
-  top: 0;               /* pegado al About */
-  left: 0;              /* margen izquierdo */
+  top: 0;              /* 🔑 pegado arriba de la sección */
+  left: 0;             /* 🔑 pegado al margen izquierdo */
 
   font-family: var(--font-serif);
   font-weight: 300;
@@ -35,8 +35,8 @@
   color: #1F2E2A;
   line-height: 0.9;
 
-  transform: rotate(-90deg);
-  transform-origin: top left;
+  transform: rotate(-90deg);      /* 🔑 orientación correcta */
+  transform-origin: top left;     /* 🔑 anclaje real */
 
   white-space: nowrap;
   z-index: 10;
@@ -50,7 +50,7 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 1.6rem 1.8rem;
   margin-left: 22rem;  /* deja aire real para el título */
-  margin-top: 2.5rem;
+  margin-top: 1rem;
   margin-right: 3rem;
   position: relative;
   display: grid;
@@ -61,7 +61,7 @@
    CÍRCULO DIFUMINADO
 ========================= */
 .work-grid::before {
-  top: 3px;        /* 🔑 sube apenas */
+  top: 0.5px;       
 }
 
 .work-grid::before {
