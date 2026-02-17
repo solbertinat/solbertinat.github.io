@@ -20,20 +20,19 @@
 /* =========================
    TÍTULO — VERTICAL, ESPEJO CORRECTO
 ========================= */
-
 .work-title {
   position: absolute;
-  top: 0;            /* 🔑 tope real de la sección */
+  top: 0;
   left: 0;
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(5.5rem, 14vw, 20rem); /* 🔑 un poco más chico */
+  font-size: clamp(5.5rem, 14vw, 20rem);
   color: #1F2E2A;
   line-height: 0.9;
 
-  /* rotado + espejo VERTICAL (no horizontal) */
-  transform: rotate(-90deg) scaleY(-1);
+  /* rotación + espejo vertical con compensación */
+  transform: rotate(-90deg) scaleY(-1) translateY(-100%);
   transform-origin: top left;
 
   white-space: nowrap;
