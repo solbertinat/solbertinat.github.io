@@ -76,7 +76,7 @@
     rgba(238, 255, 99, 0) 70%
   );
 
-  top: -6rem;        /* 🔑 círculo más abajo */
+  top: 6rem;        /* 🔑 círculo más abajo */
   right: -55rem;
 
   pointer-events: none;
