@@ -21,21 +21,29 @@
    TÍTULO — VERTICAL ANCLADO
 ========================= */
 
+
+.work {
+  position: relative; /* asegura anclaje */
+}
+
 .work-title {
   position: absolute;
-  top: 10rem;
-  left: 10rem;              /* 🔑 lo corre hacia la derecha */
+  top: 14rem;          /* más aire */
+  left: 0;             /* anclado al borde de la sección */
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(7rem, 20vw, 26rem);
+  font-size: clamp(6rem, 16vw, 22rem);
   color: #1F2E2A;
   line-height: 0.9;
 
-  transform: rotate(90deg);
+  transform: rotate(-90deg) translateX(-100%);
   transform-origin: top left;
 
   white-space: nowrap;
+  max-width: 70vh;     /* 🔑 lo “angosta” visualmente */
+  overflow: hidden;
+
   z-index: 2;
 }
 
@@ -44,16 +52,13 @@
 ========================= */
 
 .work-grid {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem 2rem;      /* 🔑 más cerca */
+  margin-left: 20rem;  /* deja aire real para el título */
+  margin-top: 7rem;
+  margin-right: 3rem;
   position: relative;
   display: grid;
-
-  grid-template-columns: repeat(5, 1fr); /* 🔑 5 trabajos visibles */
-  gap: 2.5rem 3rem;
-
-  margin-left: 18rem;   /* 🔑 corre el grid a la derecha */
-  margin-top: 6rem;     /* 🔑 baja el inicio del grid */
-  margin-right: 3rem;
-
   z-index: 3;
 }
 
