@@ -23,8 +23,8 @@
 
 .work-title {
   position: absolute;
-  top: 10rem;          /* 🔑 anclado arriba de la sección */
-  left: 2rem;
+  top: 10rem;
+  left: 10rem;              /* 🔑 lo corre hacia la derecha */
 
   font-family: var(--font-serif);
   font-weight: 300;
@@ -32,7 +32,7 @@
   color: #1F2E2A;
   line-height: 0.9;
 
-  transform: rotate(90deg);        /* 🔑 orientación correcta */
+  transform: rotate(90deg);
   transform-origin: top left;
 
   white-space: nowrap;
@@ -48,10 +48,11 @@
   display: grid;
 
   grid-template-columns: repeat(5, 1fr); /* 🔑 5 trabajos visibles */
-  gap: 3.5rem 3rem;
+  gap: 2.5rem 3rem;
 
   margin-left: 18rem;   /* 🔑 corre el grid a la derecha */
   margin-top: 6rem;     /* 🔑 baja el inicio del grid */
+  margin-right: 3rem;
 
   z-index: 3;
 }
@@ -77,8 +78,8 @@
     rgba(238, 255, 99, 0) 70%
   );
 
-  top: -12rem;        /* 🔑 círculo más abajo */
-  right: -70rem;
+  top: -6rem;        /* 🔑 círculo más abajo */
+  right: -55rem;
 
   pointer-events: none;
   z-index: 0;
