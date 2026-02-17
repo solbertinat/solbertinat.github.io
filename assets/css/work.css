@@ -31,11 +31,11 @@
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(7.5rem, 20vw, 27.5rem);
+  font-size: clamp(6.75rem, 18vw, 24.75rem);
   color: #1F2E2A;
   line-height: 0.9;
 
-  transform: rotate(90deg) translateY(-100%);
+  transform: rotate(-90deg);
   transform-origin: top left;
 
   white-space: nowrap;
@@ -50,7 +50,7 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 1.6rem 1.8rem;
   margin-left: 22rem;  /* deja aire real para el título */
-  margin-top: 7rem;
+  margin-top: 2.5rem;
   margin-right: 3rem;
   position: relative;
   display: grid;
@@ -61,7 +61,7 @@
    CÍRCULO DIFUMINADO
 ========================= */
 .work-grid::before {
-  bottom: -5px;        /* 🔑 sube apenas */
+  top: 3px;        /* 🔑 sube apenas */
 }
 
 .work-grid::before {
