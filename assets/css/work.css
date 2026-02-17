@@ -18,38 +18,28 @@
 }
 
 /* =========================
-   TRANSICIÓN ABOUT → WORK
-========================= */
-
-.work::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 35vh;
-  background: linear-gradient(
-    to bottom,
-    #e6c3cc 0%,
-    #F6F5F0 100%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* =========================
    TÍTULO
 ========================= */
 
+.work {
+  position: relative;
+}
+
 .work-title {
+  position: absolute;
+  top: 4rem;              /* ajustá fino si querés */
+  left: -6rem;            /* hace que “toque” el borde */
+
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(5rem, 15vw, 18rem);
+  font-size: clamp(7rem, 20vw, 26rem);
   color: #1F2E2A;
-  line-height: 0.95;
+  line-height: 0.9;
 
-  margin: 3.5rem 0 3rem;
-  margin-left: -4rem; /* 🔑 hace que toque (o casi) el borde izquierdo */
+  transform: rotate(-90deg);
+  transform-origin: top left;
 
-  position: relative;
+  white-space: nowrap;
   z-index: 2;
 }
 
