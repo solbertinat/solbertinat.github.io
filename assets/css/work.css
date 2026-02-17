@@ -20,16 +20,14 @@
 /* =========================
    TÍTULO — VERTICAL ANCLADO
 ========================= */
-
-
 .work {
   position: relative; /* referencia real */
 }
 
 .work-title {
   position: absolute;
-  top: 8rem;           /* 🔑 vuelve a entrar en pantalla */
-  left: 2rem;          /* 🔑 evita que se corte */
+  top: 10rem;
+  left: 4rem;
 
   font-family: var(--font-serif);
   font-weight: 300;
@@ -41,7 +39,7 @@
   transform-origin: top left;
 
   white-space: nowrap;
-  z-index: 10;         /* 🔑 fuerza visibilidad */
+  z-index: 10;
 }
 
 /* =========================
@@ -50,7 +48,7 @@
 
 .work-grid {
   grid-template-columns: repeat(5, 1fr);
-  gap: 2rem 2rem;      /* 🔑 más cerca */
+  gap: 1.6rem 1.8rem;
   margin-left: 22rem;  /* deja aire real para el título */
   margin-top: 7rem;
   margin-right: 3rem;
@@ -63,7 +61,7 @@
    CÍRCULO DIFUMINADO
 ========================= */
 .work-grid::before {
-  top: -10rem;        /* 🔑 sube apenas */
+  top: -6rem;        /* 🔑 sube apenas */
 }
 
 .work-grid::before {
