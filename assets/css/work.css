@@ -12,27 +12,28 @@
 
 .work {
   position: relative;
-  padding: 12rem 4rem 12rem;   /* 🔑 menos aire arriba */
+  padding: 10rem 4rem 12rem;   /* 🔑 menos aire arriba */
   background-color: #F8F7F3;
   overflow: hidden;
 }
 
 /* =========================
-   TÍTULO — VERTICAL ESPEJADO
+   TÍTULO — VERTICAL, ESPEJO CORRECTO
 ========================= */
 
 .work-title {
   position: absolute;
-  top: 0;              /* 🔑 tope real de la sección */
+  top: 0;            /* 🔑 tope real de la sección */
   left: 0;
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(6rem, 16vw, 22rem); /* 🔑 apenas más chico */
+  font-size: clamp(5.5rem, 14vw, 20rem); /* 🔑 un poco más chico */
   color: #1F2E2A;
   line-height: 0.9;
 
-  transform: rotate(-90deg) scaleX(-1); /* 🔑 espejado correcto */
+  /* rotado + espejo VERTICAL (no horizontal) */
+  transform: rotate(-90deg) scaleY(-1);
   transform-origin: top left;
 
   white-space: nowrap;
@@ -77,10 +78,10 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.4rem 1.6rem;      /* 🔑 más compacto */
+  gap: 1.3rem 1.5rem;   /* 🔑 más cerca entre sí */
 
-  margin-left: 20rem;     /* 🔑 acompaña el título */
-  margin-top: -3rem;      /* 🔑 sube la grilla */
+  margin-left: 20rem;  /* deja aire para el título */
+  margin-top: -5rem;   /* 🔑 sube más la grilla */
   margin-right: 3rem;
 
   z-index: 3;
