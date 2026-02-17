@@ -23,12 +23,12 @@
 
 .work-title {
   position: absolute;
-  top: 12rem;          /* aire desde arriba del work */
-  left: 6rem;          /* entra dentro del bloque, no se corta */
+  top: 12;          /* aire desde arriba del work */
+  left: 10;          /* entra dentro del bloque, no se corta */
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(6rem, 16vw, 22rem);
+  font-size: clamp(7.2rem, 19.2vw, 26.4rem);
   color: #1F2E2A;
   line-height: 0.9;
 
