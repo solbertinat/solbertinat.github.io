@@ -42,11 +42,12 @@
 .work-title {
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(6rem, 18vw, 22rem);
+  font-size: clamp(5rem, 15vw, 18rem);
   color: #1F2E2A;
   line-height: 0.95;
 
-  margin: 3.5rem 0 3rem; /* 🔑 sube el título */
+  margin: 3.5rem 0 3rem;
+  margin-left: -4rem; /* 🔑 hace que toque (o casi) el borde izquierdo */
 
   position: relative;
   z-index: 2;
