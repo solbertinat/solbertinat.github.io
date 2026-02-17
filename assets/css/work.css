@@ -21,10 +21,6 @@
    TÍTULO — VERTICAL ANCLADO
 ========================= */
 
-.work {
-  position: relative; /* referencia real */
-}
-
 .work-title {
   position: absolute;
   top: 12rem;          /* aire desde arriba del work */
@@ -37,7 +33,7 @@
   line-height: 0.9;
 
   /* 🔑 rotación correcta, sin espejar */
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
   transform-origin: top left;
 
   white-space: nowrap;
@@ -80,7 +76,7 @@
     rgba(238, 255, 99, 0) 70%
   );
 
-  top: 4rem;        /* 🔑 círculo más abajo */
+  top: -6rem;        /* 🔑 círculo más abajo */
   right: -55rem;
 
   pointer-events: none;
