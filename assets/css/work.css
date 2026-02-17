@@ -27,7 +27,7 @@
 
 .work-title {
   position: absolute;
-  top: 0px;          /* aire desde arriba del work */
+  top: 50px;          /* aire desde arriba del work */
   left: 10px;          /* entra dentro del bloque, no se corta */
 
   font-family: var(--font-serif);
