@@ -35,7 +35,7 @@
   color: #1F2E2A;
   line-height: 0.9;
 
-  transform: rotate(90deg) translateY(-100%);
+  transform: rotate(90deg) translateX(0);
   transform-origin: top left;
 
   white-space: nowrap;
@@ -52,7 +52,7 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 1.6rem 1.8rem;
   margin-left: 22rem;  /* deja aire real para el título */
-  margin-top: 1rem;
+  margin-top: -2rem; 
   margin-right: 3rem;
   position: relative;
   display: grid;
@@ -63,9 +63,9 @@
    CÍRCULO DIFUMINADO
 ========================= */
 .work-grid::before {
-  top: 42%;      
+  top: 35vh;          /* 🔑 mitad visual de la sección */
+  transform: none;
 }
-
 .work-grid::before {
   content: "";
   position: absolute;
