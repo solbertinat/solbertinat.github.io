@@ -12,21 +12,18 @@
 
 .work {
   position: relative;
-  padding: 18rem 4rem 12rem; /* 🔑 más aire general */
+  padding: 14rem 4rem 12rem;
   background-color: #F8F7F3;
   overflow: hidden;
 }
 
 /* =========================
-   TÍTULO — VERTICAL ANCLADO
+   TÍTULO — VERTICAL, FIJO Y VISIBLE
 ========================= */
-.work {
-  position: relative; /* referencia real */
-}
 
 .work-title {
   position: absolute;
-  top: 0;
+  top: 6rem;          /* 🔑 baja lo justo para que no se corte */
   left: 0;
 
   font-family: var(--font-serif);
@@ -35,38 +32,19 @@
   color: #1F2E2A;
   line-height: 0.9;
 
-  transform: rotate(90deg) translateX(0);
+  transform: rotate(90deg) translateY(-100%);
   transform-origin: top left;
 
   white-space: nowrap;
-  z-index: 10;
+  z-index: 5;
+  pointer-events: none;
 }
 
 /* =========================
-   GRID
+   CÍRCULO DIFUMINADO (REFERENCIA: WORK)
 ========================= */
-.work {
-  padding: 10rem 4rem 12rem; /* antes 18rem arriba */
-}
-.work-grid {
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.6rem 1.8rem;
-  margin-left: 22rem;  /* deja aire real para el título */
-  margin-top: -2rem; 
-  margin-right: 3rem;
-  position: relative;
-  display: grid;
-  z-index: 3;
-}
 
-/* =========================
-   CÍRCULO DIFUMINADO
-========================= */
-.work-grid::before {
-  top: 35vh;          /* 🔑 mitad visual de la sección */
-  transform: none;
-}
-.work-grid::before {
+.work::after {
   content: "";
   position: absolute;
 
@@ -83,10 +61,29 @@
     rgba(238, 255, 99, 0) 70%
   );
 
+  top: 50%;
   right: -55rem;
+  transform: translateY(-50%);   /* 🔑 mitad real del bloque */
 
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.work-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.6rem 1.8rem;
+
+  margin-left: 22rem;
+  margin-top: -1rem;
+  margin-right: 3rem;
+
+  z-index: 3;
 }
 
 /* =========================
@@ -106,7 +103,6 @@
   overflow: hidden;
   position: relative;
   transform: scale(0.98);
-  transform-origin: center;
 }
 
 .work-image img {
@@ -137,10 +133,6 @@
   background-color: var(--hover-accent);
   transition: opacity 0.45s ease;
 }
-
-/* =========================
-   TEXTO OVERLAY
-========================= */
 
 .work-name {
   font-family: var(--font-serif);
@@ -196,14 +188,5 @@
 
   .work {
     padding: 10rem 2rem;
-  }
-
-  html, body {
-    overflow-y: scroll;
-    scrollbar-width: none;
-  }
-
-  body::-webkit-scrollbar {
-    display: none;
   }
 }
