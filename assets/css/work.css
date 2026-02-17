@@ -26,8 +26,8 @@
 
 .work-title {
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 2px;
+  left: 2px;
 
   font-family: var(--font-serif);
   font-weight: 300;
@@ -61,7 +61,7 @@
    CÍRCULO DIFUMINADO
 ========================= */
 .work-grid::before {
-  bottom: 5px;        /* 🔑 sube apenas */
+  bottom: 1.5px;        /* 🔑 sube apenas */
 }
 
 .work-grid::before {
