@@ -41,11 +41,13 @@
 
 .work-title {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 300;
   font-size: clamp(6rem, 18vw, 22rem);
   color: #1F2E2A;
   line-height: 0.95;
-  margin: 6rem 0 3rem;
+
+  margin: 3.5rem 0 3rem; /* 🔑 sube el título */
+
   position: relative;
   z-index: 2;
 }
