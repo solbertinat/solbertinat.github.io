@@ -69,25 +69,25 @@
 .work-grid::before {
   content: "";
   position: absolute;
-  width: 1040px;          /* 🔑 doble de grande */
-  height: 1040px;
+
+  width: 2200px;      /* 🔑 muchísimo más grande */
+  height: 2200px;
   border-radius: 50%;
+
   background: radial-gradient(
     circle,
     rgba(238, 255, 99, 0.85) 0%,
-    rgba(238, 255, 99, 0.45) 25%,
-    rgba(238, 255, 99, 0.2) 45%,
+    rgba(238, 255, 99, 0.45) 22%,
+    rgba(238, 255, 99, 0.22) 40%,
+    rgba(238, 255, 99, 0.08) 55%,
     rgba(238, 255, 99, 0) 70%
   );
-  top: -2rem;             /* 🔑 más abajo */
-  right: -10rem;
+
+  top: -32rem;        /* 🔑 un poco más arriba */
+  right: -60rem;
+
   pointer-events: none;
   z-index: 0;
-}
-
-.work-grid > * {
-  position: relative;
-  z-index: 1;
 }
 
 /* =========================
