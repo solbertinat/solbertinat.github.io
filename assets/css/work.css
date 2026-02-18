@@ -28,12 +28,11 @@
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(5.2rem, 13vw, 19rem); /* 🔑 un poco más chico */
+  font-size: clamp(5.2rem, 13vw, 19rem);
   color: #1F2E2A;
   line-height: 0.9;
 
-  /* rotación + espejo VERTICAL */
-  transform: rotate(-90deg) scaleX(-1);
+  transform: rotate(-90deg) scaleY(-1);
   transform-origin: top left;
 
   white-space: nowrap;
@@ -62,7 +61,7 @@
     rgba(238, 255, 99, 0) 70%
   );
 
-  top: 50%;
+  top: 60%;              /* 🔑 queda dentro de Work */
   right: -55rem;
   transform: translateY(-50%);
 
