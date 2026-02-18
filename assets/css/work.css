@@ -14,11 +14,10 @@
   position: relative;
   padding: 10rem 4rem 12rem;
   background-color: #F8F7F3;
-  /* 🔴 overflow hidden REMOVIDO para que el título no desaparezca */
 }
 
 /* =========================
-   TÍTULO — VERTICAL, ESPEJO VERTICAL
+   TÍTULO — VERTICAL ESTABLE (SIN ROTATE)
 ========================= */
 
 .work-title {
@@ -28,12 +27,12 @@
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(5.2rem, 13vw, 19rem);
+  font-size: clamp(5.2rem, 12vw, 18rem);
   color: #1F2E2A;
-  line-height: 0.9;
+  line-height: 1;
 
-  transform: rotate(-90deg) scaleY(-1);
-  transform-origin: top left;
+  writing-mode: vertical-rl;   /* 🔑 clave */
+  transform: rotate(180deg);   /* 🔑 espejo vertical correcto */
 
   white-space: nowrap;
   z-index: 10;
@@ -41,7 +40,7 @@
 }
 
 /* =========================
-   CÍRCULO DIFUMINADO
+   CÍRCULO DIFUMINADO (SOLO DENTRO DE WORK)
 ========================= */
 
 .work::after {
@@ -61,9 +60,8 @@
     rgba(238, 255, 99, 0) 70%
   );
 
-  top: 60%;              /* 🔑 queda dentro de Work */
+  top: 22rem;          /* 🔑 dentro de Work, nunca arriba */
   right: -55rem;
-  transform: translateY(-50%);
 
   pointer-events: none;
   z-index: 1;
@@ -77,10 +75,10 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.2rem 1.4rem;     /* 🔑 más juntos */
+  gap: 1.2rem 1.4rem;
 
-  margin-left: 18rem;    /* aire para el título */
-  margin-top: -7rem;     /* 🔑 sube la grilla */
+  margin-left: 18rem;   /* espacio real para el título */
+  margin-top: -6rem;    /* sube la grilla */
   margin-right: 3rem;
 
   z-index: 3;
@@ -170,6 +168,7 @@
 
   .work-title {
     position: static;
+    writing-mode: horizontal-tb;
     transform: none;
     margin-bottom: 4rem;
   }
