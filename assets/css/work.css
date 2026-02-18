@@ -31,14 +31,14 @@
   color: #1F2E2A;
   line-height: 0.9;
 
-  /* rotación + espejo vertical con compensación */
-  transform: rotate(-90deg) scaleY(-1) translateY(-100%);
-  transform-origin: top left;
+  transform: rotate(-90deg);
+  transform-origin: left top;
 
   white-space: nowrap;
-  z-index: 5;
+  z-index: 10;
   pointer-events: none;
 }
+
 
 /* =========================
    CÍRCULO DIFUMINADO
