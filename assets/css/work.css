@@ -23,11 +23,11 @@
 .work-title {
   position: absolute;
   top: 0;
-  left: calc(-1rem); /* 🔑 compensa el padding del contenedor */
+  left: calc(-2rem); /* 🔑 compensa el padding del contenedor */
 
   font-family: var(--font-serif);
   font-weight: 300;
-  font-size: clamp(5.2rem, 12vw, 18rem);
+  font-size: clamp(6.76rem, 15.6vw, 23.4rem);
   color: #1F2E2A;
   line-height: 1;
 
