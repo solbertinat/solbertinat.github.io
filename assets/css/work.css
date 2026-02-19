@@ -23,11 +23,11 @@
 .work-title {
   position: absolute;
   top: 0;
-  left: calc(-2rem); /* 🔑 compensa el padding del contenedor */
+  left: calc(-3rem); /* 🔑 compensa el padding del contenedor */
 
   font-family: var(--font-serif);
-  font-weight: 300;
-  font-size: clamp(6.76rem, 15.6vw, 23.4rem);
+  font-weight: 400;
+  font-size: clamp(9.126rem, 21.06vw, 31.59rem);
   color: #1F2E2A;
   line-height: 1;
 
@@ -78,9 +78,9 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 1.2rem 1.4rem;
 
-  margin-left: 18rem;   /* espacio real para el título */
+  margin-left: 19rem;   /* espacio real para el título */
   margin-top: -6rem;    /* sube la grilla */
-  margin-right: 3rem;
+  margin-right: 2rem;
 
   z-index: 3;
 }
