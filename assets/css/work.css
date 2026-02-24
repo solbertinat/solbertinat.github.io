@@ -64,13 +64,13 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2.3rem 2.5rem;   /* 🔑 más cerca entre sí */
+  gap: 2.5rem 2.8rem;   /* 🔑 más cerca entre sí */
 
-  margin-left: 22rem;  /* deja aire para el título */
-  margin-top: 1rem;   /* 🔑 sube más la grilla */
-  margin-right: 1.5rem;
+  margin-left: 21rem;  /* deja aire para el título */
+  margin-top: -2rem;   /* 🔑 sube más la grilla */
+  margin-right: 2rem;
 
-  max-width: calc(100% - 20rem);
+  max-width: calc(100% - 10rem);
 
   z-index: 3;
 }
