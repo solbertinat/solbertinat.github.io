@@ -13,7 +13,7 @@
 .hero-image-main {
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: -40px;
   width: 30vw;
   max-width: 500px;
   height: 85vh;
@@ -51,8 +51,8 @@
 /* ========== TEXTO ========== */
 .hero-text {
   grid-column: 2;
-  padding-top: 17rem;
-  padding-left: 0.3rem;
+  padding-top: 15rem;
+  padding-left: 1rem;
   max-width: 400px;
   opacity: 0;
 }
