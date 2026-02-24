@@ -1,93 +1,52 @@
-/* ========= WORK ========= */
-
 :root {
-  --photo-color: #E35C8A;
-  --style-color: #8c1d2c;
   --hover-accent: #eeff63;
 }
 
-/* =========================
-   CONTENEDOR
-========================= */
+/* CONTENEDOR */
 
 .work {
   position: relative;
   padding: 10rem 4rem 12rem;
   background-color: #F8F7F3;
+  overflow: hidden;
 }
 
-/* =========================
-   TÍTULO — VERTICAL ESTABLE (SIN ROTATE)
-========================= */
+/* TÍTULO */
 
 .work-title {
   position: absolute;
   top: 0;
-  left: calc(-3rem); /* 🔑 compensa el padding del contenedor */
+  left: 0;
 
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(9.126rem, 21.06vw, 31.59rem);
+  font-size: clamp(8rem, 20vw, 28rem);
   color: #1F2E2A;
   line-height: 1;
 
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 
-  white-space: nowrap;
+  pointer-events: none;
   z-index: 10;
-  pointer-events: none;
 }
 
-/* =========================
-   CÍRCULO DIFUMINADO (SOLO DENTRO DE WORK)
-========================= */
-
-.work::after {
-  content: "";
-  position: absolute;
-
-  width: 2200px;
-  height: 2200px;
-  border-radius: 50%;
-
-  background: radial-gradient(
-    circle,
-    rgba(238, 255, 99, 0.85) 0%,
-    rgba(238, 255, 99, 0.45) 22%,
-    rgba(238, 255, 99, 0.22) 40%,
-    rgba(238, 255, 99, 0.08) 55%,
-    rgba(238, 255, 99, 0) 70%
-  );
-
-  top: calc(10rem + 20vh); /* 🔑 SIEMPRE dentro de Work */
-  right: -55rem;
-
-  pointer-events: none;
-  z-index: 1;
-}
-
-
-/* =========================
-   GRID
-========================= */
+/* GRID */
 
 .work-grid {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.2rem 1.4rem;
+  gap: 1.4rem;
 
-  margin-left: 19rem;   /* espacio real para el título */
-  margin-top: -6rem;    /* sube la grilla */
+  margin-left: 18rem;
+  margin-top: -4rem;
   margin-right: 2rem;
 
+  position: relative;
   z-index: 3;
 }
 
-/* =========================
-   ITEM
-========================= */
+/* ITEM */
 
 .work-item {
   position: relative;
@@ -96,44 +55,42 @@
   color: inherit;
 }
 
-.work-image {
+/* MEDIA (imagen + video iguales) */
+
+.work-media {
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
-  transform: scale(0.98);
+  position: relative;
 }
 
-.work-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 1.6s cubic-bezier(.19,1,.22,1);
-}
-
-.work-video video {
+.work-media img,
+.work-media video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 1.4s cubic-bezier(.19,1,.22,1);
 }
 
-/* =========================
-   OVERLAY
-========================= */
+/* OVERLAY */
 
 .work-overlay {
   position: absolute;
   inset: 0;
+  background-color: var(--hover-accent);
   opacity: 0;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
-  background-color: var(--hover-accent);
-  transition: opacity 0.45s ease;
+  transition: opacity 0.35s ease;
 }
+
+/* TEXTO */
 
 .work-name {
   font-family: var(--font-serif);
@@ -151,15 +108,10 @@
   color: #1F2E2A;
 }
 
-/* =========================
-   HOVER
-========================= */
+/* HOVER */
 
-.work-item:hover .work-image img {
-  transform: scale(1.08);
-}
-
-.work-item:hover .work-video video {
+.work-item:hover .work-media img,
+.work-item:hover .work-media video {
   transform: scale(1.08);
 }
 
@@ -167,9 +119,7 @@
   opacity: 1;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media (max-width: 1200px) {
   .work-grid {
@@ -189,10 +139,9 @@
 @media (max-width: 900px) {
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
   }
 
   .work {
-    padding: 10rem 2rem;
+    padding: 8rem 2rem;
   }
 }
