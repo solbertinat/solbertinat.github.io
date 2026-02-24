@@ -66,8 +66,8 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 1.3rem 1.5rem;   /* 🔑 más cerca entre sí */
 
-  margin-left: 20rem;  /* deja aire para el título */
-  margin-top: 2rem;   /* 🔑 sube más la grilla */
+  margin-left: 24rem;  /* deja aire para el título */
+  margin-top: 1rem;   /* 🔑 sube más la grilla */
   margin-right: 1.5rem;
 
   max-width: calc(100% - 20rem);
@@ -89,6 +89,7 @@
   aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
+  transform: scale(1.2);
 }
 
 .work-image {
