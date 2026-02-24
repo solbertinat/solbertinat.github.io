@@ -152,36 +152,14 @@
 }
 
 /* =========================
-   VIDEO EN WORK (SE COMPORTA COMO IMAGEN)
-========================= */
-
-.work-video {
-  position: relative;
-}
-
-.work-video video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* aseguramos orden correcto */
-.work-video video {
-  position: relative;
-  z-index: 1;
-}
-
-.work-overlay {
-  z-index: 2;
-  background-color: var(--hover-accent); /* amarillo paleta */
-}
-
-/* =========================
    HOVER
 ========================= */
 
 .work-item:hover .work-image img {
+  transform: scale(1.08);
+}
+
+.work-item:hover .work-video video {
   transform: scale(1.08);
 }
 
