@@ -15,11 +15,11 @@
 .work-title {
   position: absolute;
   top: 2rem;
-  left: 0;
+  left: -0.5rem;      /* 🔑 toca el borde */
 
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(4.8rem, 10vw, 14rem);
+  font-size: clamp(4.2rem, 9vw, 12rem); /* 🔑 un poco más chico */
   line-height: 1;
 
   writing-mode: vertical-rl;
@@ -70,7 +70,7 @@
   gap: 1.3rem 1.5rem;   /* 🔑 más cerca entre sí */
 
   margin-left: 20rem;  /* deja aire para el título */
-  margin-top: -5rem;   /* 🔑 sube más la grilla */
+  margin-top: 4rem;   /* 🔑 sube más la grilla */
   margin-right: 3rem;
 
   max-width: calc(100% - 20rem);
@@ -92,6 +92,7 @@
   aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
+  transform: scale(0.94);
 }
 
 .work-image {
