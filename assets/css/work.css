@@ -64,9 +64,9 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.3rem 1.5rem;   /* 🔑 más cerca entre sí */
+  gap: 2.3rem 2.5rem;   /* 🔑 más cerca entre sí */
 
-  margin-left: 24rem;  /* deja aire para el título */
+  margin-left: 22rem;  /* deja aire para el título */
   margin-top: 1rem;   /* 🔑 sube más la grilla */
   margin-right: 1.5rem;
 
