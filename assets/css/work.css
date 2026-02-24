@@ -110,6 +110,13 @@
   transition: transform 1.6s cubic-bezier(.19,1,.22,1);
 }
 
+.work-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* =========================
    OVERLAY
 ========================= */
@@ -142,6 +149,32 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #1F2E2A;
+}
+
+/* =========================
+   VIDEO EN WORK (SE COMPORTA COMO IMAGEN)
+========================= */
+
+.work-video {
+  position: relative;
+}
+
+.work-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* aseguramos orden correcto */
+.work-video video {
+  position: relative;
+  z-index: 1;
+}
+
+.work-overlay {
+  z-index: 2;
+  background-color: var(--hover-accent); /* amarillo paleta */
 }
 
 /* =========================
