@@ -55,7 +55,7 @@
 
   top: calc(10rem + 20vh); /* 🔑 SIEMPRE dentro de Work */
   right: -55rem;
-  bottom: 200px;
+  bottom: 70px;
 
   pointer-events: none;
   z-index: 1;
@@ -70,11 +70,10 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 1.2rem 1.4rem;
 
-  margin-left: 19rem;
-  margin-top: 0;
+  margin-left: 19rem;   /* espacio real para el título */
+  margin-top: -6rem;    /* sube la grilla */
   margin-right: 2rem;
 
-  max-width: calc(100% - 19rem); /* 🔑 evita que se estire */
   z-index: 3;
 }
 
