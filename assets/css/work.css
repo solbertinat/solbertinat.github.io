@@ -67,8 +67,8 @@
   gap: 1.3rem 1.5rem;   /* 🔑 más cerca entre sí */
 
   margin-left: 20rem;  /* deja aire para el título */
-  margin-top: 4rem;   /* 🔑 sube más la grilla */
-  margin-right: 3rem;
+  margin-top: 2rem;   /* 🔑 sube más la grilla */
+  margin-right: 1.5rem;
 
   max-width: calc(100% - 20rem);
 
@@ -89,7 +89,6 @@
   aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
-  transform: scale(0.94);
 }
 
 .work-image {
