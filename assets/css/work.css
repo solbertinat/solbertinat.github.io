@@ -67,15 +67,14 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.2rem 1.4rem;
+  gap: 1.3rem 1.5rem;   /* 🔑 más cerca entre sí */
 
-  margin-left: 19rem;   /* espacio real para el título */
-  margin-top: -6rem;    /* sube la grilla */
-  margin-right: 2rem;
+  margin-left: 20rem;  /* deja aire para el título */
+  margin-top: -5rem;   /* 🔑 sube más la grilla */
+  margin-right: 3rem;
 
   z-index: 3;
 }
-
 
 /* ITEM */
 
@@ -86,23 +85,22 @@
   color: inherit;
 }
 
-/* MEDIA (imagen + video iguales) */
-
-.work-image,
-.work-video {
+.work-image {
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
+  transform: scale(0.98);
 }
 
-.work-image img,
-.work-video video {
+.work-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 1.6s cubic-bezier(.19,1,.22,1);
 }
+
 
 /* OVERLAY */
 
