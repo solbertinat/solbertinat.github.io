@@ -15,20 +15,20 @@
 
 .work-title {
   position: absolute;
-  top: 2rem;          /* apenas separado del about */
-  left: 0;            /* toca el borde izquierdo */
+  top: 2rem;
+  left: 0;
 
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(4.5rem, 10vw, 14rem); /* 🔑 mucho más chico */
+  font-size: clamp(4.8rem, 10vw, 14rem);
   line-height: 1;
 
   writing-mode: vertical-rl;
-  transform: rotate(180deg); /* vertical legible */
+  transform: rotate(180deg);
   transform-origin: top left;
 
   white-space: nowrap;
-  z-index: 5;
+  z-index: 6;
   pointer-events: none;
 }
 
@@ -70,12 +70,14 @@
   grid-template-columns: repeat(5, 1fr);
   gap: 1.2rem 1.4rem;
 
-  margin-left: 19rem;   /* espacio para el título */
-  margin-top: 0;        /* 🔑 NO negativo */
+  margin-left: 19rem;
+  margin-top: 0;
   margin-right: 2rem;
 
+  max-width: calc(100% - 19rem); /* 🔑 evita que se estire */
   z-index: 3;
 }
+
 
 /* ITEM */
 
@@ -88,12 +90,14 @@
 
 /* MEDIA (imagen + video iguales) */
 
-.work-media {
+.work-image,
+.work-video {
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
 }
+
 .work-image img,
 .work-video video {
   width: 100%;
