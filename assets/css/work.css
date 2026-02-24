@@ -16,7 +16,7 @@
 .work-title {
   position: absolute;
   top: 0;
-  left: 0;
+  left: calc(-3rem);
 
   font-family: var(--font-serif);
   font-weight: 400;
@@ -26,23 +26,49 @@
 
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+  pointer-events: none;
+}
+
+/* =========================
+   CÍRCULO DIFUMINADO (SOLO DENTRO DE WORK)
+========================= */
+
+.work::after {
+  content: "";
+  position: absolute;
+
+  width: 2200px;
+  height: 2200px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(238, 255, 99, 0.85) 0%,
+    rgba(238, 255, 99, 0.45) 22%,
+    rgba(238, 255, 99, 0.22) 40%,
+    rgba(238, 255, 99, 0.08) 55%,
+    rgba(238, 255, 99, 0) 70%
+  );
+
+  top: calc(10rem + 20vh); /* 🔑 SIEMPRE dentro de Work */
+  right: -55rem;
 
   pointer-events: none;
-  z-index: 10;
+  z-index: 1;
 }
+
 
 /* GRID */
 
 .work-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.4rem;
+  gap: 1.2rem 1.4rem;
 
-  margin-left: 18rem;
+  margin-left: 19rem;
   margin-top: -4rem;
   margin-right: 2rem;
-
-  position: relative;
+  
   z-index: 3;
 }
 
@@ -87,10 +113,8 @@
   align-items: center;
   text-align: center;
 
-  transition: opacity 0.35s ease;
+  transition: opacity 0.45s ease;
 }
-
-/* TEXTO */
 
 .work-name {
   font-family: var(--font-serif);
