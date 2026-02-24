@@ -14,24 +14,21 @@
 /* TÍTULO */
 
 .work-title {
-  position: relative;
-  padding: 10rem 4rem 12rem;
-  background-color: #F8F7F3;
-  overflow: visible;
-  
-  white-space: nowrap;
   position: absolute;
-  top: 0;
-  left: calc(-3rem);
+  top: 2rem;          /* apenas separado del about */
+  left: 0;            /* toca el borde izquierdo */
 
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(8rem, 20vw, 28rem);
-  color: #1F2E2A;
+  font-size: clamp(4.5rem, 10vw, 14rem); /* 🔑 mucho más chico */
   line-height: 1;
 
   writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  transform: rotate(180deg); /* vertical legible */
+  transform-origin: top left;
+
+  white-space: nowrap;
+  z-index: 5;
   pointer-events: none;
 }
 
@@ -58,7 +55,7 @@
 
   top: calc(10rem + 20vh); /* 🔑 SIEMPRE dentro de Work */
   right: -55rem;
-  bottom: 20px;
+  bottom: 200px;
 
   pointer-events: none;
   z-index: 1;
@@ -68,14 +65,15 @@
 /* GRID */
 
 .work-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.2rem 1.4rem;
 
-  margin-left: 19rem;
-  margin-top: 4rem;
+  margin-left: 19rem;   /* espacio para el título */
+  margin-top: 0;        /* 🔑 NO negativo */
   margin-right: 2rem;
-  
+
   z-index: 3;
 }
 
