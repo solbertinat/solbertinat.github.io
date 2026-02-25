@@ -64,10 +64,10 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2.5rem 2.8rem;   /* 🔑 más cerca entre sí */
+  gap: 3rem 4rem;   /* 🔑 más cerca entre sí */
 
   margin-left: 21rem;  /* deja aire para el título */
-  margin-top: -2rem;   /* 🔑 sube más la grilla */
+  margin-top: -4rem;   /* 🔑 sube más la grilla */
   margin-right: 2rem;
 
   max-width: calc(100% - 10rem);
@@ -151,7 +151,7 @@
 
 .work-item:hover .work-media img,
 .work-item:hover .work-media video {
-  transform: scale(1.08);
+  transform: scale(1.2);
 }
 
 .work-item:hover .work-overlay {
