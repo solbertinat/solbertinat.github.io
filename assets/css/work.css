@@ -90,9 +90,6 @@
   aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
-
-  transform: translateZ(0); /* 🔑 fija el layer */
-  transition: transform 0.6s cubic-bezier(.19,1,.22,1);
 }
 
 .work-image {
@@ -114,7 +111,9 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 1.6s cubic-bezier(.19,1,.22,1);
+  transform: translateZ(0); /* 🔑 fija el layer */
+  transition: transform 0.6s cubic-bezier(.19,1,.22,1);
+  transform-origin: center;
 }
 
 /* OVERLAY */
@@ -156,7 +155,8 @@
 
 /* HOVER */
 
-.work-item:hover .work-media {
+.work-item:hover .work-media img,
+.work-item:hover .work-media video {
   transform: scale(1.08);
 }
 
