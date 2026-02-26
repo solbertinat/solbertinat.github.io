@@ -122,6 +122,9 @@
 .work-overlay {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+
   background-color: var(--hover-accent);
   opacity: 0;
 
@@ -132,6 +135,7 @@
   text-align: center;
 
   transition: opacity 0.45s ease;
+  pointer-events: none;
 }
 
 .work-name {
@@ -152,14 +156,14 @@
 
 /* HOVER */
 
-.work-media {
-  transition: transform 0.6s cubic-bezier(.19,1,.22,1);
+.work-item:hover .work-media {
+  transform: scale(1.08);
 }
-
 
 .work-item:hover .work-overlay {
   opacity: 1;
 }
+
 
 /* RESPONSIVE */
 
