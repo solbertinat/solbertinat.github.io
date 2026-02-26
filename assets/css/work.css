@@ -67,7 +67,7 @@
   gap: 1.6rem 1.8rem;          /* 🔑 vuelve a valores sanos */
 
   margin-left: 21rem;
-  margin-top: 2rem;            /* 🔑 deja de invadir el about */
+  margin-top: -2rem;            
   margin-right: 2rem;
 
   max-width: calc(100% - 21rem); /* 🔑 coherente con el margin-left */
