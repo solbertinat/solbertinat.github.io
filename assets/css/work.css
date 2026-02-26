@@ -64,16 +64,17 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 3rem 10rem;   /* 🔑 más cerca entre sí */
+  gap: 1.6rem 1.8rem;          /* 🔑 vuelve a valores sanos */
 
-  margin-left: 21rem;  /* deja aire para el título */
-  margin-top: -4rem;   /* 🔑 sube más la grilla */
+  margin-left: 21rem;
+  margin-top: 2rem;            /* 🔑 deja de invadir el about */
   margin-right: 2rem;
 
-  max-width: calc(100% - 5rem);
+  max-width: calc(100% - 21rem); /* 🔑 coherente con el margin-left */
 
   z-index: 3;
 }
+
 
 /* ITEM */
 
