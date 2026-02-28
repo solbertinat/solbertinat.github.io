@@ -49,10 +49,9 @@
     rgba(238, 255, 99, 0) 70%
   );
 
-  top: calc(10rem + 20vh); /* 🔑 SIEMPRE dentro de Work */
+  top: calc(5rem + 10vh); /* 🔑 SIEMPRE dentro de Work */
   right: -55rem;
-  bottom: 120px;
-
+  
   pointer-events: none;
   z-index: 1;
 }
