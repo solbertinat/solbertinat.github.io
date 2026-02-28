@@ -63,7 +63,7 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.6rem 1.8rem;          /* 🔑 vuelve a valores sanos */
+  gap: 1.85rem 2.2rem;          /* 🔑 vuelve a valores sanos */
 
   margin-left: 21rem;
   margin-top: -2rem;            
