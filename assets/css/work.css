@@ -164,6 +164,11 @@
 }
 
 
+.work {
+  padding-bottom: 22rem;
+}
+
+
 /* RESPONSIVE */
 
 @media (max-width: 1200px) {
