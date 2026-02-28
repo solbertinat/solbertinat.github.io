@@ -2,10 +2,10 @@
    CONTACT.
 ========================= */
 
-..contact-section {
+.contact-section {
   width: 100%;
   background-color: #b4d64f;
-  padding: 160px 0;
+  padding-top: 14rem;
 }
 
 .contact-inner {
