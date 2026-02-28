@@ -1,57 +1,50 @@
-/* =========================
-   CONTACT.
-========================= */
+<!-- =========================
+     CONTACT
+========================= -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
 
-.contact-section {
-  width: 100%;
-  background-color: #F6F5F0;
-  padding-top: 20rem;
-}
+    <!-- COLUMNA IZQUIERDA: DATOS -->
+    <div class="contact-left">
 
-.contact-inner {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 80px;
-}
+      <p class="contact-intro">
+        Disponible para proyectos editoriales, comerciales y colaboraciones creativas.
+      </p>
 
-.contact-inner h2 {
-  font-family: var(--font-serif);
-  font-size: 36px;
-  margin-bottom: 24px;
-}
+      <div class="contact-items">
+        <div>
+          <span class="contact-label">Mail</span>
+          <a href="mailto:sol.bertinat12@gmail.com">sol.bertinat12@gmail.com</a>
+        </div>
 
-.contact-intro {
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 48px;
-}
+        <div>
+          <span class="contact-label">Instagram</span>
+          <a href="https://instagram.com/solbertinat" target="_blank">@solbertinat_</a>
+        </div>
 
-.contact-items {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-bottom: 80px;
-}
+        <div>
+          <span class="contact-label">Behance</span>
+          <a href="https://behance.net/solbertinat" target="_blank">behance.net/solbertinat</a>
+        </div>
+      </div>
 
-.contact-label {
-  display: block;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  opacity: 0.7;
-  margin-bottom: 6px;
-}
+      <footer class="contact-footer">
+        © Sol Bertinat<br>
+        Buenos Aires
+      </footer>
 
-.contact-items a {
-  font-size: 16px;
-  text-decoration: none;
-  color: inherit;
-}
+    </div>
 
-.contact-footer {
-  font-size: 12px;
-  opacity: 0.6;
-}
+    <!-- COLUMNA DERECHA: RECTÁNGULO VERTICAL -->
+    <div class="contact-right">
+      <div class="contact-strip">
+        Contact me! Contact me! Contact me! Contact me! Contact me!
+        Contact me! Contact me! Contact me! Contact me! Contact me!
+      </div>
+    </div>
+
+  </div>
+</section>
 
 /* RESPONSIVE */
 
