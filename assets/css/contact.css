@@ -23,6 +23,24 @@
   align-items: center;
 }
 
+.contact-section {
+  position: relative;
+  z-index: 3;   /* 🔑 contact siempre por encima del círculo */
+}
+
+.contact-inner {
+  position: relative;
+  z-index: 4;   /* 🔑 texto aún más arriba */
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #F6F5F0;
+  z-index: 2;
+}
+
 /* =========================
    IZQUIERDA — TEXTO
 ========================= */
