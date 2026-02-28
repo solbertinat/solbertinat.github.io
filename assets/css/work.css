@@ -51,7 +51,7 @@
 
   top: calc(10rem + 20vh); /* 🔑 SIEMPRE dentro de Work */
   right: -55rem;
-  bottom: 70px;
+  bottom: 120px;
 
   pointer-events: none;
   z-index: 1;
@@ -192,6 +192,4 @@
   }
 }
 
-.work {
-  padding-bottom: 30rem; 
-}
+
