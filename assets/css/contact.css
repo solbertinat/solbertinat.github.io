@@ -1,17 +1,116 @@
+/* =========================
+   CONTACT
+========================= */
 
+.contact-section {
+  width: 100%;
+  background-color: #F6F5F0;
+  padding: 20rem 0;
+}
 
-/* RESPONSIVE */
+/* CONTENEDOR GENERAL */
+.contact-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 80px;
 
-@media (max-width: 768px) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8rem;
+}
 
-  .contact-inner,
+/* =========================
+   COLUMNA IZQUIERDA
+========================= */
+
+.contact-left {
+  max-width: 420px;
+}
+
+.contact-intro {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 64px;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 96px;
+}
+
+.contact-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 6px;
+}
+
+.contact-items a {
+  font-size: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-footer {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* =========================
+   COLUMNA DERECHA
+========================= */
+
+.contact-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RECTÁNGULO VERTICAL */
+.contact-strip {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  background-color: #cfe4ea; /* celeste paleta */
+  padding: 4rem 1.6rem;
+
+  font-family: var(--font-serif);
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #1F2E2A;
+  line-height: 1.8;
+
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
   .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 6rem;
     padding: 0 24px;
   }
 
-  .contact-inner {
-    grid-template-columns: 1fr;
-    gap: 48px;
+  .contact-right {
+    justify-content: flex-start;
+  }
+
+  .contact-strip {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 2rem;
+    font-size: 16px;
   }
 }
-
