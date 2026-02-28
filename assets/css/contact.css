@@ -1,14 +1,14 @@
 /* =========================
-   CONTACT.
+   CONTACT
 ========================= */
 
 .contact-section {
-  width: 100vw;                 /* 🔑 full ancho real */
-  margin-left: calc(50% - 50vw);/* 🔑 rompe el centrado */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   background-color: #F6F5F0;
   padding: 20rem 0;
   position: relative;
-  z-index: 5;                   /* 🔑 arriba del work */
+  z-index: 5;
 }
 
 /* CONTENEDOR */
@@ -28,13 +28,13 @@
 ========================= */
 
 .contact-left {
-  max-width: 420px;
+  max-width: 440px;
 }
 
 /* TEXTO DESTACADO */
 .contact-intro {
-  font-size: 17px;              /* 🔑 más grande */
-  line-height: 1.8;
+  font-size: 18px;          /* 🔑 más grande */
+  line-height: 1.85;
   margin-bottom: 72px;
 }
 
@@ -76,21 +76,19 @@
   align-items: center;
 }
 
-/* BLOQUE DE TEXTO REPETIDO */
+/* BLOQUE VERTICAL */
 .contact-strip {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;                  /* 🔑 bien pegados */
+  gap: 0.25rem;                 /* 🔑 muy pegados */
 
   font-family: var(--font-serif);
-  font-size: 22px;
-  letter-spacing: 0.14em;
+  font-size: 20px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.15;
 
-  color: #1F2E2A;
-  background-color: #cfe4ea;    /* celeste paleta */
-  padding: 3.5rem 3rem;
+  color: #cfe4ea;               /* 🔑 celeste SOLO texto */
 }
 
 /* =========================
@@ -105,7 +103,6 @@
   }
 
   .contact-strip {
-    font-size: 16px;
-    padding: 2rem;
+    font-size: 14px;
   }
 }
