@@ -1,5 +1,5 @@
 /* =========================
-   CONTACT,
+   CONTACT
 ========================= */
 
 .contact-section {
@@ -8,7 +8,7 @@
   background-color: #F6F5F0;
   padding: 20rem 0;
   position: relative;
-  z-index: 5;
+  z-index: 6; /* por encima del círculo del work */
 }
 
 /* CONTENEDOR */
@@ -21,24 +21,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 8rem;
   align-items: center;
-}
-
-.contact-section {
   position: relative;
-  z-index: 3;   /* 🔑 contact siempre por encima del círculo */
-}
-
-.contact-inner {
-  position: relative;
-  z-index: 4;   /* 🔑 texto aún más arriba */
-}
-
-.contact-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #F6F5F0;
-  z-index: 2;
+  z-index: 7;
 }
 
 /* =========================
@@ -49,14 +33,12 @@
   max-width: 440px;
 }
 
-/* TEXTO DESTACADO */
 .contact-intro {
-  font-size: 18px;          /* 🔑 más grande */
+  font-size: 18px;
   line-height: 1.85;
   margin-bottom: 72px;
 }
 
-/* DATOS */
 .contact-items {
   display: flex;
   flex-direction: column;
@@ -85,7 +67,7 @@
 }
 
 /* =========================
-   DERECHA — BLOQUE "CONTACT ME"
+   DERECHA — CUADRADO CUT-OUT
 ========================= */
 
 .contact-right {
@@ -94,19 +76,30 @@
   align-items: center;
 }
 
-/* BLOQUE VERTICAL */
 .contact-strip {
+  width: 420px;
+  height: 420px;
+
+  background-color: #cfe4ea; /* celeste */
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;                 /* 🔑 muy pegados */
+  gap: 0.05rem;
+
+  padding: 1.5rem;
 
   font-family: var(--font-serif);
-  font-size: 20px;
-  letter-spacing: 0.18em;
+  font-size: 14px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  line-height: 1.15;
+  line-height: 1.05;
 
-  color: #cfe4ea;               /* 🔑 celeste SOLO texto */
+  color: #F6F5F0; /* hueso */
+}
+
+.contact-strip span {
+  opacity: 0.85; /* efecto cut-out */
 }
 
 /* =========================
@@ -121,6 +114,9 @@
   }
 
   .contact-strip {
-    font-size: 14px;
+    width: 300px;
+    height: 300px;
+    font-size: 12px;
   }
 }
+
