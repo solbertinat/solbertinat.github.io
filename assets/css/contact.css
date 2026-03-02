@@ -91,10 +91,9 @@
 
   font-family: var(--font-serif);
   font-size: 18px;           /* 🔑 más grande */
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  line-height: 1;
-
+  font-size: 28px;        /* 🔑 bastante más grande */
+  letter-spacing: 0.14em;
+  line-height: 1;         /* compacto para que llene */
   color: #F6F5F0;            /* hueso */
 }
 
