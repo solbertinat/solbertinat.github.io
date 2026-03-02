@@ -8,12 +8,12 @@
   background-color: #F6F5F0;
   padding: 20rem 0;
   position: relative;
-  z-index: 4; /* fondo del contact */
+  z-index: 3; /* fondo del contact */
 }
 
 .contact-inner {
   position: relative;
-  z-index: 6; /* texto por encima del círculo */
+  z-index: 5; /* texto por encima del círculo */
    
   max-width: 1200px;
   margin: 0 auto;
