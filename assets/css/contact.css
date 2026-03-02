@@ -8,11 +8,13 @@
   background-color: #F6F5F0;
   padding: 20rem 0;
   position: relative;
-  z-index: 6; /* por encima del círculo del work */
+  z-index: 4; /* fondo del contact */
 }
 
-/* CONTENEDOR */
 .contact-inner {
+  position: relative;
+  z-index: 6; /* texto por encima del círculo */
+   
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 80px;
@@ -21,8 +23,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 8rem;
   align-items: center;
-  position: relative;
-  z-index: 7;
 }
 
 /* =========================
@@ -77,41 +77,45 @@
 }
 
 .contact-strip {
-  width: 420px;
-  height: 420px;
+  width: 440px;
+  height: 440px;
 
   background-color: #cfe4ea; /* celeste */
   overflow: hidden;
 
-  display: flex;
-  flex-direction: column;
-  gap: 0.05rem;
+  display: grid;
+  grid-auto-rows: 1fr;       /* 🔑 filas iguales */
+  align-content: stretch;
 
-  padding: 1.5rem;
+  padding: 1.2rem;
 
   font-family: var(--font-serif);
-  font-size: 14px;
-  letter-spacing: 0.14em;
+  font-size: 18px;           /* 🔑 más grande */
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  line-height: 1.05;
+  line-height: 1;
 
-  color: #F6F5F0; /* hueso */
+  color: #F6F5F0;            /* hueso */
 }
 
 .contact-strip span {
-  opacity: 0.85; /* efecto cut-out */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.9;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
-
 @media (max-width: 900px) {
-  .contact-inner {
-    grid-template-columns: 1fr;
-    gap: 6rem;
-    padding: 0 24px;
+  .contact-strip {
+    width: 300px;
+    height: 300px;
+    font-size: 14px;
   }
+}
 
   .contact-strip {
     width: 300px;
