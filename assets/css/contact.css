@@ -69,39 +69,19 @@
 /* =========================
    DERECHA — CUADRADO CUT-OUT
 ========================= */
-
-.contact-right {
+.contactme {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.contact-strip {
-  width: 440px;
-  height: 440px;
-
-  background-color: #cfe4ea; /* celeste */
   overflow: hidden;
-
-  display: grid;
-  grid-auto-rows: 1fr;       /* 🔑 filas iguales */
-  align-content: stretch;
-
-  padding: 1.2rem;
-
-  font-family: var(--font-serif);
-  font-size: 35px;        /* 🔑 bastante más grande */
-  letter-spacing: 0.14em;
-  line-height: 1;         /* compacto para que llene */
-  color: #F6F5F0;            /* hueso */
 }
 
-.contact-strip span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  opacity: 0.9;
+.contactme img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform-origin: center bottom;
 }
 
 /* =========================
