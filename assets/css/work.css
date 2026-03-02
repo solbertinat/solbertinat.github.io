@@ -71,7 +71,7 @@
 
   max-width: calc(100% - 21rem); /* 🔑 coherente con el margin-left */
 
-  z-index: 5;
+  z-index: 4;
 }
 
 
