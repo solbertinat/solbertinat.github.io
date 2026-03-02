@@ -30,7 +30,6 @@
 
 /* =========================
    CÍRCULO DIFUMINADO (SOLO DENTRO DE WORK)
-========================= */
 
 .work::after {
   content: "";
@@ -55,6 +54,7 @@
   pointer-events: none;
   z-index: 2;
 }
+========================= */
 
 
 /* GRID */
