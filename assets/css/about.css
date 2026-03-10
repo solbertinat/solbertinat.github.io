@@ -38,39 +38,14 @@
   padding: 0 80px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
   align-items: center;
   margin-top: -2rem;
 }
 
 /* =========================
-   TEXTO IZQUIERDA
-========================= */
-
-.about-text {
-  max-width: 430px;
-  justify-self: center;
-  align-self: center;
-}
-
-.about-text p {
-  font-size: 14px;
-  line-height: 1.75;
-  margin-bottom: 22px;
-}
-
-.about-text p:first-child::first-letter {
-  font-family: var(--font-serif);
-  font-size: 4.6rem;
-  line-height: 0.85;
-  float: left;
-  margin-right: 10px;
-  margin-top: 2px;
-}
-
-/* =========================
-   IMAGEN CENTRO
+   IZQUIERDA — IMAGEN
 ========================= */
 
 .about-image {
@@ -78,12 +53,11 @@
   justify-content: center;
   align-self: center;
   position: relative;
-  margin-top: -4rem;
 }
 
 .about-image img.profile-image {
   width: 100%;
-  max-width: 255px;
+  max-width: 320px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   position: relative;
@@ -101,22 +75,22 @@
 }
 
 .about-star {
-  width: 112px;
-  top: -14px;
-  left: 22px;
+  width: 120px;
+  top: -18px;
+  left: 34px;
   animation: starSwing 0.9s steps(2, end) infinite alternate;
 }
 
 .about-tape {
-  width: 104px;
-  bottom: 12px;
-  left: 12px;
+  width: 115px;
+  bottom: 22px;
+  left: 18px;
   animation: tapeSwing 1.1s steps(2, end) infinite alternate;
 }
 
 .about-flower {
-  width: 180px;
-  right: 3px;
+  width: 175px;
+  right: 8px;
   top: 34%;
   animation: flowerSwing 0.8s steps(2, end) infinite alternate;
 }
@@ -137,49 +111,27 @@
 }
 
 /* =========================
-   DERECHA — HIGHLIGHTS + CV
+   DERECHA — TEXTO + CV
 ========================= */
 
-.about-side {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: center;
-  gap: 3rem;
-  margin-top: -2rem;
+.about-text {
+  max-width: 520px;
+  justify-self: start;
 }
 
-/* =========================
-   HIGHLIGHTS
-========================= */
-
-.about-highlights h3 {
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  opacity: 0.8;
-}
-
-.about-highlights ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.about-highlights li {
+.about-text p {
   font-size: 14px;
-  margin-bottom: 12px;
-  padding-left: 1.4rem;
-  position: relative;
+  line-height: 1.75;
+  margin-bottom: 20px;
 }
 
-.about-highlights li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  opacity: 0.6;
+.about-text p:first-child::first-letter {
+  font-family: var(--font-serif);
+  font-size: 4.6rem;
+  line-height: 0.85;
+  float: left;
+  margin-right: 10px;
+  margin-top: 4px;
 }
 
 /* =========================
@@ -187,6 +139,9 @@
 ========================= */
 
 .cv-link {
+  display: inline-block;
+  margin-top: 2rem;
+
   font-family: var(--font-sans);
   font-size: 0.9rem;
   letter-spacing: 0.14em;
