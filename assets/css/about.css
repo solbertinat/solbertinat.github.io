@@ -39,7 +39,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 7rem;
+  gap: 8rem;
   align-items: center;
   margin-top: -2rem;
 }
@@ -53,6 +53,7 @@
   justify-content: center;
   align-self: center;
   position: relative;
+  margin-left: -2rem;
 }
 
 .about-image img.profile-image {
@@ -115,14 +116,14 @@
 ========================= */
 
 .about-text {
-  max-width: 520px;
+  max-width: 620px;
   justify-self: start;
 }
 
 .about-text p {
-  font-size: 14px;
-  line-height: 1.75;
-  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 18px;
 }
 
 .about-text p:first-child::first-letter {
@@ -140,7 +141,7 @@
 
 .cv-link {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 1rem;
 
   font-family: var(--font-sans);
   font-size: 0.9rem;
