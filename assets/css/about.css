@@ -50,8 +50,7 @@
 .about-text {
   max-width: 430px;
   justify-self: center;
-  align-self: start;
-  margin-top: -2.5rem;
+  align-self: center;
 }
 
 .about-text p {
@@ -76,14 +75,13 @@
 .about-image {
   display: flex;
   justify-content: center;
-  align-self: start;
+  align-self: center;
   position: relative;
-  margin-top: -2.5rem;
 }
 
 .about-image img.profile-image {
   width: 100%;
-  max-width: 220px;
+  max-width: 240px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
   position: relative;
@@ -98,34 +96,42 @@
   position: absolute;
   z-index: 5;
   pointer-events: none;
-  animation: decoSwing 2.2s steps(2, end) infinite alternate;
 }
 
 .about-star {
-  width: 72px;
-  top: -18px;
-  left: -8px;
+  width: 88px;
+  top: -14px;
+  left: 28px;
+  animation: starSwing 2.4s steps(2, end) infinite alternate;
 }
 
 .about-tape {
   width: 92px;
   bottom: 18px;
-  left: -18px;
+  left: 12px;
+  animation: tapeSwing 2.9s steps(2, end) infinite alternate;
 }
 
 .about-flower {
-  width: 88px;
-  right: -18px;
-  top: 38%;
+  width: 110px;
+  right: 12px;
+  top: 34%;
+  animation: flowerSwing 2.1s steps(2, end) infinite alternate;
 }
 
-@keyframes decoSwing {
-  0% {
-    transform: rotate(-10deg);
-  }
-  100% {
-    transform: rotate(10deg);
-  }
+@keyframes starSwing {
+  0% { transform: rotate(-8deg); }
+  100% { transform: rotate(9deg); }
+}
+
+@keyframes tapeSwing {
+  0% { transform: rotate(7deg); }
+  100% { transform: rotate(-10deg); }
+}
+
+@keyframes flowerSwing {
+  0% { transform: rotate(-11deg); }
+  100% { transform: rotate(8deg); }
 }
 
 /* =========================
@@ -139,7 +145,6 @@
   justify-content: center;
   align-self: center;
   gap: 3rem;
-  margin-top: 0;
 }
 
 /* =========================
