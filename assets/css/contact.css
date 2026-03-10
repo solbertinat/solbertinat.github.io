@@ -74,15 +74,23 @@
   font-weight: 320;
   font-size: clamp(5rem, 14vw, 18rem);
   color: #1F2E2A;
-  line-height: 0.95;
+  line-height: 0.82;
 
   position: absolute;
-  right: -0.5rem;                
+  right: -0.5rem;
   top: 50%;
-  transform: translateY(50%); 
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   pointer-events: none;
-   z-index: 7;
+  z-index: 7;
+}
+
+.contact-title span:last-child {
+  margin-left: 2.05ch;
 }
 
 /* =========================
