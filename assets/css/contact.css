@@ -72,12 +72,12 @@
 .contact-title {
   font-family: var(--font-serif);
   font-weight: 320;
-  font-size: clamp(5rem, 14vw, 18rem);
+  font-size: clamp(4rem, 11.2vw, 14.4rem);
   color: #1F2E2A;
   line-height: 0.82;
 
   position: absolute;
-  right: -0.5rem;
+  right: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
 
@@ -89,8 +89,12 @@
   z-index: 7;
 }
 
+.contact-title span:first-child {
+  margin-left: -1.2rem;
+}
+
 .contact-title span:last-child {
-  margin-left: 2.05ch;
+  margin-left: 3rem;
 }
 
 /* =========================
