@@ -33,13 +33,13 @@
 
 .about-inner {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 80px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8rem;
+  grid-template-columns: 0.85fr 1.45fr;
+  gap: 5rem;
   align-items: center;
   margin-top: -2rem;
 }
@@ -78,21 +78,21 @@
 .about-star {
   width: 140px;
   top: -19px;
-  left: 34px;
+  left: 36px;
   animation: starSwing 0.9s steps(2, end) infinite alternate;
 }
 
 .about-tape {
-  width: 130px;
-  bottom: 21px;
+  width: 160px;
+  bottom: 18px;
   left: 25px;
   animation: tapeSwing 1.1s steps(2, end) infinite alternate;
 }
 
 .about-flower {
-  width: 190px;
-  right: 10px;
-  top: 40%;
+  width: 200px;
+  right: 12px;
+  top: 15%;
   animation: flowerSwing 0.8s steps(2, end) infinite alternate;
 }
 
@@ -116,11 +116,12 @@
 ========================= */
 
 .about-text {
-  max-width: 760px;
   width: 100%;
+  max-width: 760px;
   justify-self: start;
-  align-self: start;
-  margin-top: -3.5rem;
+  align-self: center;
+  margin-top: -1rem;
+  margin-left: -1rem;
 }
 
 .about-text p {
