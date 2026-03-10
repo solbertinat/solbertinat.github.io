@@ -71,11 +71,12 @@
 
 .about-image img {
   width: 100%;
-  max-width: 320px;
+  max-width: 250px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
+  position: relative;
+  z-index: 3;
 }
-
 /* =========================
    DERECHA — HIGHLIGHTS + CV
 ========================= */
@@ -152,6 +153,27 @@
 
 .cv-link:hover::after {
   transform: scaleX(0.4);
+}
+
+.about-section::after {
+  content: "";
+  position: absolute;
+
+  width: 220px;
+  height: 280px;
+
+  background: #eeff63;
+
+  border-radius: 48% 52% 43% 57% / 54% 42% 58% 46%;
+
+  right: 31%;
+  top: 48%;
+
+  transform: translate(-50%, -50%) rotate(-12deg);
+
+  z-index: 1;
+  opacity: 0.55;
+  pointer-events: none;
 }
 
 /* =========================
