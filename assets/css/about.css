@@ -79,14 +79,14 @@
 
 .about-star {
   width: 140px;
-  top: -28px;
+  top: -32px;
   left: -4px;
   animation: starSwing 0.9s steps(2, end) infinite alternate;
 }
 
 .about-tape {
   width: 160px;
-  bottom: -30px;
+  bottom: -40px;
   left: 25px;
   animation: tapeSwing 1.1s steps(2, end) infinite alternate;
 }
@@ -94,7 +94,7 @@
 .about-flower {
   width: 220px;
   right: -20px;
-  top: 21%;
+  top: 19.5%;
   animation: flowerSwing 0.8s steps(2, end) infinite alternate;
 }
 
