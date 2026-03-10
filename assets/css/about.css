@@ -76,23 +76,23 @@
 }
 
 .about-star {
-  width: 120px;
-  top: -18px;
+  width: 140px;
+  top: -19px;
   left: 34px;
   animation: starSwing 0.9s steps(2, end) infinite alternate;
 }
 
 .about-tape {
-  width: 115px;
-  bottom: 22px;
-  left: 18px;
+  width: 130px;
+  bottom: 21px;
+  left: 25px;
   animation: tapeSwing 1.1s steps(2, end) infinite alternate;
 }
 
 .about-flower {
-  width: 175px;
-  right: 8px;
-  top: 34%;
+  width: 190px;
+  right: 10px;
+  top: 40%;
   animation: flowerSwing 0.8s steps(2, end) infinite alternate;
 }
 
@@ -116,14 +116,17 @@
 ========================= */
 
 .about-text {
-  max-width: 620px;
+  max-width: 760px;
+  width: 100%;
   justify-self: start;
+  align-self: start;
+  margin-top: -3.5rem;
 }
 
 .about-text p {
   font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 18px;
+  line-height: 1.65;
+  margin-bottom: 16px;
 }
 
 .about-text p:first-child::first-letter {
