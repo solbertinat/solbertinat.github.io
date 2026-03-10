@@ -79,7 +79,7 @@
 
 .about-star {
   width: 140px;
-  top: -20px;
+  top: -10px;
   left: -2px;
   animation: starSwing 0.9s steps(2, end) infinite alternate;
 }
