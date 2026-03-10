@@ -41,6 +41,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  margin-top: -2rem;
 }
 
 /* =========================
@@ -99,24 +100,24 @@
 }
 
 .about-star {
-  width: 88px;
+  width: 100px;
   top: -14px;
   left: 28px;
-  animation: starSwing 2.4s steps(2, end) infinite alternate;
+  animation: starSwing 0.9s steps(2, end) infinite alternate;
 }
 
 .about-tape {
   width: 92px;
   bottom: 18px;
   left: 12px;
-  animation: tapeSwing 2.9s steps(2, end) infinite alternate;
+  animation: tapeSwing 1.1s steps(2, end) infinite alternate;
 }
 
 .about-flower {
-  width: 110px;
+  width: 145px;
   right: 12px;
   top: 34%;
-  animation: flowerSwing 2.1s steps(2, end) infinite alternate;
+  animation: flowerSwing 0.8s steps(2, end) infinite alternate;
 }
 
 @keyframes starSwing {
