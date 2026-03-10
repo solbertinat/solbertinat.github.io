@@ -80,20 +80,20 @@
 .about-star {
   width: 140px;
   top: -17px;
-  left: 50px;
+  left: -5px;
   animation: starSwing 0.9s steps(2, end) infinite alternate;
 }
 
 .about-tape {
   width: 160px;
-  bottom: 6px;
+  bottom: -3px;
   left: 25px;
   animation: tapeSwing 1.1s steps(2, end) infinite alternate;
 }
 
 .about-flower {
   width: 220px;
-  right: -3px;
+  right: -5px;
   top: 22.5%;
   animation: flowerSwing 0.8s steps(2, end) infinite alternate;
 }
