@@ -71,17 +71,18 @@
 ========================= */
 .contact-title {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 320;
   font-size: clamp(5rem, 14vw, 18rem);
   color: #1F2E2A;
   line-height: 0.95;
 
   position: absolute;
-  right: -0.5rem;                 /* 🔑 AHORA sí toca el borde */
+  right: -0.5rem;                
   top: 50%;
-  transform: translateY(75%); /* 🔑 controla cuánto baja */
+  transform: translateY(50%); 
 
   pointer-events: none;
+   z-index: 7;
 }
 
 /* =========================
