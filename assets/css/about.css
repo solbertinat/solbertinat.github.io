@@ -38,7 +38,7 @@
   padding: 0 80px;
 
   display: grid;
-  grid-template-columns: 0.85fr 1.45fr;
+  grid-template-columns: 0.9fr 1.35fr;
   gap: 5rem;
   align-items: center;
   margin-top: -2rem;
@@ -117,11 +117,11 @@
 
 .about-text {
   width: 100%;
-  max-width: 760px;
+  max-width: 700px;
   justify-self: start;
   align-self: center;
-  margin-top: -1rem;
-  margin-left: -1rem;
+  margin-top: -2rem;
+  margin-left: 0.5rem;
 }
 
 .about-text p {
