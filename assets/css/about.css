@@ -4,14 +4,14 @@
 
 .about-section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #e6c3cc;
   display: flex;
   align-items: center;
-  position: relative; /* 🔑 referencia real del título */
+  position: relative;
 }
 
-/* TÍTULO ABOUT (FUERA DEL GRID) */
+/* TÍTULO ABOUT */
 .about-title {
   font-family: var(--font-serif);
   font-weight: 400;
@@ -20,9 +20,9 @@
   line-height: 0.95;
 
   position: absolute;
-  right: -0.5rem;                 /* 🔑 AHORA sí toca el borde */
+  right: -0.5rem;
   top: 50%;
-  transform: translateY(75%); /* 🔑 controla cuánto baja */
+  transform: translateY(75%);
 
   pointer-events: none;
 }
@@ -33,23 +33,22 @@
 
 .about-inner {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 80px;
 
   display: grid;
-  grid-template-columns: 4fr 3fr;
-  gap: 100px;
-
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
   align-items: center;
 }
 
 /* =========================
-   BLOQUE IZQUIERDO — TEXTO
+   TEXTO IZQUIERDA
 ========================= */
 
 .about-text {
-  max-width: 530px;
+  max-width: 430px;
   justify-self: center;
 }
 
@@ -60,16 +59,30 @@
 }
 
 /* =========================
-   BLOQUE DERECHO — HIGHLIGHTS
+   IMAGEN CENTRO
+========================= */
+
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* =========================
+   DERECHA — HIGHLIGHTS + CV
 ========================= */
 
 .about-side {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 4rem;
-  gap: 3.5rem;
+  align-items: flex-start;
+  gap: 3rem;
 }
 
 /* =========================
@@ -104,19 +117,43 @@
   opacity: 0.6;
 }
 
-/* LINK CV */
+/* =========================
+   BOTÓN CV
+========================= */
+
 .cv-link {
-  display: inline-block;
-  margin-top: 24px;
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  color: var(--text);
   text-decoration: none;
-  color: inherit;
-  opacity: 0.9;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-/* ===*
+.cv-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.cv-link:hover {
+  color: #eeff63;
+}
+
+.cv-link:hover::after {
+  transform: scaleX(0.4);
+}
+
+/* =========================
+   TRANSICIÓN ABOUT → WORK
+========================= */
 
 .about-work-spacer {
   height: 40vh;
