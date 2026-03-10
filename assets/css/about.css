@@ -63,7 +63,7 @@
   object-fit: cover;
   position: relative;
   z-index: 3;
-  transform: rotate(-12deg);
+  transform: rotate(-6deg);
 }
 
 /* =========================
@@ -121,7 +121,7 @@
   max-width: 700px;
   justify-self: start;
   align-self: center;
-  margin-top: -1rem;
+  margin-top: -10rem;
   margin-left: -0.5rem;
 }
 
