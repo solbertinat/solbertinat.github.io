@@ -1,5 +1,5 @@
 /* =========================
-   CONTACT
+   CONTACT.
 ========================= */
 
 .contact-section {
@@ -26,6 +26,7 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 6rem;
   align-items: center;
+  min-height: 700px;
 }
 
 /* =========================
@@ -60,18 +61,6 @@
 }
 
 /* =========================
-   INTRO CELESTE
-========================= */
-
-.contact-intro {
-  max-width: 260px;
-  font-size: 18px;
-  line-height: 1.35;
-  color: #cfe4ea;
-  margin: 0;
-}
-
-/* =========================
    MEDIOS CONTACTO
 ========================= */
 
@@ -80,8 +69,9 @@
   flex-direction: column;
   gap: 32px;
 
-  align-self: center;
-  margin-left: 4rem;
+  width: 320px;
+  margin-left: 9rem;
+  text-align: center;
 }
 
 .contact-label {
@@ -110,7 +100,7 @@
   height: 1px;
   background-color: currentColor;
   transition: transform 0.3s ease;
-  transform-origin: left;
+  transform-origin: center;
 }
 
 .contact-items a:hover {
@@ -138,6 +128,10 @@
   z-index: 9;
 }
 
+/* =========================
+   TELÉFONO
+========================= */
+
 .contact-phone {
   width: 480px;
   max-width: 100%;
@@ -145,22 +139,35 @@
   right: -80px;
   z-index: 8;
 
-  animation: phoneSlideIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateX(180px);
+  animation: phoneSlideIn 0.9s ease-out forwards;
+}
+
+@keyframes phoneSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* =========================
-   PHONE ANIMATION
+   TEXTO CELESTE
 ========================= */
 
-@keyframes phoneSlideIn {
-  from {
-    transform: translateX(220px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.contact-intro {
+  position: absolute;
+  left: 2rem;
+  top: 62%;
+
+  max-width: 220px;
+
+  font-size: 17px;
+  line-height: 1.35;
+  color: #cfe4ea;
+
+  z-index: 10;
+  margin: 0;
 }
 
 /* =========================
@@ -171,17 +178,16 @@
   position: absolute;
   width: 80px;
 
-  top: 12%;
-  left: 8%;
+  top: 10%;
+  left: 14%;
 
   z-index: 10;
 
-  transform: rotate(10deg);
-
   opacity: 0;
+
   animation:
-    pinkAppear 0.2s ease forwards 1s,
-    pinkSwing 1s steps(2, end) infinite alternate 1.2s;
+    pinkAppear 0.2s ease forwards 0.9s,
+    pinkSwing 1s steps(2, end) infinite alternate 1.1s;
 }
 
 @keyframes pinkAppear {
@@ -192,10 +198,10 @@
 
 @keyframes pinkSwing {
   0% {
-    transform: rotate(2deg);
+    transform: rotate(-20deg);
   }
   100% {
-    transform: rotate(18deg);
+    transform: rotate(-8deg);
   }
 }
 
