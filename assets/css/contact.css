@@ -60,10 +60,6 @@
   margin-left: 0;
 }
 
-/* =========================
-   MEDIOS CONTACTO
-========================= */
-
 .contact-items {
   display: flex;
   flex-direction: column;
@@ -140,15 +136,13 @@
   z-index: 8;
 
   opacity: 0;
-  transform: translateX(180px);
-  animation: phoneSlideIn 0.9s ease-out forwards;
+  transform: translateX(220px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-@keyframes phoneSlideIn {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.contact-phone.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* =========================
@@ -156,17 +150,10 @@
 ========================= */
 
 .contact-intro {
-  position: absolute;
-  left: 2rem;
-  top: 62%;
-
-  max-width: 220px;
-
-  font-size: 17px;
+  max-width: 260px;
+  font-size: 18px;
   line-height: 1.35;
   color: #cfe4ea;
-
-  z-index: 10;
   margin: 0;
 }
 
@@ -178,16 +165,17 @@
   position: absolute;
   width: 80px;
 
-  top: 10%;
-  left: 14%;
+  top: 6%;
+  left: 24%;
 
   z-index: 10;
 
   opacity: 0;
+  transform: rotate(-20deg);
 
   animation:
     pinkAppear 0.2s ease forwards 0.9s,
-    pinkSwing 1s steps(2, end) infinite alternate 1.1s;
+    pinkSwing 0.8s steps(2, end) infinite alternate 1.1s;
 }
 
 @keyframes pinkAppear {
@@ -198,10 +186,10 @@
 
 @keyframes pinkSwing {
   0% {
-    transform: rotate(-20deg);
+    transform: rotate(-26deg);
   }
   100% {
-    transform: rotate(-8deg);
+    transform: rotate(-10deg);
   }
 }
 
