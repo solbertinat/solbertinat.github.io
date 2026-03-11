@@ -10,8 +10,8 @@
 }
 
 .contact-background {
-   background-color: #F6F5F0;
-   z-index: 1;
+  background-color: #F6F5F0;
+  z-index: 1;
 }
 
 .contact-inner {
@@ -33,13 +33,13 @@
 ========================= */
 
 .contact-left {
-  max-width: 440px;
+  max-width: 520px;
   position: relative;
   z-index: 10;
 
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .contact-title {
@@ -59,10 +59,29 @@
   margin-left: 0;
 }
 
+/* =========================
+   INTRO CELESTE
+========================= */
+
+.contact-intro {
+  max-width: 260px;
+  font-size: 18px;
+  line-height: 1.35;
+  color: #cfe4ea;
+  margin: 0;
+}
+
+/* =========================
+   MEDIOS CONTACTO
+========================= */
+
 .contact-items {
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  align-self: center;
+  margin-left: 4rem;
 }
 
 .contact-label {
@@ -125,25 +144,59 @@
   position: relative;
   right: -80px;
   z-index: 8;
+
+  animation: phoneSlideIn 1s ease-out forwards;
 }
 
 /* =========================
-   TEXTO ROSA
+   PHONE ANIMATION
 ========================= */
 
-.contact-intro {
+@keyframes phoneSlideIn {
+  from {
+    transform: translateX(220px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* =========================
+   PINK SHAPES
+========================= */
+
+.contact-pink {
   position: absolute;
-  right: 2rem;
-  top: 32%;
+  width: 80px;
 
-  max-width: 210px;
-
-  font-size: 18px;
-  line-height: 1.35;
-  color: #E35C8A;
+  top: 12%;
+  left: 8%;
 
   z-index: 10;
-  margin: 0;
+
+  transform: rotate(10deg);
+
+  opacity: 0;
+  animation:
+    pinkAppear 0.2s ease forwards 1s,
+    pinkSwing 1s steps(2, end) infinite alternate 1.2s;
+}
+
+@keyframes pinkAppear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pinkSwing {
+  0% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(18deg);
+  }
 }
 
 /* =========================
