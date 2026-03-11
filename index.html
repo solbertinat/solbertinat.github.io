@@ -431,6 +431,23 @@
 
   </div>
 </section>
+
+    <script>
+const contactSection = document.querySelector('.contact-section');
+const phone = document.querySelector('.contact-phone');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      phone.classList.add('is-visible');
+    }
+  });
+}, {
+  threshold: 0.33
+});
+
+observer.observe(contactSection);
+</script>
     
 <!-- =========================
      SCRIPT .HERO (sin cambios)
