@@ -5,10 +5,13 @@
 .contact-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  background-color: #F6F5F0;
-  padding: 6rem 0;
+  padding-top: 10rem;
   position: relative;
-  z-index: 3;
+}
+
+.contact-background {
+   background-color: #F6F5F0;
+   z-index: 1;
 }
 
 .contact-inner {
