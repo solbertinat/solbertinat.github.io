@@ -66,10 +66,15 @@
   gap: 32px;
 
   width: 320px;
-  margin-left: 14rem;
-  margin-top: -55px;
+
+  position: absolute;
+  left: 50%;
+  top: 43%;
+
+  transform: translateX(-55%);
 
   text-align: center;
+  z-index: 10;
 }
 
 .contact-label {
@@ -131,7 +136,7 @@
 ========================= */
 
 .contact-phone {
-  width: 410px;
+  width: 440px;
   max-width: 100%;
   position: relative;
   right: -80px;
@@ -152,12 +157,14 @@
 ========================= */
 
 .contact-note {
-  width: 180px;
+  width: 380px;
 
   position: relative;
   margin-top: -2.5rem;
   margin-left: 1.5rem;
   transform: rotate(-6deg);
+
+    filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.10));
 
   z-index: 11;
 }
@@ -177,7 +184,7 @@
 
   opacity: 0;
 
-  filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.18));
+  filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.10));
 
   animation:
     pinkAppear 0.2s ease forwards 0.9s,
@@ -193,10 +200,10 @@
 
 @keyframes pinkSwing {
   0% {
-    transform: rotate(-26deg);
+    transform: rotate(-36deg);
   }
   100% {
-    transform: rotate(-14deg);
+    transform: rotate(-24deg);
   }
 }
 
