@@ -66,7 +66,9 @@
   gap: 32px;
 
   width: 320px;
-  margin-left: 9rem;
+  margin-left: calc(50vw - 320px);
+  margin-top: -25px;
+
   text-align: center;
 }
 
@@ -129,7 +131,7 @@
 ========================= */
 
 .contact-phone {
-  width: 480px;
+  width: 410px;
   max-width: 100%;
   position: relative;
   right: -80px;
@@ -146,15 +148,16 @@
 }
 
 /* =========================
-   TEXTO CELESTE
+   TEXTO burgundy
 ========================= */
 
 .contact-intro {
   max-width: 260px;
   font-size: 18px;
   line-height: 1.35;
-  color: #cfe4ea;
+  color: #8c1d2c;
   margin: 0;
+  margin-top: 10px;
 }
 
 /* =========================
@@ -163,15 +166,15 @@
 
 .contact-pink {
   position: absolute;
-  width: 80px;
+  width: 100px;
 
   top: 6%;
-  left: 24%;
+  left: 40%;
 
   z-index: 10;
 
   opacity: 0;
-  transform: rotate(-20deg);
+  transform: rotate(-50deg);
 
   animation:
     pinkAppear 0.2s ease forwards 0.9s,
