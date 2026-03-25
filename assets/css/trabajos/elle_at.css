@@ -71,7 +71,7 @@ body { scrollbar-width: none; }
   bottom: 0;                    /* CIERRA ABAJO EN EL VIEWPORT */
 }
 
-.elleat-cover-image img {
+.elleat-cover-video video {
   height: 105vh;                /* PROTAGONISTA */
   width: auto;
   object-fit: contain;
