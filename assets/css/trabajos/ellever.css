@@ -1,1 +1,156 @@
 
+:root {
+  --ellever-bg: #C8D6E0;
+  --ellever-text: #1F2E2A;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body {
+  background-color: var(--ellever-bg);
+  color: var(--ellever-text);
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar { width: 0; }
+body { scrollbar-width: none; }
+
+/* =========================
+   PORTADA
+========================= */
+
+.ellever-cover {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;          /* centra verticalmente el texto */
+  padding-left: 12vw;
+}
+
+/* TEXTO */
+
+.ellever-text {
+  width: 430px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.ellever-text h1 {
+  font-family: var(--font-serif);
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.ellever-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 32px;
+}
+
+.ellever-text p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   VIDEO PORTADA
+========================= */
+
+.ellever-cover-video {
+  position: absolute;
+  top: 0;                       /* TOPE ARRIBA */
+  right: 0;                     /* TOPE DERECHA */
+  bottom: 0;                    /* CIERRA ABAJO EN EL VIEWPORT */
+}
+
+.ellever-cover-video video {
+  height: 105vh;                /* PROTAGONISTA */
+  width: auto;
+  object-fit: contain;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.15s;
+}
+
+/* =========================
+   LAYOUT EDITORIAL FINAL
+========================= */
+
+/* =========================
+   LAYOUT EDITORIAL FINAL
+========================= */
+
+.layout_ellever {
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.layout_ellever img {
+  width: 100%;
+  max-width: 1440px;   /* coincide con el ancho real del archivo */
+  height: auto;
+  display: block;
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .ellever-cover {
+    padding: 60px 24px;
+    align-items: flex-start;
+  }
+
+  .ellever-text {
+    width: 100%;
+  }
+
+  .ellever-cover-image {
+    position: static;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .ellever-cover-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .layout_ellever {
+    padding: 80px 0;
+  }
+
+  .layout_ellever img {
+    width: 100%;
+    max-height: none;
+  }
+}
+
+
