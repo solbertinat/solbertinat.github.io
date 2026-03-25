@@ -1,7 +1,7 @@
 
 :root {
-  --elleat-bg: #1F2E2A;
-  --elleat-text: #c8d6e0;
+  --elleat-bg: #C8D6E0;
+  --elleat-text: #1F2E2A;
 }
 
 /* =========================
@@ -61,10 +61,10 @@ body { scrollbar-width: none; }
 }
 
 /* =========================
-   IMAGEN PORTADA
+   VIDEO PORTADA
 ========================= */
 
-.elleat-cover-image {
+.elleat-cover-video {
   position: absolute;
   top: 0;                       /* TOPE ARRIBA */
   right: 0;                     /* TOPE DERECHA */
