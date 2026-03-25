@@ -1,0 +1,161 @@
+
+:root {
+  --blockette-bg: #E6C3CC;
+  --blockette-text: #8c1d2c;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body {
+  background-color: var(--blockette-bg);
+  color: var(--blockette-text);
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar { width: 0; }
+body { scrollbar-width: none; }
+
+/* =========================
+   PORTADA
+========================= */
+
+.blockette-cover {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;          /* centra verticalmente el texto */
+  padding-left: 12vw;
+}
+
+/* TEXTO */
+
+.blockette-text {
+  width: 430px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.blockette-text h1 {
+  font-family: var(--font-serif);
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.blockette-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 32px;
+}
+
+.blockette-text p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   video PORTADA
+========================= */
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100vw;
+  height: 56.25vw; /* ratio 16:9 */
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+}
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.15s;
+}
+
+/* =========================
+   LAYOUT EDITORIAL FINAL
+========================= */
+
+.layout_blockette {
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.layout_blockette img {
+  width: 100%;
+  max-width: 1440px;   /* coincide con el ancho real del archivo */
+  height: auto;
+  display: block;
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .blockette-cover {
+    padding: 60px 24px;
+    align-items: flex-start;
+  }
+
+  .blockette-text {
+    width: 100%;
+  }
+
+  .blockette-cover-image {
+    position: static;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .blockette-cover-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .layout_blockette {
+    padding: 80px 0;
+  }
+
+  .layout_blockette img {
+    width: 100%;
+    max-height: none;
+  }
+}
+
