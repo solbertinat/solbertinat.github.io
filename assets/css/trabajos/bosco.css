@@ -1,0 +1,155 @@
+
+:root {
+  --bosco-bg: #E6C3CC;
+  --bosco-text: #8c1d2c;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body {
+  background-color: var(--bosco-bg);
+  color: var(--bosco-text);
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar { width: 0; }
+body { scrollbar-width: none; }
+
+/* =========================
+   PORTADA
+========================= */
+
+.bosco-cover {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;          /* centra verticalmente el texto */
+  padding-left: 12vw;
+}
+
+/* TEXTO */
+
+.bosco-text {
+  width: 430px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.bosco-text h1 {
+  font-family: var(--font-serif);
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.bosco-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 32px;
+}
+
+.bosco-text p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   IMAGEN PORTADA
+========================= */
+
+.bosco-cover-images {
+  position: absolute;
+  top: 0;                       /* TOPE ARRIBA */
+  right: 0;                     /* TOPE DERECHA */
+  bottom: 0;                    /* CIERRA ABAJO EN EL VIEWPORT */
+}
+
+.bosco-cover-image img {
+  height: 105vh;                /* PROTAGONISTA */
+  width: auto;
+  object-fit: contain;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.15s;
+}
+
+/* =========================
+   LAYOUT EDITORIAL FINAL
+========================= */
+
+/* =========================
+   LAYOUT EDITORIAL FINAL
+========================= */
+
+.layout_bosco {
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.layout_bosco img {
+  width: 100%;
+  max-width: 1440px;   /* coincide con el ancho real del archivo */
+  height: auto;
+  display: block;
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .bosco-cover {
+    padding: 60px 24px;
+    align-items: flex-start;
+  }
+
+  .bosco-text {
+    width: 100%;
+  }
+
+  .bosco-cover-image {
+    position: static;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bosco-cover-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .layout_bosco {
+    padding: 80px 0;
+  }
+
+  .layout_bosco img {
+    width: 100%;
+    max-height: none;
+  }
+}
+
