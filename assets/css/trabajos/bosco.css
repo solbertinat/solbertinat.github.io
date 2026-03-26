@@ -72,7 +72,7 @@ body { scrollbar-width: none; }
 }
 
 .bosco-cover-image img {
-  height: 105vh;                /* PROTAGONISTA */
+  maxheight: 60vh;                /* PROTAGONISTA */
   width: auto;
   object-fit: contain;
 
