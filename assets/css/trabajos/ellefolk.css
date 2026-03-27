@@ -1,7 +1,7 @@
 
 :root {
-  --blockette-bg: #1F2E2A;
-  --blockette-text: #c8d6e0;
+  --ellefolk-bg: #1F2E2A;
+  --ellefolk-text: #c8d6e0;
 }
 
 /* =========================
@@ -9,8 +9,8 @@
 ========================= */
 
 body {
-  background-color: var(--blockette-bg);
-  color: var(--blockette-text);
+  background-color: var(--ellefolk-bg);
+  color: var(--ellefolk-text);
   overflow-x: hidden;
 }
 
@@ -21,7 +21,7 @@ body { scrollbar-width: none; }
    PORTADA
 ========================= */
 
-.blockette-cover {
+.ellefolk-cover {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -31,20 +31,20 @@ body { scrollbar-width: none; }
 
 /* TEXTO */
 
-.blockette-text {
+.ellefolk-text {
   width: 430px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
 }
 
-.blockette-text h1 {
+.ellefolk-text h1 {
   font-family: var(--font-serif);
   font-size: 60px;
   margin-bottom: 20px;
 }
 
-.blockette-meta {
+.ellefolk-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -55,7 +55,7 @@ body { scrollbar-width: none; }
   margin-bottom: 32px;
 }
 
-.blockette-text p {
+.ellefolk-text p {
   font-size: 16px;
   line-height: 1.7;
 }
@@ -64,14 +64,14 @@ body { scrollbar-width: none; }
    IMAGEN PORTADA
 ========================= */
 
-.blockette-cover-image {
+.ellefolk-cover-image {
   position: absolute;
   top: 0;                       /* TOPE ARRIBA */
   right: 0;                     /* TOPE DERECHA */
   bottom: 0;                    /* CIERRA ABAJO EN EL VIEWPORT */
 }
 
-.blockette-cover-image img {
+.ellefolk-cover-image img {
   height: 105vh;                /* PROTAGONISTA */
   width: auto;
   object-fit: contain;
@@ -90,14 +90,14 @@ body { scrollbar-width: none; }
    LAYOUT EDITORIAL FINAL
 ========================= */
 
-.layout_blockette {
+.layout_ellefolk {
   width: 100%;
   padding: 120px 0;
   display: flex;
   justify-content: center;
 }
 
-.layout_blockette img {
+.layout_ellefolk img {
   width: 100%;
   max-width: 1440px;   /* coincide con el ancho real del archivo */
   height: auto;
@@ -122,32 +122,32 @@ body { scrollbar-width: none; }
 
 @media (max-width: 768px) {
 
-  .blockette-cover {
+  .ellefolk-cover {
     padding: 60px 24px;
     align-items: flex-start;
   }
 
-  .blockette-text {
+  .ellefolk-text {
     width: 100%;
   }
 
-  .blockette-cover-image {
+  .ellefolk-cover-image {
     position: static;
     margin-top: 40px;
     display: flex;
     justify-content: center;
   }
 
-  .blockette-cover-image img {
+  .ellefolk-cover-image img {
     width: 100%;
     height: auto;
   }
 
-  .layout_blockette {
+  .layout_ellefolk {
     padding: 80px 0;
   }
 
-  .layout_blockette img {
+  .layout_ellefolk img {
     width: 100%;
     max-height: none;
   }
