@@ -187,7 +187,7 @@
   filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.10));
 
   animation:
-    pinkAppear 0.2s ease forwards 0.9s,
+    pinkAppear 0.9s ease forwards 0.9s,
     pinkSwing 0.8s steps(2, end) infinite alternate 1.1s;
 }
 
