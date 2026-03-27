@@ -8,6 +8,7 @@
   position: relative;
   padding: 10rem 4rem 12rem;
   background-color: #F8F7F3;
+  overflow: hidden;
 }
 
 /* TÍTULO. */
@@ -49,11 +50,13 @@
     rgba(238, 255, 99, 0) 70%
   );
 
-  margin-top: 1px;
-  right: 5px;
-  
+  top: 50%;
+  right: -900px;
+
+  transform: translateY(-50%);
+
   pointer-events: none;
-  z-index: 2;
+  z-index: 1;
 }
 
 
