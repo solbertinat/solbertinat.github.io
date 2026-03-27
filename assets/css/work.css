@@ -49,8 +49,8 @@
     rgba(238, 255, 99, 0) 70%
   );
 
-  margin-top: 10px;
-  right: -5px;
+  margin-top: 1px;
+  right: 5px;
   
   pointer-events: none;
   z-index: 2;
