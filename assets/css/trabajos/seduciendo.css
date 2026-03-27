@@ -1,7 +1,7 @@
 
 :root {
-  --blockette-bg: #E6C3CC;
-  --blockette-text: #8c1d2c;
+  --seduciendo-bg: #E6C3CC;
+  --seduciendo-text: #8c1d2c;
 }
 
 /* =========================
@@ -9,8 +9,8 @@
 ========================= */
 
 body {
-  background-color: var(--blockette-bg);
-  color: var(--blockette-text);
+  background-color: var(--seduciendo-bg);
+  color: var(--seduciendo-text);
   overflow-x: hidden;
 }
 
@@ -21,7 +21,7 @@ body { scrollbar-width: none; }
    PORTADA
 ========================= */
 
-.blockette-cover {
+.seduciendo-cover {
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -31,20 +31,20 @@ body { scrollbar-width: none; }
 
 /* TEXTO */
 
-.blockette-text {
+.seduciendo-text {
   width: 430px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
 }
 
-.blockette-text h1 {
+.seduciendo-text h1 {
   font-family: var(--font-serif);
   font-size: 60px;
   margin-bottom: 20px;
 }
 
-.blockette-meta {
+.seduciendo-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -55,7 +55,7 @@ body { scrollbar-width: none; }
   margin-bottom: 32px;
 }
 
-.blockette-text p {
+.seduciendo-text p {
   font-size: 16px;
   line-height: 1.7;
 }
@@ -68,8 +68,8 @@ body { scrollbar-width: none; }
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   z-index: -1;
 }
@@ -79,31 +79,25 @@ body { scrollbar-width: none; }
   top: 50%;
   left: 50%;
 
-  width: 100vw;
-  height: 56.25vw; /* ratio 16:9 */
+  width: 177.77vh; /* clave */
+  height: 100vh;
 
   transform: translate(-50%, -50%);
-
   pointer-events: none;
-}
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.9s ease forwards;
-  animation-delay: 0.15s;
 }
 
 /* =========================
    LAYOUT EDITORIAL FINAL
 ========================= */
 
-.layout_blockette {
+.layout_seduciendo {
   width: 100%;
   padding: 120px 0;
   display: flex;
   justify-content: center;
 }
 
-.layout_blockette img {
+.layout_seduciendo img {
   width: 100%;
   max-width: 1440px;   /* coincide con el ancho real del archivo */
   height: auto;
@@ -128,32 +122,32 @@ body { scrollbar-width: none; }
 
 @media (max-width: 768px) {
 
-  .blockette-cover {
+  .seduciendo-cover {
     padding: 60px 24px;
     align-items: flex-start;
   }
 
-  .blockette-text {
+  .seduciendo-text {
     width: 100%;
   }
 
-  .blockette-cover-image {
+  .seduciendo-cover-image {
     position: static;
     margin-top: 40px;
     display: flex;
     justify-content: center;
   }
 
-  .blockette-cover-image img {
+  .seduciendo-cover-image img {
     width: 100%;
     height: auto;
   }
 
-  .layout_blockette {
+  .layout_seduciendo {
     padding: 80px 0;
   }
 
-  .layout_blockette img {
+  .layout_seduciendo img {
     width: 100%;
     max-height: none;
   }
