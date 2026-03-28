@@ -2,45 +2,35 @@
   --hover-accent: #eeff63;
 }
 
-/* CONTENEDOR */
-
 .work {
   position: relative;
   padding: 10rem 4rem 12rem;
   background-color: #F8F7F3;
-  overflow: hidden;
+  overflow: visible;
 }
 
-/* TÍTULO. */
-
-.work-title { 
-  position: absolute; 
-  top: 0; 
-  left: calc(-3rem); /* 🔑 compensa el padding del contenedor */ 
-  font-family: var(--font-serif); 
-  font-weight: 400; 
-  font-size: clamp(9.126rem, 21.06vw, 31.59rem); 
-  color: #1F2E2A; 
-  line-height: 1; 
-  writing-mode: vertical-rl; 
-  transform: rotate(180deg); 
-  white-space: nowrap; 
-  z-index: 10; 
-  pointer-events: none; 
+.work-title {
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(9.126rem, 21.06vw, 31.59rem);
+  color: #1F2E2A;
+  line-height: 1;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
 }
-
-/* =========================
-   CÍRCULO DIFUMINADO (SOLO DENTRO DE WORK)
-========================= */
 
 .work::after {
   content: "";
   position: absolute;
-
   width: 2200px;
   height: 2200px;
   border-radius: 50%;
-
   background: radial-gradient(
     circle,
     rgba(238, 255, 99, 0.85) 0%,
@@ -49,36 +39,23 @@
     rgba(238, 255, 99, 0.08) 55%,
     rgba(238, 255, 99, 0) 70%
   );
-
   top: 33%;
   right: -900px;
-
   transform: translateY(-50%);
-
   pointer-events: none;
   z-index: 1;
 }
 
-
-/* GRID */
-
 .work-grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.85rem 2.2rem;          /* 🔑 vuelve a valores sanos */
-
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 5px;
   margin-left: 21rem;
-  margin-top: -2rem;            
   margin-right: 2rem;
-
-  max-width: calc(100% - 21rem); /* 🔑 coherente con el margin-left */
-
   z-index: 4;
 }
-
-
-/* ITEM */
 
 .work-item {
   position: relative;
@@ -87,24 +64,21 @@
   color: inherit;
 }
 
-.work-media {
+.work-item .work-media {
+  aspect-ratio: 3/4;
   width: 100%;
-  aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
 }
 
-.work-image {
- width: 100%;
-  height: 100%;
+.work-item.featured {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
-.work-image img {
-  width: 100%;
+.work-item.featured .work-media {
+  aspect-ratio: unset;
   height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 1.6s cubic-bezier(.19,1,.22,1);
 }
 
 .work-media img,
@@ -113,30 +87,24 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transform: translateZ(0); /* 🔑 fija el layer */
+  transform: translateZ(0);
   transition: transform 0.6s cubic-bezier(.19,1,.22,1);
-  transform-origin: center;
 }
-
-/* OVERLAY */
 
 .work-overlay {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-
   background-color: var(--hover-accent);
   opacity: 0;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  padding: 1.2rem;
   transition: opacity 0.45s ease;
   pointer-events: none;
+  box-sizing: border-box;
 }
 
 .work-name {
@@ -155,8 +123,6 @@
   color: #1F2E2A;
 }
 
-/* HOVER */
-
 .work-item:hover .work-media img,
 .work-item:hover .work-media video {
   transform: scale(1.08);
@@ -166,21 +132,15 @@
   opacity: 1;
 }
 
-
 .work {
   padding-bottom: 22rem;
 }
-
-
-/* RESPONSIVE */
 
 @media (max-width: 1200px) {
   .work-grid {
     grid-template-columns: repeat(3, 1fr);
     margin-left: 0;
-    margin-top: 0;
   }
-
   .work-title {
     position: static;
     writing-mode: horizontal-tb;
@@ -193,10 +153,7 @@
   .work-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .work {
     padding: 8rem 2rem;
   }
 }
-
-
