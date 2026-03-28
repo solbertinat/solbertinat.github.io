@@ -9,20 +9,20 @@
   overflow: visible;
 }
 
-.work-title {
-  position: absolute;
-  top: 0;
-  left: -0.5rem;
-  font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: clamp(9.126rem, 21.06vw, 31.59rem);
-  color: #1F2E2A;
-  line-height: 1;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  white-space: nowrap;
-  z-index: 10;
-  pointer-events: none;
+.work-title { 
+  position: absolute; 
+  top: 0; 
+  left: calc(-3rem); /* 🔑 compensa el padding del contenedor */ 
+  font-family: var(--font-serif); 
+  font-weight: 400; 
+  font-size: clamp(9.126rem, 21.06vw, 31.59rem); 
+  color: #1F2E2A; 
+  line-height: 1; 
+  writing-mode: vertical-rl; 
+  transform: rotate(180deg); 
+  white-space: nowrap; 
+  z-index: 10; 
+  pointer-events: none; 
 }
 
 .work::after {
