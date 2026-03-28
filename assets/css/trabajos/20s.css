@@ -1,1 +1,156 @@
 
+:root {
+  --20s-bg: #1F2E2A;
+  --20s-text: #c8d6e0;
+}
+
+/* =========================
+   BASE
+========================= */
+
+body {
+  background-color: var(--20s-bg);
+  color: var(--20s-text);
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar { width: 0; }
+body { scrollbar-width: none; }
+
+/* =========================
+   PORTADA
+========================= */
+
+.20s-cover {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;          /* centra verticalmente el texto */
+  padding-left: 12vw;
+}
+
+/* TEXTO */
+
+.20s-text {
+  width: 430px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.20s-text h1 {
+  font-family: var(--font-serif);
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.20s-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 32px;
+}
+
+.20s-text p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   IMAGEN PORTADA
+========================= */
+
+.20s-cover-image {
+  position: absolute;
+  top: 0;                       /* TOPE ARRIBA */
+  right: 0;                     /* TOPE DERECHA */
+  bottom: 0;                    /* CIERRA ABAJO EN EL VIEWPORT */
+}
+
+.20s-cover-image img {
+  height: 105vh;                /* PROTAGONISTA */
+  width: auto;
+  object-fit: contain;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.15s;
+}
+
+/* =========================
+   LAYOUT EDITORIAL FINAL
+========================= */
+
+/* =========================
+   LAYOUT EDITORIAL FINAL
+========================= */
+
+.layout_20s {
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.layout_20s img {
+  width: 100%;
+  max-width: 1440px;   /* coincide con el ancho real del archivo */
+  height: auto;
+  display: block;
+}
+
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .20s-cover {
+    padding: 60px 24px;
+    align-items: flex-start;
+  }
+
+  .20s-text {
+    width: 100%;
+  }
+
+  .20s-cover-image {
+    position: static;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .20s-cover-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .layout_20s {
+    padding: 80px 0;
+  }
+
+  .layout_20s img {
+    width: 100%;
+    max-height: none;
+  }
+}
+
+
