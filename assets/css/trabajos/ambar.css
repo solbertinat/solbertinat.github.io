@@ -1,35 +1,54 @@
-
 :root {
   --ambar-bg: #C8D6E0;
   --ambar-text: #8c1d2c;
 }
-
-/* =========================
-   BASE
-========================= */
 
 body {
   background-color: var(--ambar-bg);
   color: var(--ambar-text);
   overflow-x: hidden;
 }
-
 body::-webkit-scrollbar { width: 0; }
 body { scrollbar-width: none; }
 
 /* =========================
+   BOTÓN DE REGRESO
+========================= */
+.back-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.45rem 1.1rem;
+  background-color: var(--ambar-text);
+  color: var(--ambar-bg);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.back-btn:hover {
+  opacity: 1;
+}
+
+/* =========================
    PORTADA
 ========================= */
-
 .ambar-cover {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: center;          /* centra verticalmente el texto */
+  align-items: center;
   padding-left: 12vw;
 }
-
-/* TEXTO */
 
 .ambar-text {
   width: 430px;
@@ -37,13 +56,11 @@ body { scrollbar-width: none; }
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
 }
-
 .ambar-text h1 {
   font-family: var(--font-serif);
   font-size: 60px;
   margin-bottom: 20px;
 }
-
 .ambar-meta {
   display: flex;
   flex-wrap: wrap;
@@ -54,7 +71,6 @@ body { scrollbar-width: none; }
   opacity: 0.75;
   margin-bottom: 32px;
 }
-
 .ambar-text p {
   font-size: 16px;
   line-height: 1.7;
@@ -63,19 +79,16 @@ body { scrollbar-width: none; }
 /* =========================
    IMAGEN PORTADA
 ========================= */
-
 .ambar-cover-image {
   position: absolute;
-  top: 0;                       /* TOPE ARRIBA */
-  right: 0;                     /* TOPE DERECHA */
-  bottom: 0;                    /* CIERRA ABAJO EN EL VIEWPORT */
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
-
 .ambar-cover-image img {
-  height: 105vh;                /* PROTAGONISTA */
+  height: 105vh;
   width: auto;
   object-fit: contain;
-
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
@@ -83,32 +96,49 @@ body { scrollbar-width: none; }
 }
 
 /* =========================
-   LAYOUT EDITORIAL FINAL
+   LAYOUT EDITORIAL
 ========================= */
-
-/* =========================
-   LAYOUT EDITORIAL FINAL
-========================= */
-
 .layout_ambar {
   width: 100%;
   padding: 120px 0;
   display: flex;
   justify-content: center;
 }
-
 .layout_ambar img {
   width: 100%;
-  max-width: 1440px;   /* coincide con el ancho real del archivo */
+  max-width: 1440px;
   height: auto;
   display: block;
 }
 
+/* =========================
+   FOOTER
+========================= */
+.work-footer {
+  width: 100%;
+  padding: 2rem 12vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.5px solid rgba(140, 29, 44, 0.2);
+  box-sizing: border-box;
+}
+.work-footer-name {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  color: var(--ambar-text);
+  text-decoration: none;
+}
+.work-footer-name:hover {
+  opacity: 1;
+}
 
 /* =========================
    ANIMACIÓN
 ========================= */
-
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -119,37 +149,37 @@ body { scrollbar-width: none; }
 /* =========================
    RESPONSIVE
 ========================= */
-
 @media (max-width: 768px) {
-
+  .back-btn {
+    top: 1.2rem;
+    left: 1.2rem;
+  }
   .ambar-cover {
-    padding: 60px 24px;
+    padding: 80px 24px 60px;
     align-items: flex-start;
   }
-
   .ambar-text {
     width: 100%;
   }
-
   .ambar-cover-image {
     position: static;
     margin-top: 40px;
     display: flex;
     justify-content: center;
   }
-
   .ambar-cover-image img {
     width: 100%;
     height: auto;
   }
-
   .layout_ambar {
     padding: 80px 0;
   }
-
   .layout_ambar img {
     width: 100%;
     max-height: none;
+  }
+  .work-footer {
+    padding: 2rem 24px;
   }
 }
 
