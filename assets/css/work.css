@@ -4,25 +4,25 @@
 
 .work {
   position: relative;
-  padding: 10rem 4rem 12rem;
+  padding: 10rem 4rem 22rem;
   background-color: #F8F7F3;
   overflow: visible;
 }
 
-.work-title { 
-  position: absolute; 
-  top: 0; 
-  left: calc(-3rem); /* 🔑 compensa el padding del contenedor */ 
-  font-family: var(--font-serif); 
-  font-weight: 400; 
-  font-size: clamp(9.126rem, 21.06vw, 31.59rem); 
-  color: #1F2E2A; 
-  line-height: 1; 
-  writing-mode: vertical-rl; 
-  transform: rotate(180deg); 
-  white-space: nowrap; 
-  z-index: 10; 
-  pointer-events: none; 
+.work-title {
+  position: absolute;
+  top: 0;
+  left: -0.5rem;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(9.126rem, 21.06vw, 31.59rem);
+  color: #1F2E2A;
+  line-height: 1;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .work::after {
@@ -46,6 +46,48 @@
   z-index: 1;
 }
 
+/* =========================
+   FILTROS
+========================= */
+.work-filters {
+  display: flex;
+  gap: 5px;
+  margin-left: 21rem;
+  margin-right: 2rem;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 4;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 0.55rem 1rem;
+  background-color: #f2d4d0;
+  color: #1F2E2A;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #eeff63;
+  color: #5a1a2a;
+}
+
+.filter-btn.active {
+  background-color: #eeff63;
+  color: #5a1a2a;
+}
+
+/* =========================
+   GRILLA
+========================= */
 .work-grid {
   position: relative;
   display: grid;
@@ -62,6 +104,8 @@
   display: block;
   text-decoration: none;
   color: inherit;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .work-item .work-media {
@@ -69,6 +113,7 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  border-radius: 4px;
 }
 
 .work-item.featured {
@@ -79,6 +124,10 @@
 .work-item.featured .work-media {
   aspect-ratio: unset;
   height: 100%;
+}
+
+.work-item.hidden {
+  display: none;
 }
 
 .work-media img,
@@ -132,14 +181,17 @@
   opacity: 1;
 }
 
-.work {
-  padding-bottom: 22rem;
-}
-
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 1200px) {
+  .work-filters,
+  .work-grid {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .work-grid {
     grid-template-columns: repeat(3, 1fr);
-    margin-left: 0;
   }
   .work-title {
     position: static;
