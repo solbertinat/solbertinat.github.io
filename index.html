@@ -29,7 +29,7 @@
       const start = window.pageYOffset;
       const end = target.getBoundingClientRect().top + start;
       const distance = end - start;
-      const duration = 900; // 🔑 velocidad (ms) — rápido pero legible
+      const duration = 900;
 
       let startTime = null;
 
@@ -56,11 +56,10 @@
   });
 </script>
 
-  
 <body>
 
 <!-- ========================
-     HOME / HERO 
+     HOME / HERO
 ======================== -->
 <section id="home" class="hero">
 
@@ -93,7 +92,7 @@
 </section>
 
 <!-- =========================
-     ABOUT.
+     ABOUT
 ========================= -->
 <section id="about" class="about-section">
 
@@ -103,7 +102,6 @@
 
     <div class="about-image">
       <img src="assets/images/profile.jpg" alt="Sol Bertinat" class="profile-image">
-
       <img src="assets/images/star_transparent.png" class="about-deco about-star" alt="">
       <img src="assets/images/tape_transparent.png" class="about-deco about-tape" alt="">
       <img src="assets/images/flower_transparent_refined.png" class="about-deco about-flower" alt="">
@@ -111,22 +109,20 @@
 
     <div class="about-text">
       <p>
-         Trabajo en el campo de la fotografía, el estilismo y la dirección creativa,
-  desarrollando proyectos de moda y contenido visual desde una mirada integral,
-  donde el color y la composición ocupan un lugar central como recursos para construir
-  sentido y dar identidad a cada imagen. Mi formación en Producción de Modas y
-  Fotografía Profesional, junto con estudios en Administración de Empresas,
-  me permite abordar cada proyecto considerando tanto su dimensión creativa
-  como su viabilidad y contexto comercial.
+        Trabajo en el campo de la fotografía, el estilismo y la dirección creativa,
+        desarrollando proyectos de moda y contenido visual desde una mirada integral,
+        donde el color y la composición ocupan un lugar central como recursos para construir
+        sentido y dar identidad a cada imagen. Mi formación en Producción de Modas y
+        Fotografía Profesional, junto con estudios en Administración de Empresas,
+        me permite abordar cada proyecto considerando tanto su dimensión creativa
+        como su viabilidad y contexto comercial.
       </p>
-
       <p>
-         He trabajado de manera freelance en producciones editoriales y comerciales,
+        He trabajado de manera freelance en producciones editoriales y comerciales,
         participado como asistente en proyectos de moda y colaborado en el ámbito académico.
         Me caracterizo por una forma de trabajo organizada, sensible y resolutiva,
         con especial atención al proceso y al trabajo en equipo.
       </p>
-
       <a href="assets/docs/Sol_Bertinat_CV.pdf" class="cv-link" download>
         CV disponible para descarga
       </a>
@@ -139,283 +135,284 @@
 <!-- =========================
      WORK
 ========================= -->
-  <section id="work" class="work">
-    <header class="work-header">
-      <h1 class="work-title">My Work</h1> 
-    </header>
-    
- <main class="work-grid">
+<section id="work" class="work">
+  <header class="work-header">
+    <h1 class="work-title">My Work</h1>
+  </header>
 
-  <a href="blockette.html" class="work-item featured">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw1.jpg" alt="Blockette Core">
-      <div class="work-overlay">
-        <span class="work-name">Blockette Core</span>
-        <span class="work-role">Fotografía · Estilismo</span>
-        <span class="work-year">2024</span>
+  <div class="work-filters">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="fotografia">Fotografía</button>
+    <button class="filter-btn" data-filter="estilismo">Estilismo</button>
+    <button class="filter-btn" data-filter="direccion">Dirección Creativa</button>
+  </div>
+
+  <main class="work-grid">
+
+    <a href="blockette.html" class="work-item featured" data-categories="fotografia estilismo" data-featured="true">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw1.jpg" alt="Blockette Core" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Blockette Core</span>
+          <span class="work-role">Fotografía · Estilismo</span>
+          <span class="work-year">2024</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="elle_acc.html" class="work-item">
-    <div class="work-media">
-      <video autoplay muted loop playsinline poster="assets/images/portadas_work/pw2.jpg">
-        <source src="assets/images/portadas_work/elleacc.mp4" type="video/mp4">
-      </video>
-      <div class="work-overlay">
-        <span class="work-name">Elle Accesorios</span>
-        <span class="work-role">Asistente de Estilismo</span>
-        <span class="work-year">2025</span>
+    <a href="elle_acc.html" class="work-item" data-categories="estilismo">
+      <div class="work-media">
+        <video autoplay muted loop playsinline poster="assets/images/portadas_work/pw2.jpg">
+          <source src="assets/images/portadas_work/elleacc.mp4" type="video/mp4">
+        </video>
+        <div class="work-overlay">
+          <span class="work-name">Elle Accesorios</span>
+          <span class="work-role">Asistente de Estilismo</span>
+          <span class="work-year">2025</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="bosco.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw3.jpg" alt="El jardín de las delicias">
-      <div class="work-overlay">
-        <span class="work-name">El jardín de las delicias</span>
-        <span class="work-role">Fotografía · Estilismo · DC</span>
-        <span class="work-year">2024</span>
+    <a href="bosco.html" class="work-item" data-categories="fotografia estilismo direccion">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw3.jpg" alt="El jardín de las delicias" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">El jardín de las delicias</span>
+          <span class="work-role">Fotografía · Estilismo · Dirección Creativa</span>
+          <span class="work-year">2024</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="elle_at.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw4.jpeg" alt="Elle Anticipo Colección">
-      <div class="work-overlay">
-        <span class="work-name">Elle Anticipo Colección</span>
-        <span class="work-role">Asistente de Estilismo</span>
-        <span class="work-year">Septiembre 2025</span>
+    <a href="elle_at.html" class="work-item" data-categories="estilismo">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw4.jpeg" alt="Elle Anticipo Colección" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Elle Anticipo Colección</span>
+          <span class="work-role">Asistente de Estilismo</span>
+          <span class="work-year">Septiembre 2025</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="ellever.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw6.JPG" alt="Elle Verano '26">
-      <div class="work-overlay">
-        <span class="work-name">Elle Verano '26</span>
-        <span class="work-role">Asistente de Estilismo</span>
-        <span class="work-year">Diciembre 2025</span>
+    <a href="ellever.html" class="work-item" data-categories="estilismo">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw6.JPG" alt="Elle Verano '26" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Elle Verano '26</span>
+          <span class="work-role">Asistente de Estilismo</span>
+          <span class="work-year">Diciembre 2025</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="alice.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw5.jpg" alt="Alice in Fashionland">
-      <div class="work-overlay">
-        <span class="work-name">Alice in Fashionland</span>
-        <span class="work-role">Estilismo · Fotografía · DC</span>
-        <span class="work-year">2022</span>
+    <a href="alice.html" class="work-item" data-categories="fotografia estilismo direccion">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw5.jpg" alt="Alice in Fashionland" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Alice in Fashionland</span>
+          <span class="work-role">Estilismo · Fotografía · Dirección Creativa</span>
+          <span class="work-year">2022</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="seduciendo.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw7.JPG" alt="Videoclip Seduciendo">
-      <div class="work-overlay">
-        <span class="work-name">Videoclip Seduciendo</span>
-        <span class="work-role">Estilismo</span>
-        <span class="work-year">2025</span>
+    <a href="seduciendo.html" class="work-item" data-categories="estilismo">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw7.JPG" alt="Videoclip Seduciendo" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Videoclip Seduciendo</span>
+          <span class="work-role">Estilismo</span>
+          <span class="work-year">2025</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="harry.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw8.jpg" alt="Harry's House">
-      <div class="work-overlay">
-        <span class="work-name">Harry's House</span>
-        <span class="work-role">Estilismo · Fotografía · DC</span>
-        <span class="work-year">2024</span>
+    <a href="harry.html" class="work-item" data-categories="fotografia estilismo direccion">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw8.jpg" alt="Harry's House" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Harry's House</span>
+          <span class="work-role">Estilismo · Fotografía · Dirección Creativa</span>
+          <span class="work-year">2024</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="elle1.html" class="work-item">
-    <div class="work-media">
-      <video autoplay muted loop playsinline poster="assets/images/portadas_work/pw9.jpg">
-        <source src="assets/images/portadas_work/elle_min.mp4" type="video/mp4">
-      </video>
-      <div class="work-overlay">
-        <span class="work-name">Elle Nuevo Minimalismo</span>
-        <span class="work-role">Asistente de Estilismo</span>
-        <span class="work-year">Julio 2025</span>
+    <a href="elle1.html" class="work-item" data-categories="estilismo">
+      <div class="work-media">
+        <video autoplay muted loop playsinline poster="assets/images/portadas_work/pw9.jpg">
+          <source src="assets/images/portadas_work/elle_min.mp4" type="video/mp4">
+        </video>
+        <div class="work-overlay">
+          <span class="work-name">Elle Nuevo Minimalismo</span>
+          <span class="work-role">Asistente de Estilismo</span>
+          <span class="work-year">Julio 2025</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="emma.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw10.jpg" alt="E-commerce EMMA">
-      <div class="work-overlay">
-        <span class="work-name">E-commerce EMMA</span>
-        <span class="work-role">Estilismo · Fotografía · DC</span>
-        <span class="work-year">2024</span>
+    <a href="emma.html" class="work-item" data-categories="fotografia estilismo direccion">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw10.jpg" alt="E-commerce EMMA" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">E-commerce EMMA</span>
+          <span class="work-role">Estilismo · Fotografía · Dirección Creativa</span>
+          <span class="work-year">2024</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="ellefolk.html" class="work-item">
-    <div class="work-media">
-      <video autoplay muted loop playsinline poster="assets/images/portadas_work/pw12.jpg">
-        <source src="assets/images/portadas_work/elle f&c.mp4" type="video/mp4">
-      </video>
-      <div class="work-overlay">
-        <span class="work-name">Elle Folk and Chic</span>
-        <span class="work-role">Asistente de Estilismo</span>
-        <span class="work-year">Enero 2026</span>
+    <a href="ellefolk.html" class="work-item" data-categories="estilismo">
+      <div class="work-media">
+        <video autoplay muted loop playsinline poster="assets/images/portadas_work/pw12.jpg">
+          <source src="assets/images/portadas_work/elle f&c.mp4" type="video/mp4">
+        </video>
+        <div class="work-overlay">
+          <span class="work-name">Elle Folk and Chic</span>
+          <span class="work-role">Asistente de Estilismo</span>
+          <span class="work-year">Enero 2026</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="maga.html" class="work-item featured">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw14.jpg" alt="Unspoken Language">
-      <div class="work-overlay">
-        <span class="work-name">Unspoken Language</span>
-        <span class="work-role">Fotografía</span>
-        <span class="work-year">2025</span>
+    <a href="maga.html" class="work-item featured" data-categories="fotografia" data-featured="true">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw14.jpg" alt="Unspoken Language" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Unspoken Language</span>
+          <span class="work-role">Fotografía</span>
+          <span class="work-year">2025</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="maxxxine.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw13.jpg" alt="Maxxxine">
-      <div class="work-overlay">
-        <span class="work-name">Maxxxine</span>
-        <span class="work-role">Estilismo · Fotografía · DC</span>
-        <span class="work-year">2024</span>
+    <a href="maxxxine.html" class="work-item" data-categories="fotografia estilismo direccion">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw13.jpg" alt="Maxxxine" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Maxxxine</span>
+          <span class="work-role">Estilismo · Fotografía · Dirección Creativa</span>
+          <span class="work-year">2024</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="elleinv.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw11.png" alt="Elle Alto Invierno">
-      <div class="work-overlay">
-        <span class="work-name">Elle Alto Invierno</span>
-        <span class="work-role">Asistente de Estilismo</span>
-        <span class="work-year">Agosto 2025</span>
+    <a href="elleinv.html" class="work-item" data-categories="estilismo">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw11.png" alt="Elle Alto Invierno" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Elle Alto Invierno</span>
+          <span class="work-role">Asistente de Estilismo</span>
+          <span class="work-year">Agosto 2025</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="fosforo.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw15.jpg" alt="Fósforo accesorios">
-      <div class="work-overlay">
-        <span class="work-name">Fósforo accesorios</span>
-        <span class="work-role">Estilismo</span>
-        <span class="work-year">2025</span>
+    <a href="fosforo.html" class="work-item" data-categories="estilismo">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw15.jpg" alt="Fósforo accesorios" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Fósforo Accesorios</span>
+          <span class="work-role">Estilismo</span>
+          <span class="work-year">2025</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="girassois.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw16.jpg" alt="Girassois">
-      <div class="work-overlay">
-        <span class="work-name">Girassois</span>
-        <span class="work-role">Fotografía · DC</span>
-        <span class="work-year">2023</span>
+    <a href="girassois.html" class="work-item" data-categories="fotografia direccion">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw16.jpg" alt="Girassois" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Girassois</span>
+          <span class="work-role">Fotografía · Dirección Creativa</span>
+          <span class="work-year">2023</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="top.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw17.jpg" alt="El B4ck TOP">
-      <div class="work-overlay">
-        <span class="work-name">El B4ck TOP</span>
-        <span class="work-role">Fotografía · Estilismo · DC</span>
-        <span class="work-year">2024</span>
+    <a href="top.html" class="work-item" data-categories="fotografia estilismo direccion">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw17.jpg" alt="El B4ck TOP" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">El B4ck TOP</span>
+          <span class="work-role">Fotografía · Estilismo · Dirección Creativa</span>
+          <span class="work-year">2024</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="tennis.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw18.jpg" alt="Tennis">
-      <div class="work-overlay">
-        <span class="work-name">Tennis</span>
-        <span class="work-role">Fotografía</span>
-        <span class="work-year">2026</span>
+    <a href="tennis.html" class="work-item" data-categories="fotografia">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw18.jpg" alt="Tennis" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Tennis</span>
+          <span class="work-role">Fotografía</span>
+          <span class="work-year">2026</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="20s.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw19.jpg" alt="Roaring 20s">
-      <div class="work-overlay">
-        <span class="work-name">Roaring 20s in Buenos Aires</span>
-        <span class="work-role">Fotografía</span>
-        <span class="work-year">2025</span>
+    <a href="20s.html" class="work-item" data-categories="fotografia">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw19.jpg" alt="Roaring 20s" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Roaring 20s in Buenos Aires</span>
+          <span class="work-role">Fotografía</span>
+          <span class="work-year">2025</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-  <a href="ambar.html" class="work-item">
-    <div class="work-media">
-      <img src="assets/images/portadas_work/pw20.jpg" alt="Ambar">
-      <div class="work-overlay">
-        <span class="work-name">Ambar</span>
-        <span class="work-role">Fotografía</span>
-        <span class="work-year">2018</span>
+    <a href="ambar.html" class="work-item" data-categories="fotografia">
+      <div class="work-media">
+        <img src="assets/images/portadas_work/pw20.jpg" alt="Ambar" loading="lazy">
+        <div class="work-overlay">
+          <span class="work-name">Ambar</span>
+          <span class="work-role">Fotografía</span>
+          <span class="work-year">2018</span>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-</main>
-<div class="work-circle"></div>
-    
+  </main>
+
+  <div class="work-circle"></div>
+</section>
+
 <!-- =========================
      CONTACT
 ========================= -->
 <section id="contact" class="contact-section">
   <div class="contact-inner">
 
-     <div class="contact-items">
-        <div>
-          <span class="contact-label">Mail</span>
-          <a href="mailto:sol.bertinat12@gmail.com">sol.bertinat12@gmail.com</a>
-        </div>
-
-        <div>
-          <span class="contact-label">Instagram</span>
-          <a href="https://instagram.com/solbertinat_" target="_blank">@solbertinat_</a>
-        </div>
-
-        <div>
-          <span class="contact-label">Behance</span>
-          <a href="https://behance.net/solbertinat" target="_blank">behance.net/solbertinat</a>
-        </div>
+    <div class="contact-items">
+      <div>
+        <span class="contact-label">Mail</span>
+        <a href="mailto:sol.bertinat12@gmail.com">sol.bertinat12@gmail.com</a>
       </div>
+      <div>
+        <span class="contact-label">Instagram</span>
+        <a href="https://instagram.com/solbertinat_" target="_blank">@solbertinat_</a>
+      </div>
+      <div>
+        <span class="contact-label">Behance</span>
+        <a href="https://behance.net/solbertinat" target="_blank">behance.net/solbertinat</a>
+      </div>
+    </div>
 
-    <!-- IZQUIERDA -->
     <div class="contact-left">
-
       <div class="contact-title">
         <span>Contact</span>
         <span>me!</span>
       </div>
-      
       <img src="assets/images/disponible_transparent_clean.png" class="contact-note" alt="">
-     
       <footer class="contact-footer">
         © Sol Bertinat<br>
         Buenos Aires
       </footer>
-
     </div>
 
-    <!-- DERECHA -->
     <div class="contact-right">
       <img src="assets/images/phone_transparent.png" class="contact-phone" alt="Phone">
       <img src="assets/images/pink_shapes_torn_white_border.png" class="contact-pink" alt="">
@@ -424,32 +421,26 @@
   </div>
 </section>
 
-    <script>
-const contactSection = document.querySelector('.contact-section');
-const phone = document.querySelector('.contact-phone');
+<script>
+  const contactSection = document.querySelector('.contact-section');
+  const phone = document.querySelector('.contact-phone');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      phone.classList.add('is-visible');
-    }
-  });
-}, {
-  threshold: 0.33
-});
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        phone.classList.add('is-visible');
+      }
+    });
+  }, { threshold: 0.33 });
 
-observer.observe(contactSection);
+  observer.observe(contactSection);
 </script>
-    
-<!-- =========================
-     SCRIPT .HERO (sin cambios)
-========================= -->
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(
       '.hero-image-main, .hero-text, .hero-image-secondary'
     );
-
     if (!sessionStorage.getItem('heroAnimated')) {
       document.body.classList.add('animate-hero');
       sessionStorage.setItem('heroAnimated', 'true');
@@ -458,6 +449,40 @@ observer.observe(contactSection);
         if (el) el.style.opacity = 1;
       });
     }
+  });
+</script>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const workItems = document.querySelectorAll('.work-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      workItems.forEach(item => {
+        if (filter === 'all') {
+          item.classList.remove('hidden');
+          const isFeatured = item.dataset.featured === 'true';
+          item.classList.toggle('featured', isFeatured);
+          item.querySelector('.work-media').style.aspectRatio = isFeatured ? '' : '3/4';
+          item.querySelector('.work-media').style.height = isFeatured ? '100%' : '';
+        } else {
+          const cats = item.dataset.categories.split(' ');
+          if (cats.includes(filter)) {
+            item.classList.remove('hidden');
+            item.classList.remove('featured');
+            item.querySelector('.work-media').style.aspectRatio = '3/4';
+            item.querySelector('.work-media').style.height = '';
+          } else {
+            item.classList.add('hidden');
+          }
+        }
+      });
+    });
   });
 </script>
 
