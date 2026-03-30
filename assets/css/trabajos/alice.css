@@ -47,15 +47,18 @@ body { scrollbar-width: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-right: 10px;
+  justify-content: flex-end;
+  padding-right: 12vw;
 }
 
 .alice-text {
-  width: 430px;
+  width: 380px;
+  flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
 }
+
 .alice-text h1 {
   font-family: var(--font-serif);
   font-size: 60px;
@@ -85,6 +88,7 @@ body { scrollbar-width: none; }
   left: 0;
   bottom: 0;
 }
+
 .alice-cover-image img {
   height: 105vh;
   width: auto;
