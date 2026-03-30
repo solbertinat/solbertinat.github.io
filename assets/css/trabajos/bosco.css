@@ -161,6 +161,7 @@ body { scrollbar-width: none; }
 /* =========================
    RESPONSIVE
 ========================= */
+
 @media (max-width: 768px) {
   .back-btn {
     top: 1.2rem;
@@ -168,27 +169,28 @@ body { scrollbar-width: none; }
   }
   .bosco-cover {
     flex-direction: column;
-    padding: 80px 24px 60px;
-    align-items: flex-start;
-    gap: 2rem;
-  }
-  .bosco-text {
-    width: 100%;
-    text-align: left;
-  }
-  .bosco-meta {
-    justify-content: flex-start;
+    align-items: stretch;
   }
   .bosco-cover-image-left,
   .bosco-cover-image-right {
     width: 100%;
-    justify-content: center;
+    height: 50vw;
   }
   .bosco-cover-image-left img,
   .bosco-cover-image-right img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
+  .bosco-text {
+    width: 100%;
+    text-align: left;
+    padding: 3rem 24px;
+  }
+  .bosco-meta {
+    justify-content: flex-start;
+  }
+}
   .layout_bosco {
     padding: 80px 0;
   }
@@ -200,3 +202,4 @@ body { scrollbar-width: none; }
     padding: 2rem 24px;
   }
 }
+
