@@ -47,15 +47,18 @@ body { scrollbar-width: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 12vw;
+  justify-content: flex-end;
+  padding-right: 12vw;
 }
 
 .twenties-text {
-  width: 430px;
+  width: 380px;
+  flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
 }
+
 .twenties-text h1 {
   font-family: var(--font-serif);
   font-size: 60px;
@@ -79,12 +82,14 @@ body { scrollbar-width: none; }
 /* =========================
    IMAGEN PORTADA
 ========================= */
+
 .twenties-cover-image {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   bottom: 0;
 }
+
 .twenties-cover-image img {
   height: 105vh;
   width: auto;
