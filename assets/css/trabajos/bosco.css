@@ -101,7 +101,7 @@ body { scrollbar-width: none; }
 
 .bosco-cover-image-left img,
 .bosco-cover-image-right img {
-  width: 100%;
+  width: 80%;
   height: 100vh;
   object-fit: cover;
   display: block;
