@@ -12,7 +12,7 @@ body::-webkit-scrollbar { width: 0; }
 body { scrollbar-width: none; }
 
 /* =========================
-   BOTÓN DE REGRESO
+   BOTÓN DE REGRESO.
 ========================= */
 .back-btn {
   position: fixed;
