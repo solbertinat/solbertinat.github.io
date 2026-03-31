@@ -1,1 +1,214 @@
+:root {
+  --fosforo-bg: #1F2E2A;
+  --fosforo-text: #E6C3CC;
+}
 
+body {
+  background-color: var(--fosforo-bg);
+  color: var(--fosforo-text);
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar { width: 0; }
+body { scrollbar-width: none; }
+
+/* =========================
+   BOTÓN DE REGRESO
+========================= */
+.back-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.45rem 1.1rem;
+  background-color: var(--fosforo-text);
+  color: var(--fosforo-bg);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 20px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.back-btn:hover {
+  opacity: 1;
+}
+
+/* =========================
+   TEXTO
+========================= */
+.fosforo-cover {
+  padding: 8rem 12vw 4rem;
+}
+
+.fosforo-text {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+}
+.fosforo-text h1 {
+  font-family: var(--font-serif);
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.fosforo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 24px;
+}
+.fosforo-text p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   VIDEOS
+========================= */
+.fosforo-videos {
+  display: flex;
+  gap: 2vw;
+  padding: 2rem 4vw 8rem;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.fosforo-video-item {
+  flex: 1;
+  position: relative;
+  aspect-ratio: 9/16;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fosforo-video-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fosforo-play {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.fosforo-play::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 20px solid var(--fosforo-text);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  margin-left: 4px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.fosforo-video-item:hover .fosforo-play {
+  background: rgba(31, 46, 42, 0.2);
+}
+
+.fosforo-video-item.playing .fosforo-play::after {
+  border-left: 6px solid var(--fosforo-text);
+  border-right: 6px solid var(--fosforo-text);
+  width: 18px;
+  height: 18px;
+  border-top: none;
+  border-bottom: none;
+  margin-left: 0;
+}
+
+.fosforo-video-item.playing .fosforo-play {
+  background: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fosforo-video-item.playing:hover .fosforo-play {
+  opacity: 1;
+  background: rgba(31, 46, 42, 0.2);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.work-footer {
+  width: 100%;
+  padding: 2rem 12vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 0.5px solid rgba(230, 195, 204, 0.2);
+  box-sizing: border-box;
+}
+.work-footer-name {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  color: var(--fosforo-text);
+  text-decoration: none;
+}
+.work-footer-name:hover {
+  opacity: 1;
+}
+
+/* =========================
+   ANIMACIÓN
+========================= */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .back-btn {
+    top: 1.2rem;
+    left: 1.2rem;
+  }
+  .fosforo-cover {
+    padding: 6rem 24px 3rem;
+  }
+  .fosforo-videos {
+    flex-direction: column;
+    padding: 2rem 24px 6rem;
+    gap: 2rem;
+  }
+  .fosforo-video-item {
+    width: 100%;
+  }
+  .work-footer {
+    padding: 2rem 24px;
+  }
+}
