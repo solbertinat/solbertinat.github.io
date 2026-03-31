@@ -107,6 +107,9 @@ body { scrollbar-width: none; }
   display: block;
 }
 
+.bosco-cover-image-right img {
+  margin-right: 0px;
+}
 /* =========================
    LAYOUT EDITORIAL
 ========================= */
