@@ -104,11 +104,15 @@ body { scrollbar-width: none; }
   width: 80%;
   height: 100vh;
   object-fit: cover;
+}
+
+.bosco-cover-image-left img{
   display: block;
 }
 
 .bosco-cover-image-right img {
-  margin-right: 0px;
+  display: flex;
+  justify-content: flex-end;
 }
 /* =========================
    LAYOUT EDITORIAL
