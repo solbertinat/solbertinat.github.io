@@ -52,7 +52,7 @@ body { scrollbar-width: none; }
 }
 
 .bosco-text {
-  width: 460px;
+  width: 500px;
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
@@ -99,18 +99,26 @@ body { scrollbar-width: none; }
   animation-delay: 0.15s;
 }
 
+/* IMÁGENES */
+
 .bosco-cover-image-left img,
 .bosco-cover-image-right img {
   width: 80%;
   height: 100vh;
   object-fit: cover;
-}
-
-.bosco-cover-image-left img{
   display: block;
 }
 
-.bosco-cover-image-right img {
+/* IZQUIERDA (queda igual) */
+
+.bosco-cover-image-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* DERECHA (esto es lo que necesitabas) */
+
+.bosco-cover-image-right {
   display: flex;
   justify-content: flex-end;
 }
