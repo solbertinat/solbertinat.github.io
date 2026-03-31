@@ -52,7 +52,7 @@ body { scrollbar-width: none; }
 }
 
 .bosco-text {
-  width: 410px;
+  width: 460px;
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
