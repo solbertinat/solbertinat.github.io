@@ -47,7 +47,7 @@ body { scrollbar-width: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 14vw;
+  padding-left: 18vw;
 }
 
 .blockette-text {
