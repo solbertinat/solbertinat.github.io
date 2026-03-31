@@ -52,7 +52,7 @@ body { scrollbar-width: none; }
 }
 
 .bosco-text {
-  width: 380px;
+  width: 410px;
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
@@ -102,7 +102,7 @@ body { scrollbar-width: none; }
 .bosco-cover-image-left img,
 .bosco-cover-image-right img {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   display: block;
 }
