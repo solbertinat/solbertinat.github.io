@@ -82,7 +82,7 @@ body { scrollbar-width: none; }
 .bosco-text p {
   font-size: 16px;
   line-height: 1.7;
-  text-align: left;
+  text-align: center;
 }
 
 /* =========================
