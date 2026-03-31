@@ -4,37 +4,70 @@
   <meta charset="UTF-8" />
   <title>fosforo — Sol Bertinat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/trabajos/fosforo.css">
 </head>
-
 <body>
 
-  <!-- PORTADA -->
+  <a href="index.html#work" class="back-btn">← Volver</a>
+
   <section class="fosforo-cover">
-
     <div class="fosforo-text">
-      <h1>Fósforo accesorios</h1>
-
+      <h1>Fósforo Accesorios</h1>
       <div class="fosforo-meta">
-        <span>ESTILISMO ·</span>
+        <span>ESTILISMO</span>
+        <span>·</span>
         <span>2025</span>
       </div>
-
-      <p>
-        Vestuario para contenido de redes sociales para la marca de accesorios Fósforo.
-      </p>
+      <p>Vestuario para contenido de redes sociales para la marca de accesorios Fósforo.</p>
     </div>
-
-    <div class="fosforo-cover-image">
-      <img src="assets/images/fosforo/fosforo (12).jpg" alt="fosforo portada">
-    </div>
-
   </section>
 
-  <section class="layout_fosforo">
-  <img src="assets/images/fosforo/layout_fosforo.png">
-</section>
+  <section class="fosforo-videos">
+    <div class="fosforo-video-item">
+      <video loop playsinline preload="metadata">
+        <source src="assets/images/fosforo/fosforo1.mp4" type="video/mp4">
+      </video>
+      <button class="fosforo-play" aria-label="Play"></button>
+    </div>
+    <div class="fosforo-video-item">
+      <video loop playsinline preload="metadata">
+        <source src="assets/images/fosforo/fosforo2.mp4" type="video/mp4">
+      </video>
+      <button class="fosforo-play" aria-label="Play"></button>
+    </div>
+    <div class="fosforo-video-item">
+      <video loop playsinline preload="metadata">
+        <source src="assets/images/fosforo/fosforo3.mp4" type="video/mp4">
+      </video>
+      <button class="fosforo-play" aria-label="Play"></button>
+    </div>
+  </section>
 
+  <footer class="work-footer">
+    <a href="index.html#work" class="work-footer-name">Sol Bertinat</a>
+  </footer>
 
+  <script>
+    document.querySelectorAll('.fosforo-video-item').forEach(item => {
+      const video = item.querySelector('video');
+      const btn = item.querySelector('.fosforo-play');
+
+      btn.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+          item.classList.add('playing');
+        } else {
+          video.pause();
+          item.classList.remove('playing');
+        }
+      });
+
+      video.addEventListener('ended', () => {
+        item.classList.remove('playing');
+      });
+    });
+  </script>
+
+</body>
+</html>
