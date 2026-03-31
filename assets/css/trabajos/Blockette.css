@@ -47,11 +47,11 @@ body { scrollbar-width: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 12vw;
+  padding-left: 14vw;
 }
 
 .blockette-text {
-  width: 430px;
+  width: 480px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
