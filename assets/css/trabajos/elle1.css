@@ -47,8 +47,8 @@ body { scrollbar-width: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 14vw;
-  padding: 4rem;
+  padding-left: 18vw;
+  padding: 6rem;
 }
 
 .elle1-text {
