@@ -30,7 +30,7 @@ body { scrollbar-width: none; }
   border-radius: 20px;
   opacity: 0.5;
   transition: opacity 0.3s ease;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
 }
 .back-btn:hover {
   opacity: 1;
@@ -73,8 +73,8 @@ body { scrollbar-width: none; }
 
 .seduciendo-text {
   width: 330px;
-  margin-top: 25px;
-  margin-right: 6px;
+  margin-top: 30px;
+  margin-right: 15px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
