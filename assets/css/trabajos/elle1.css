@@ -47,11 +47,12 @@ body { scrollbar-width: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 12vw;
+  padding-left: 14vw;
+  padding:10rem;
 }
 
 .elle1-text {
-  width: 520px;
+  width: 550px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
