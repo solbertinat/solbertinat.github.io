@@ -55,7 +55,7 @@ body { scrollbar-width: none; }
   top: 0;
   left: 0;
   bottom: 0;
-  width: 60vw; /* 👈 define cuánto “entra” en pantalla */
+  width: 35vw; /* 👈 define cuánto “entra” en pantalla */
   overflow: hidden;
 }
 
