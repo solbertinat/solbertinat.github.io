@@ -55,13 +55,15 @@ body { scrollbar-width: none; }
   top: 0;
   left: 0;
   bottom: 0;
+  width: 60vw; /* 👈 define cuánto “entra” en pantalla */
   overflow: hidden;
 }
+
 .emma-cover-image img {
-  height: 100vh;
-  width: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: left center; /* 👈 mantiene contacto con borde izquierdo */
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
