@@ -145,6 +145,10 @@
   color: inherit;
 }
 
+.hero-scroll-hint {
+  display: none;
+}
+
 .hero::after {
   content: "";
   position: absolute;
@@ -185,7 +189,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   .hero {
     display: flex;
     flex-direction: column;
-    min-height: auto;
+    min-height: 100vh;
     overflow: visible;
     padding: 0;
   }
@@ -199,7 +203,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     position: static;
     width: 100%;
     max-width: 100%;
-    height: 70vw;
+    height: 52vh;
     opacity: 1;
     bottom: auto;
     order: 1;
@@ -210,6 +214,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
   }
 
   .hero-text {
@@ -217,41 +222,47 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     order: 2;
     opacity: 1;
     max-width: 100%;
-    padding: 0 20px 2rem;
+    padding: 0 20px 0;
     margin-top: 0;
     position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .hero-text h1 {
-    font-size: clamp(2.8rem, 13vw, 4.5rem);
     text-align: right;
-    margin-bottom: 0.6rem;
-    line-height: 0.95;
-    margin-top: calc(clamp(2.8rem, 13vw, 4.5rem) * -1.05);
+    margin-bottom: 0;
+    line-height: 0.9;
+    margin-top: calc(clamp(7rem, 32vw, 12rem) * -0.95);
   }
 
   .hero-text h1 .name-sol {
     display: block;
-    color: #F6F5F0;
+    color: #eeff63;
+    font-size: clamp(7rem, 32vw, 12rem);
+    line-height: 0.88;
   }
 
   .hero-text h1 .name-bertinat {
     display: block;
     color: #1F2E2A;
+    font-size: clamp(3.5rem, 16vw, 6rem);
   }
 
   .hero-claim {
     font-size: 1rem;
-    margin-top: 0.8rem;
-    margin-bottom: 0.5rem;
-    text-align: right;
+    margin-top: 1.8rem;
+    margin-bottom: 0.4rem;
+    text-align: left;
   }
 
   .hero-roles {
     font-size: 0.68rem;
     letter-spacing: 0.13em;
-    margin-bottom: 1.2rem;
-    text-align: right;
+    margin-bottom: 0;
+    text-align: left;
   }
 
   .hero-links {
@@ -261,24 +272,22 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   .hero-scroll-hint {
     order: 3;
     display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-sans);
-    font-size: 0.62rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #1F2E2A;
-    opacity: 0.4;
-    padding: 0 20px 2rem;
-    animation: hintFade 2.5s ease infinite;
+    justify-content: center;
+    align-items: flex-end;
+    flex-shrink: 0;
+    height: 6vh;
+    padding-bottom: 1rem;
+    font-size: 0;
+    color: transparent;
   }
 
   .hero-scroll-hint::before {
     content: '';
     display: block;
     width: 1px;
-    height: 24px;
+    height: 32px;
     background: #1F2E2A;
+    opacity: 0.3;
     animation: lineGrow 2.5s ease infinite;
   }
 
@@ -287,7 +296,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   }
 
   .hero::after {
-    height: 55vw;
+    height: 25vh;
   }
 
   body.animate-hero .hero-image-main,
@@ -298,14 +307,14 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   }
 
   @keyframes hintFade {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 0.12; }
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.08; }
   }
 
   @keyframes lineGrow {
-    0% { transform: scaleY(0); transform-origin: top; }
-    50% { transform: scaleY(1); transform-origin: top; }
+    0% { transform: scaleY(0); transform-origin: top; opacity: 0.3; }
+    50% { transform: scaleY(1); transform-origin: top; opacity: 0.3; }
     51% { transform-origin: bottom; }
-    100% { transform: scaleY(0); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; opacity: 0.08; }
   }
 }
