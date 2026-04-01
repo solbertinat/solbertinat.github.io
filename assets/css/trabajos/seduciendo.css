@@ -30,7 +30,7 @@ body { scrollbar-width: none; }
   border-radius: 20px;
   opacity: 0.5;
   transition: opacity 0.3s ease;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 .back-btn:hover {
   opacity: 1;
@@ -73,8 +73,8 @@ body { scrollbar-width: none; }
 
 .seduciendo-text {
   width: 330px;
-  margin-top: 120px;
-  margin-left: -33px;
+  margin-top: 850px;
+  margin-left: -30px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
@@ -153,7 +153,7 @@ body { scrollbar-width: none; }
 
 /* =========================
    RESPONSIVE
-========================= */
+
 @media (max-width: 768px) {
   .seduciendo-cover {
     padding: 60px 24px;
@@ -181,5 +181,20 @@ body { scrollbar-width: none; }
   }
   .work-footer {
     padding: 2rem 24px;
+  }
+}
+========================= */
+@media (max-width: 768px) {
+  .seduciendo-split {
+    flex-direction: column;
+    gap: 0;
+  }
+  .seduciendo-video {
+    width: 100%;
+    height: 56vw;
+  }
+  .seduciendo-text {
+    width: 100%;
+    margin: 2rem 24px 0;
   }
 }
