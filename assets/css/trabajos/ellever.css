@@ -47,7 +47,7 @@ body { scrollbar-width: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10rem 12vw 4rem;
+  padding: 4rem 12vw; /* 👈 antes: 10rem arriba → eso lo bajaba */
 }
 
 .ellever-text {
@@ -56,16 +56,20 @@ body { scrollbar-width: none; }
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
-  margin-top: 3px;
+  margin-top: 0; /* 👈 eliminamos desplazamiento extra */
+  text-align: center; /* 👈 centra el contenido */
 }
+
 .ellever-text h1 {
   font-family: var(--font-serif);
   font-size: 60px;
   margin-bottom: 20px;
 }
+
 .ellever-meta {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* 👈 centra los meta */
   gap: 12px;
   font-size: 13px;
   letter-spacing: 0.12em;
@@ -73,11 +77,11 @@ body { scrollbar-width: none; }
   opacity: 0.75;
   margin-bottom: 32px;
 }
+
 .ellever-text p {
   font-size: 16px;
   line-height: 1.7;
 }
-
 /* =========================
    VIDEO
 ========================= */
