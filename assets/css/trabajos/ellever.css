@@ -52,10 +52,11 @@ body { scrollbar-width: none; }
 
 .ellever-text {
   width: 100%;
-  max-width: 860px;
+  max-width: 900px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
+  margin-top: 3px;
 }
 .ellever-text h1 {
   font-family: var(--font-serif);
