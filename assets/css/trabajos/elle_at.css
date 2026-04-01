@@ -75,7 +75,7 @@ body { scrollbar-width: none; }
 .elleat-text {
   width: 560px;
   flex-shrink: 0;
-  margin-left: 18w;
+  margin-left: 18vw;
   margin-right: auto;
   opacity: 0;
   transform: translateY(20px);
