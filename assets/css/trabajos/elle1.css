@@ -48,11 +48,11 @@ body { scrollbar-width: none; }
   display: flex;
   align-items: center;
   padding-left: 14vw;
-  padding:10rem;
+  padding: 4rem;
 }
 
 .elle1-text {
-  width: 550px;
+  width: 650px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
