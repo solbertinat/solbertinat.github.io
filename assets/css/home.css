@@ -183,10 +183,8 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
 @media (max-width: 768px) {
   .hero {
-    display: flex;
-    flex-direction: column;
+    display: block;
     min-height: auto;
-    padding: 0;
     overflow: visible;
   }
 
@@ -194,9 +192,8 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     position: static;
     width: 100%;
     max-width: 100%;
-    height: 60vw;
+    height: 65vw;
     opacity: 1;
-    order: 1;
     bottom: auto;
   }
 
@@ -207,41 +204,85 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   }
 
   .hero-text {
-    order: 2;
     grid-column: auto;
-    padding: 2.5rem 24px 2rem;
+    padding: 0 20px 2.5rem;
     opacity: 1;
     max-width: 100%;
+    position: relative;
   }
 
   .hero-text h1 {
-    font-size: 3.2rem;
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+    margin-bottom: 0;
+    text-align: right;
+    position: relative;
+  }
+
+  .hero-text h1 .name-sol {
+    display: block;
+    color: #F6F5F0;
+    position: relative;
+    margin-top: calc(-1 * clamp(2.8rem, 12vw, 4.5rem) * 1.1);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .hero-text h1 .name-bertinat {
+    display: block;
+    color: #1F2E2A;
   }
 
   .hero-claim {
     font-size: 1rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.6rem;
   }
 
   .hero-roles {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     letter-spacing: 0.15em;
+    margin-bottom: 1.5rem;
   }
 
   .hero-links {
-    flex-wrap: wrap;
-    gap: 12px;
+    display: none;
+  }
+
+  .hero-scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.45;
+    color: #1F2E2A;
+    animation: hintFade 2s ease infinite;
+  }
+
+  .hero-scroll-hint::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 28px;
+    background: #1F2E2A;
+    animation: lineGrow 2s ease infinite;
+  }
+
+  @keyframes hintFade {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 0.15; }
+  }
+
+  @keyframes lineGrow {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    100% { transform: scaleY(1); transform-origin: bottom; }
   }
 
   .hero-image-secondary {
-    order: 3;
-    grid-column: auto;
-    justify-content: center;
-    padding: 0 24px 3rem;
-    opacity: 1;
-  }
-
-  .hero-image-secondary .frame {
-    width: 55%;
+    display: none;
   }
 
   .hero::after {
