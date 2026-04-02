@@ -55,7 +55,7 @@ body { scrollbar-width: none; }
   top: 0;
   left: 0;
   bottom: 0;
-  width: 74vw; /* 👈 define cuánto entra en pantalla */
+  width: 48vw; /* 👈 menos ancho */
   overflow: hidden;
 }
 
@@ -63,12 +63,13 @@ body { scrollbar-width: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%; /* 👈 más recorte abajo que arriba */
+  object-position: center 65%; /* 👈 más recorte arriba */
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
   animation-delay: 0.15s;
 }
+
 .maxxxine-text {
   width: 480px;
   flex-shrink: 0;
