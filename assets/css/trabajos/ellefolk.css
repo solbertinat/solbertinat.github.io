@@ -47,11 +47,11 @@ body { scrollbar-width: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 12vw;
+  padding-left: 14vw;
 }
 
 .ellefolk-text {
-  width: 520px;
+  width: 560px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
