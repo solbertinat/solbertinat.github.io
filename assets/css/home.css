@@ -271,7 +271,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     display: none;
   }
 
- .hero-scroll-hint {
+.hero-scroll-hint {
     order: 3;
     display: flex;
     flex-direction: column;
@@ -279,7 +279,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     align-items: center;
     flex-shrink: 0;
     height: 8vh;
-    padding-bottom: 2.5rem;
+    padding-bottom: 2rem;
     font-size: 0;
     color: transparent;
   }
@@ -296,15 +296,16 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     border-right: 2.5px solid #1F2E2A;
     border-bottom: 2.5px solid #1F2E2A;
     transform: rotate(45deg);
-    opacity: 0.35;
+    opacity: 0;
     animation: arrowFade 2.5s ease infinite;
   }
 
   @keyframes arrowFade {
-    0%, 40% { opacity: 0; }
-    70%, 100% { opacity: 0.35; }
+    0% { opacity: 0; transform: rotate(45deg) translateY(-6px); }
+    50% { opacity: 0.35; transform: rotate(45deg) translateY(0); }
+    100% { opacity: 0; transform: rotate(45deg) translateY(4px); }
   }
-
+  
   .hero-image-secondary {
     display: none !important;
   }
