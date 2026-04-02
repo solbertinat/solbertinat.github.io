@@ -48,10 +48,11 @@ body { scrollbar-width: none; }
   display: flex;
   align-items: center;
   padding-left: 14vw;
+  padding: 10rem;
 }
 
 .ellefolk-text {
-  width: 560px;
+  width: 600px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
@@ -150,35 +151,54 @@ body { scrollbar-width: none; }
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
+
   .back-btn {
-    top: 1.2rem;
-    left: 1.2rem;
+    top: 1rem;
+    left: 1rem;
   }
+
   .ellefolk-cover {
+    flex-direction: column;
     padding: 80px 24px 60px;
+    min-height: auto;
+    justify-content: flex-start;
     align-items: flex-start;
   }
+
   .ellefolk-text {
     width: 100%;
+    order: 2;
   }
+
+  .ellefolk-text h1 {
+    font-size: 38px;
+  }
+
   .ellefolk-cover-image {
     position: static;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    order: 1;
+    margin-bottom: 2rem;
   }
+
   .ellefolk-cover-image img {
     width: 100%;
     height: auto;
+    max-width: 100%;
+    object-fit: cover;
   }
+
   .layout_ellefolk {
-    padding: 80px 0;
+    padding: 60px 0;
   }
+
   .layout_ellefolk img {
     width: 100%;
     max-height: none;
   }
+
   .work-footer {
     padding: 2rem 24px;
   }
+
 }
