@@ -59,7 +59,6 @@ body { scrollbar-width: none; }
 }
 .maxxxine-cover-image img {
   height: 100vh;
-  width: auto;
   max-width: 74vw;
   object-fit: cover;
   object-position: center top;
