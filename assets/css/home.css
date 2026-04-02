@@ -285,25 +285,40 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   }
 
   .hero-scroll-hint::before {
-    display: none;
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-right: 2.5px solid #1F2E2A;
+    border-bottom: 2.5px solid #1F2E2A;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: chevron1 2.5s ease infinite;
+    margin-bottom: -8px;
   }
 
   .hero-scroll-hint::after {
     content: '';
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     border-right: 2.5px solid #1F2E2A;
     border-bottom: 2.5px solid #1F2E2A;
     transform: rotate(45deg);
     opacity: 0;
-    animation: arrowFade 2.5s ease infinite;
+    animation: chevron2 2.5s ease infinite;
   }
 
-  @keyframes arrowFade {
-    0% { opacity: 0; transform: rotate(45deg) translateY(-6px); }
-    50% { opacity: 0.35; transform: rotate(45deg) translateY(0); }
-    100% { opacity: 0; transform: rotate(45deg) translateY(4px); }
+  @keyframes chevron1 {
+    0%, 20% { opacity: 0; }
+    40%, 60% { opacity: 0.35; }
+    80%, 100% { opacity: 0; }
+  }
+
+  @keyframes chevron2 {
+    0%, 40% { opacity: 0; }
+    60%, 80% { opacity: 0.35; }
+    100% { opacity: 0; }
   }
   
   .hero-image-secondary {
