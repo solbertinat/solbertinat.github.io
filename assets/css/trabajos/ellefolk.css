@@ -47,8 +47,8 @@ body { scrollbar-width: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 15vw;
-  padding: 12rem;
+  padding-left: 13vw;
+  padding: 8rem;
 }
 
 .ellefolk-text {
