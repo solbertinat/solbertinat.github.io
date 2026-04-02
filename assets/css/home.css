@@ -240,9 +240,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
 .hero-text h1 .name-sol {
     display: block;
-    color: white;
-    -webkit-text-stroke: 3px #8c1d2c;
-    paint-order: stroke fill;
+    color: #C8D6E0;
     font-size: clamp(7rem, 32vw, 12rem);
     line-height: 0.88;
   }
@@ -251,7 +249,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     display: block;
     color: #1F2E2A;
     font-size: clamp(3.5rem, 16vw, 6rem);
-    margin-top: 1.2rem;
+    margin-top: 0.9rem;
     padding-left: 0;
   }
 
