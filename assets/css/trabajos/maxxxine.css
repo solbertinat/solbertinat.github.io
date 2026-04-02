@@ -55,7 +55,7 @@ body { scrollbar-width: none; }
   top: 0;
   left: 0;
   bottom: 0;
-  width: 48vw; /* 👈 menos ancho */
+  width: 40vw; /* 👈 menos ancho */
   overflow: hidden;
 }
 
