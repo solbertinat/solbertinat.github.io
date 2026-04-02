@@ -48,7 +48,7 @@ body { scrollbar-width: none; }
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 12vw;
+  padding-left: 10vw;
 }
 
 .maga-text {
@@ -88,9 +88,9 @@ body { scrollbar-width: none; }
   overflow: hidden;
 }
 .maga-cover-image img {
-  height: 105vh;
+  height: 100vh;
   width: auto;
-  max-width: 48vw;
+  max-width: 55vw;
   object-fit: cover;
   object-position: center;
   opacity: 0;
