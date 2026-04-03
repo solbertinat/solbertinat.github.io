@@ -47,11 +47,11 @@ body { scrollbar-width: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: 12vw;
+  padding-left: 8vw;
 }
 
 .ambar-text {
-  width: 320px;
+  width: 280px;
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
@@ -89,9 +89,9 @@ body { scrollbar-width: none; }
 }
 
 .ambar-cover-image img {
-  height: 100vh;
+  height: 105vh;
   width: auto;
-  max-width: 55vw;
+  max-width: 62vw;
   object-fit: cover;
   object-position: center;
   opacity: 0;
