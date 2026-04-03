@@ -57,7 +57,7 @@ body { scrollbar-width: none; }
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
-  text-align: right; /* 👈 solo esto */
+  text-align: right; 
 }
 
 .twenties-text h1 {
