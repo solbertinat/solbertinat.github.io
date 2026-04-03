@@ -89,9 +89,9 @@ body { scrollbar-width: none; }
 }
 
 .ambar-cover-image img {
-  height: 105vh;
+  height: 100vh;
   width: auto;
-  max-width: 45vw;
+  max-width: 55vw;
   object-fit: cover;
   object-position: center;
   opacity: 0;
@@ -154,36 +154,55 @@ body { scrollbar-width: none; }
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
+
   .back-btn {
-    top: 1.2rem;
-    left: 1.2rem;
+    top: 1rem;
+    left: 1rem;
   }
+
   .ambar-cover {
+    flex-direction: column;
     padding: 80px 24px 60px;
+    min-height: auto;
+    justify-content: flex-start;
     align-items: flex-start;
   }
+
   .ambar-text {
     width: 100%;
+    order: 2;
   }
+
+  .ambar-text h1 {
+    font-size: 38px;
+  }
+
   .ambar-cover-image {
     position: static;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    order: 1;
+    margin-bottom: 2rem;
   }
+
   .ambar-cover-image img {
     width: 100%;
     height: auto;
+    max-width: 100%;
+    object-fit: cover;
   }
+
   .layout_ambar {
-    padding: 80px 0;
+    padding: 60px 0;
   }
+
   .layout_ambar img {
     width: 100%;
     max-height: none;
   }
+
   .work-footer {
     padding: 2rem 24px;
   }
+
 }
 
