@@ -48,11 +48,11 @@ body { scrollbar-width: none; }
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 12vw;
+  padding-right: 15vw;
 }
 
 .twenties-text {
-  width: 380px;
+  width: 500px;
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
@@ -155,35 +155,54 @@ body { scrollbar-width: none; }
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
+
   .back-btn {
-    top: 1.2rem;
-    left: 1.2rem;
+    top: 1rem;
+    left: 1rem;
   }
+
   .twenties-cover {
+    flex-direction: column;
     padding: 80px 24px 60px;
+    min-height: auto;
+    justify-content: flex-start;
     align-items: flex-start;
   }
+
   .twenties-text {
     width: 100%;
+    order: 2;
   }
+
+  .twenties-text h1 {
+    font-size: 38px;
+  }
+
   .twenties-cover-image {
     position: static;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    order: 1;
+    margin-bottom: 2rem;
   }
+
   .twenties-cover-image img {
     width: 100%;
     height: auto;
+    max-width: 100%;
+    object-fit: cover;
   }
+
   .layout_twenties {
-    padding: 80px 0;
+    padding: 60px 0;
   }
+
   .layout_twenties img {
     width: 100%;
     max-height: none;
   }
+
   .work-footer {
     padding: 2rem 24px;
   }
+
 }
