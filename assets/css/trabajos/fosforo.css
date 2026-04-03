@@ -51,6 +51,8 @@ body { scrollbar-width: none; }
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
+  align: center;
+  justify-content: center;
 }
 .fosforo-text h1 {
   font-family: var(--font-serif);
