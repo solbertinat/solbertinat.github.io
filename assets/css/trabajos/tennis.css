@@ -48,7 +48,7 @@ body { scrollbar-width: none; }
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 12vw;
+  padding-left: 15vw;
 }
 
 .tennis-text {
