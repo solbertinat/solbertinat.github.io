@@ -57,7 +57,7 @@ body { scrollbar-width: none; }
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
-  text-align: right; /* 👈 alineación */
+  text-align: right; /* 👈 solo esto */
 }
 
 .twenties-text h1 {
@@ -69,7 +69,6 @@ body { scrollbar-width: none; }
 .twenties-meta {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end; /* 👈 alinea meta a la derecha */
   gap: 12px;
   font-size: 13px;
   letter-spacing: 0.12em;
@@ -82,6 +81,7 @@ body { scrollbar-width: none; }
   font-size: 16px;
   line-height: 1.7;
 }
+
 /* =========================
    IMAGEN PORTADA
 ========================= */
