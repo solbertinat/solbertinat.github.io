@@ -52,7 +52,7 @@ body { scrollbar-width: none; }
 }
 
 .top-text {
-  width: 430px;
+  width: 530px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
