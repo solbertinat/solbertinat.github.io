@@ -167,6 +167,12 @@
   background: linear-gradient(to bottom, #e6c3cc 0%, #F6F5F0 100%);
 }
 
+/* desktop: ocultar el cv-link-mobile */
+.cv-link-mobile {
+  display: none;
+}
+
+
 
 @media (max-width: 768px) {
   .about-section {
@@ -274,9 +280,8 @@
     display: none;
   }
 
-  .cv-link {
-    display: block;
-    text-align: center;
-    margin-top: 2.5rem;
-  }
+.cv-link-mobile {
+  display: block;
+  text-align: center;
+  margin-top: 2.5rem;
 }
