@@ -172,7 +172,7 @@
 }
 
 
-@media (max-width: 768px) and (pointer: coarse) {
+@media (max-width: 768px) {
   .about-section {
     min-height: auto;
     padding: 3rem 24px 5rem;
