@@ -163,8 +163,6 @@
     display: block;
   }
 
-  /* TÍTULO */
-
   .about-title {
     font-size: clamp(3rem, 18vw, 6rem);
     position: static;
@@ -174,26 +172,24 @@
     margin-bottom: 2rem;
   }
 
-  /* CONTENEDOR */
-
   .about-inner {
     display: block;
     padding: 0 24px;
   }
 
-  /* TEXTO TIPO REVISTA */
+  /* TEXTO EN COLUMNAS */
 
   .about-text {
     max-width: 100%;
     margin: 0;
-    column-count: 2; /* 👈 clave */
+    column-count: 2;
     column-gap: 24px;
   }
 
   .about-text p {
     font-size: 14px;
     line-height: 1.7;
-    text-align: justify; /* 👈 revista */
+    text-align: justify;
     margin-bottom: 16px;
   }
 
@@ -205,46 +201,48 @@
     margin-top: 2px;
   }
 
-  /* IMAGEN DENTRO DEL TEXTO */
+  /* IMAGEN ABAJO EN PRIMER COLUMNA */
 
   .about-image {
-    float: left;
-    width: 45%;
-    margin: 0 16px 16px 0;
-    position: relative;
+    break-inside: avoid;
+    width: 100%;
+    margin-top: 1rem;
   }
 
   .about-image img.profile-image {
     width: 100%;
     max-width: none;
-    transform: rotate(-2deg);
+    transform: none; /* 👈 sin rotación */
+    filter: none;    /* 👈 sin sombra */
   }
 
-  /* PNGs MÁS CHICOS Y MEJOR POSICIONADOS */
+  /* PNGs AJUSTADOS */
 
   .about-star {
     width: 70px;
-    top: -10px;
-    left: -10px;
+    top: 10px;      /* 👈 más abajo */
+    left: -20px;    /* 👈 más a la izquierda */
   }
 
   .about-tape {
     width: 90px;
     bottom: -20px;
-    left: 10px;
+    left: -10px;    /* 👈 más a la izquierda */
   }
 
   .about-flower {
     width: 110px;
-    right: -15px;
-    top: 30%;
+    right: -25px;   /* 👈 más a la derecha */
+    top: 15%;       /* 👈 más arriba */
   }
 
-  /* LINK */
+  /* BOTÓN CV ABAJO CENTRADO */
 
   .cv-link {
     display: block;
-    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
     break-inside: avoid;
   }
 
