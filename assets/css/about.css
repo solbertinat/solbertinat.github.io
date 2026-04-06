@@ -177,39 +177,51 @@
   }
 
   .about-inner {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1.2rem;
     padding: 0;
     margin-top: 0;
+    align-items: end;
+  }
+
+  .about-col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .about-col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .about-text {
-    column-count: 2;
-    column-gap: 1.5rem;
-    margin-top: 0;
-    margin-left: 0;
-    max-width: 100%;
+    display: contents;
   }
 
-  .about-text p {
+  .about-first-p,
+  .about-col-right p {
     font-size: 13px;
     line-height: 1.5;
     margin-bottom: 10px;
   }
 
-  .about-text p:first-child::first-letter {
+  .about-first-p::first-letter {
+    font-family: var(--font-serif);
     font-size: 3rem;
+    line-height: 0.85;
+    float: left;
+    margin-right: 8px;
+    margin-top: 3px;
   }
 
   .about-image {
-    break-before: column;
-    break-after: column;
-    column-span: none;
     width: 100%;
     position: relative;
-    margin-left: 0;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    justify-content: flex-start;
+    margin: 0;
     display: block;
   }
 
@@ -227,9 +239,8 @@
   .about-flower { width: 140px; right: -10px; }
 
   .cv-link {
-    column-span: all;
     display: block;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
 }
