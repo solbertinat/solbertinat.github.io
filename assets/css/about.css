@@ -211,9 +211,9 @@
     text-align: justify;
   }
 
-  .about-first-p::first-letter {
+.about-first-p::first-letter {
     font-family: var(--font-serif);
-    font-size: 5.5rem;
+    font-size: 4.2rem;
     line-height: 0.85;
     float: left;
     margin-right: 8px;
@@ -238,22 +238,21 @@
 
   .about-star {
     width: 70px;
-    top: -20px;
+    top: -10px;
     left: -30px;
   }
 
   .about-tape {
     width: 84px;
-    bottom: -35px;
-    left: -10px;
+    bottom: -25px;
+    left: -18px;
   }
 
   .about-flower {
     width: 105px;
-    right: -35px;
-    top: 10%;
+    right: -42px;
+    top: 15%;
   }
-
   .cv-link {
     display: block;
     text-align: center;
