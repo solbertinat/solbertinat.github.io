@@ -182,10 +182,9 @@
   /* GRID REVISTA */
 
   .about-text {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
+  column-count: 2;
+  column-gap: 24px;
+}
 
   .about-col p {
     font-size: 14px;
@@ -216,12 +215,20 @@
 
   /* IMAGEN */
 
-  .about-image img.profile-image {
-    width: 100%;
-    max-width: 220px;
-    transform: none;
-    filter: none;
-  }
+  .about-image {
+  float: left; /* 👈 clave */
+  width: 100%;
+  max-width: 100%;
+  margin-top: 16px;
+  break-inside: avoid;
+}
+
+.about-image img.profile-image {
+  width: 100%;
+  max-width: 100%;
+  transform: none;
+  filter: none;
+}
 
   /* PNGs */
 
