@@ -166,7 +166,7 @@
   }
 
   .about-title {
-    font-size: clamp(3rem, 16vw, 5rem);
+    font-size: clamp(3.5rem, 20vw, 6rem);
     position: static;
     transform: none;
     text-align: center;
@@ -174,6 +174,7 @@
     margin-bottom: 1.5rem;
     display: block;
     width: 100%;
+    color: #8c1d2c;
   }
 
   .about-inner {
@@ -212,7 +213,7 @@
 
   .about-first-p::first-letter {
     font-family: var(--font-serif);
-    font-size: 3rem;
+    font-size: 5.5rem;
     line-height: 0.85;
     float: left;
     margin-right: 8px;
@@ -236,21 +237,21 @@
   }
 
   .about-star {
-    width: 100px;
+    width: 70px;
     top: -20px;
-    left: -20px;
+    left: -30px;
   }
 
   .about-tape {
-    width: 120px;
+    width: 84px;
     bottom: -35px;
-    left: 5px;
+    left: -10px;
   }
 
   .about-flower {
-    width: 150px;
-    right: -25px;
-    top: 19.5%;
+    width: 105px;
+    right: -35px;
+    top: 10%;
   }
 
   .cv-link {
@@ -258,4 +259,5 @@
     text-align: center;
     margin-top: 2.5rem;
   }
+}
 }
