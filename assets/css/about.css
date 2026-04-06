@@ -156,69 +156,99 @@
 }
 
 @media (max-width: 768px) {
+
   .about-section {
     min-height: auto;
-    padding: 5rem 0 7rem; /* 👈 un poco más de aire */
+    padding: 4rem 0 6rem;
+    display: block;
   }
+
+  /* TÍTULO */
 
   .about-title {
     font-size: clamp(3rem, 18vw, 6rem);
     position: static;
     transform: none;
     text-align: right;
-    padding-right: 24px;
-    margin-bottom: 2.5rem; /* 👈 más separación */
+    padding: 0 24px;
+    margin-bottom: 2rem;
   }
+
+  /* CONTENEDOR */
 
   .about-inner {
-    grid-template-columns: 1fr;
+    display: block;
     padding: 0 24px;
-    gap: 3.5rem; /* 👈 más aire entre imagen y texto */
-    margin-top: 0;
   }
 
-  .about-image {
-    margin-left: 0;
-    margin-top: 0;
-    justify-content: center;
-  }
-
-  .about-image img.profile-image {
-    max-width: 240px;
-  }
-
-  .about-star {
-    width: 90px;
-    top: -8px;
-    left: -8px;
-  }
-
-  .about-tape {
-    width: 110px;
-    bottom: -30px;
-    left: 10px;
-  }
-
-  .about-flower {
-    width: 140px;
-    right: -10px;
-  }
+  /* TEXTO TIPO REVISTA */
 
   .about-text {
-    margin-top: 0;
-    margin-left: 0;
-    max-width: 520px; /* 👈 clave: no usar todo el ancho */
-    margin-left: auto;
-    margin-right: auto; /* 👈 centra el bloque */
+    max-width: 100%;
+    margin: 0;
+    column-count: 2; /* 👈 clave */
+    column-gap: 24px;
   }
 
   .about-text p {
     font-size: 14px;
-    line-height: 1.75; /* 👈 más legibilidad */
-    margin-bottom: 20px; /* 👈 más aire */
+    line-height: 1.7;
+    text-align: justify; /* 👈 revista */
+    margin-bottom: 16px;
   }
 
   .about-text p:first-child::first-letter {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
+    line-height: 0.9;
+    float: left;
+    margin-right: 8px;
+    margin-top: 2px;
+  }
+
+  /* IMAGEN DENTRO DEL TEXTO */
+
+  .about-image {
+    float: left;
+    width: 45%;
+    margin: 0 16px 16px 0;
+    position: relative;
+  }
+
+  .about-image img.profile-image {
+    width: 100%;
+    max-width: none;
+    transform: rotate(-2deg);
+  }
+
+  /* PNGs MÁS CHICOS Y MEJOR POSICIONADOS */
+
+  .about-star {
+    width: 70px;
+    top: -10px;
+    left: -10px;
+  }
+
+  .about-tape {
+    width: 90px;
+    bottom: -20px;
+    left: 10px;
+  }
+
+  .about-flower {
+    width: 110px;
+    right: -15px;
+    top: 30%;
+  }
+
+  /* LINK */
+
+  .cv-link {
+    display: block;
+    margin-top: 1.5rem;
+    break-inside: avoid;
+  }
+
+  .about-work-spacer {
+    height: 30vh;
   }
 }
