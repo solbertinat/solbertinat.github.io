@@ -172,20 +172,17 @@
     text-align: left;
     padding-right: 0;
     margin-bottom: 1.5rem;
+    display: block;
+    width: 100%;
   }
 
   .about-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 0 1.5rem;
+    display: block;
     padding: 0;
     margin-top: 0;
-    align-items: start;
   }
 
   .about-text {
-    grid-column: 1 / 3;
     column-count: 2;
     column-gap: 1.5rem;
     margin-top: 0;
@@ -197,7 +194,6 @@
     font-size: 13px;
     line-height: 1.5;
     margin-bottom: 10px;
-    break-inside: avoid;
   }
 
   .about-text p:first-child::first-letter {
@@ -205,11 +201,16 @@
   }
 
   .about-image {
-    column-span: all; /* queda al pie de la col izquierda via el flujo */
     break-before: column;
+    break-after: column;
+    column-span: none;
+    width: 100%;
+    position: relative;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     justify-content: flex-start;
+    display: block;
   }
 
   .about-image img.profile-image {
@@ -217,6 +218,8 @@
     max-width: 100%;
     transform: none;
     filter: none;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
   }
 
   .about-star  { width: 90px;  top: -8px;  left: -8px; }
@@ -224,6 +227,7 @@
   .about-flower { width: 140px; right: -10px; }
 
   .cv-link {
+    column-span: all;
     display: block;
     text-align: center;
     margin-top: 2rem;
