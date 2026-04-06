@@ -223,9 +223,9 @@
     margin-left: 0;
   }
 
-  .about-col-right p:first-child {
-    display: none;
-  }
+  .about-p-desktop {
+  display: none;
+}
 
   .about-first-p,
   .about-col-right p {
