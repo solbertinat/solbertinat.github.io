@@ -155,3 +155,104 @@
   );
 }
 
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .about-section {
+    padding: 4rem 0 6rem;
+  }
+
+  .about-title {
+    font-size: clamp(3rem, 18vw, 6rem);
+    text-align: right;
+    padding: 0 24px;
+    margin-bottom: 2rem;
+    position: static;
+    transform: none;
+  }
+
+  .about-inner {
+    padding: 0 24px;
+  }
+
+  /* GRID REVISTA */
+
+  .about-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .about-col p {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-bottom: 16px;
+  }
+
+  .about-col p:first-child::first-letter {
+    font-family: var(--font-serif);
+    font-size: 3.2rem;
+    float: left;
+    margin-right: 8px;
+    margin-top: 2px;
+  }
+
+  /* COLUMNA IZQUIERDA */
+
+  .about-col-left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-col-left .about-image {
+    margin-top: auto; /* 👈 clave: la manda abajo */
+    position: relative;
+  }
+
+  /* IMAGEN */
+
+  .about-image img.profile-image {
+    width: 100%;
+    max-width: 220px;
+    transform: none;
+    filter: none;
+  }
+
+  /* PNGs */
+
+  .about-star {
+    width: 60px;
+    top: 10px;
+    left: -20px;
+  }
+
+  .about-tape {
+    width: 80px;
+    bottom: -15px;
+    left: -15px;
+  }
+
+  .about-flower {
+    width: 100px;
+    right: -20px;
+    top: 10%;
+  }
+
+  /* BOTÓN CV */
+
+  .cv-link {
+    display: block;
+    text-align: center;
+    margin: 3rem auto 0;
+    width: fit-content;
+  }
+
+  .about-work-spacer {
+    height: 30vh;
+  }
+}
