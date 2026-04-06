@@ -169,7 +169,7 @@
     font-size: clamp(3rem, 16vw, 5rem);
     position: static;
     transform: none;
-    text-align: left;
+    text-align: center;
     padding-right: 0;
     margin-bottom: 1.5rem;
     display: block;
@@ -182,13 +182,13 @@
     gap: 0 1.2rem;
     padding: 0;
     margin-top: 0;
-    align-items: end;
+    align-items: start;
   }
 
   .about-col-left {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100%;
   }
 
@@ -207,6 +207,7 @@
     font-size: 13px;
     line-height: 1.5;
     margin-bottom: 10px;
+    text-align: justify;
   }
 
   .about-first-p::first-letter {
@@ -219,9 +220,9 @@
   }
 
   .about-image {
-    width: 100%;
+    width: 85%;
     position: relative;
-    margin: 0;
+    margin: 0.5rem auto 0;
     display: block;
   }
 
@@ -234,9 +235,23 @@
     object-fit: cover;
   }
 
-  .about-star  { width: 90px;  top: -8px;  left: -8px; }
-  .about-tape  { width: 110px; bottom: -30px; left: 10px; }
-  .about-flower { width: 140px; right: -10px; }
+  .about-star {
+    width: 100px;
+    top: -20px;
+    left: -20px;
+  }
+
+  .about-tape {
+    width: 120px;
+    bottom: -35px;
+    left: 5px;
+  }
+
+  .about-flower {
+    width: 150px;
+    right: -25px;
+    top: 19.5%;
+  }
 
   .cv-link {
     display: block;
