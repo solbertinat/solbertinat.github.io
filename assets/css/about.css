@@ -48,6 +48,10 @@
   display: none;
 }
 
+.about-col-right p {
+  margin-bottom: 0.4em;
+}
+
 .about-image {
   display: flex;
   justify-content: center;
