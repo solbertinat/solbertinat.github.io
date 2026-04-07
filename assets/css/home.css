@@ -270,45 +270,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     display: none;
   }
 
-  .hero-scroll-hint {
-  order: 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  flex-shrink: 0;
-  height: 8vh;
-  padding-bottom: 2rem;
-  font-size: 0;
-  color: transparent;
-  position: relative;
-  transform: translateY(1px);
-}
-
-/* 👇 máscara */
-.hero-scroll-hint::before {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  clip-path: inset(100% 0 0 0);
-  animation: chevronFill 2s ease infinite;
-  pointer-events: none;
-}
-
-/* 👇 chevron */
-.hero-scroll-hint::after {
-  content: '';
-  display: block;
-  width: 18px;
-  height: 18px;
-  border-right: 2.5px solid #1F2E2A;
-  border-bottom: 2.5px solid #1F2E2A;
-  transform: rotate(45deg);
-  animation: chevronFill 2s ease infinite;
-}
-  
- .name-sol-mobile {
+  .name-sol-mobile {
   display: block;
   font-family: var(--font-serif);
   font-weight: 280;
@@ -332,20 +294,51 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   line-height: 0.88;
 }
 
-@keyframes chevronFill {
+.hero-scroll-hint {
+  order: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 8vh;
+  padding-bottom: 2rem;
+}
+
+/* 👇 máscara (NO rota) */
+.chevron-mask {
+  width: 18px;
+  height: 18px;
+  overflow: hidden; /* 👈 clave */
+  display: block;
+  animation: chevronFill 2s ease infinite;
+}
+
+/* 👇 chevron (rotado, quieto) */
+.chevron {
+  width: 18px;
+  height: 18px;
+  border-right: 2.5px solid #1F2E2A;
+  border-bottom: 2.5px solid #1F2E2A;
+  transform: rotate(45deg);
+  display: block;
+}
+  
+  @keyframes chevronFill {
   0% {
-    transform: rotate(45deg) translateY(-6px); /* 👈 arranca más arriba */
+    clip-path: inset(100% 0 0 0); /* oculto arriba */
     opacity: 0;
   }
   40% {
     opacity: 0.35;
   }
+  60% {
+    clip-path: inset(0% 0 0 0); /* lleno completo */
+    opacity: 0.35;
+  }
   100% {
-    transform: rotate(45deg) translateY(6px); /* 👈 baja */
     opacity: 0;
   }
 }
-
+  
   .hero-image-secondary {
     display: none !important;
   }
