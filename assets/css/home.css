@@ -312,7 +312,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   display: block;
   font-family: var(--font-serif);
   font-weight: 280;
-  color: white;
+  color: #F6F5F0;
   font-size: clamp(8rem, 38vw, 14rem);
   line-height: 0.88;
   position: absolute;
