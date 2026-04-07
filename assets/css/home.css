@@ -185,6 +185,9 @@ body.animate-hero .hero-image-main { animation-delay: 0.1s; }
 body.animate-hero .hero-text { animation-delay: 0.35s; }
 body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
+
+
+
 @media (max-width: 768px) {
   .hero {
     display: flex !important;
@@ -343,5 +346,158 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   @keyframes arrowFade {
     0%, 40% { opacity: 0; }
     70%, 100% { opacity: 0.3; }
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    display: flex !important;
+    flex-direction: column;
+    min-height: 100svh;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .hero > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-image-main {
+    position: relative !important;
+    width: 100%;
+    max-width: 100%;
+    height: 58vh;
+    opacity: 1;
+    bottom: auto;
+    order: 1;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .hero-image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  .name-sol {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    font-family: var(--font-serif);
+    font-weight: 280;
+    font-size: clamp(3.5rem, 16vw, 6rem);
+    color: white;
+    line-height: 0.88;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .hero-text {
+    grid-column: auto;
+    order: 2;
+    opacity: 1;
+    max-width: 100%;
+    padding: 0 20px 0 16px;
+    margin-top: 0;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .hero-text h1 {
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 0.88;
+    margin-top: 0;
+  }
+
+  .hero-text h1 .name-bertinat {
+    display: block;
+    color: #1F2E2A;
+    font-size: clamp(3.5rem, 16vw, 6rem);
+    margin-top: 0.9rem;
+    padding-left: 0;
+  }
+
+  .hero-claim {
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.4rem;
+    text-align: right;
+  }
+
+  .hero-roles {
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    margin-bottom: 0;
+    text-align: right;
+  }
+
+  .hero-links {
+    display: none;
+  }
+
+  .hero-scroll-hint {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+    height: 8vh;
+    padding-bottom: 1.8rem;
+    font-size: 0;
+    color: transparent;
+  }
+
+  .hero-scroll-hint::before {
+    display: none;
+  }
+
+  .hero-scroll-hint::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 11px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 11'%3E%3Cpolyline points='0,0 10,11 20,0' fill='none' stroke='%231F2E2A' stroke-width='2'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    animation: chevronDraw 2s ease infinite;
+  }
+
+  .hero-image-secondary {
+    display: none !important;
+  }
+
+  .hero::after {
+    height: 25vh;
+  }
+
+  body.animate-hero .hero-image-main,
+  body.animate-hero .hero-text,
+  body.animate-hero .hero-image-secondary {
+    animation: fadeUp 1s cubic-bezier(.19,1,.22,1) forwards;
+    animation-delay: 0s;
+  }
+
+  @keyframes chevronDraw {
+    0% {
+      clip-path: polygon(0 0, 2px 0, 18px 0, 100% 0);
+      opacity: 0.35;
+    }
+    70% {
+      clip-path: polygon(0 0, 50% 100%, 50% 100%, 100% 0);
+      opacity: 0.35;
+    }
+    90%, 100% {
+      clip-path: polygon(0 0, 50% 100%, 50% 100%, 100% 0);
+      opacity: 0;
+    }
   }
 }
