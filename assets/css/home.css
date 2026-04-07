@@ -309,6 +309,8 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; 
+  transform: translateY(0.3rem);
 }
 
 .chevron {
@@ -318,15 +320,16 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   border-bottom: 2.5px solid #1F2E2A;
   transform: rotate(45deg);
   display: block;
+  animation: chevronFill 2s ease infinite; /* 👈 mover animación acá */
 }
   
 @keyframes chevronFill {
   0% {
-    clip-path: inset(0% 0 100% 0); /* 👈 oculto arriba */
+    clip-path: inset(0% 0 100% 0);
     opacity: 0;
   }
   50% {
-    clip-path: inset(0% 0 0% 0); /* 👈 baja */
+    clip-path: inset(0% 0 0% 0);
     opacity: 0.35;
   }
   100% {
