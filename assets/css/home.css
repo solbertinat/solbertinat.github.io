@@ -317,7 +317,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   fill: none;
   stroke-linecap: square;
   stroke-linejoin: miter;
-  animation: chevronFill 2.8s infinite;
+  animation: chevronFill 2.8s linear infinite;
 }
   
 @keyframes chevronFill {
@@ -326,13 +326,17 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     opacity: 0;
   }
 
-  80% { /* 👈 entrada MUY lenta */
+  10% {
+    opacity: 0.35;
+  }
+
+  85% { /* 👈 el fill ocurre durante casi TODA la animación */
     clip-path: inset(0% 0 0% 0);
     opacity: 0.35;
   }
 
-  100% { /* 👈 salida MUY rápida */
-    opacity: 0;
+  100% {
+    opacity: 0; /* 👈 salida rápida */
   }
 }
   
