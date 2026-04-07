@@ -502,6 +502,26 @@
     });
   });
 </script>
+<script>
+  if (window.innerWidth <= 768) {
+    const items = document.querySelectorAll('.work-item');
 
+    const hintObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const item = entry.target;
+          item.classList.add('hint');
+          setTimeout(() => {
+            item.classList.remove('hint');
+          }, 900);
+          hintObserver.unobserve(item);
+        }
+      });
+    }, { threshold: 0.6 });
+
+    items.forEach(item => hintObserver.observe(item));
+  }
+</script>
+  
 </body>
 </html>
