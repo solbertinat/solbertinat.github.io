@@ -282,6 +282,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   font-size: 0;
   color: transparent;
   position: relative;
+  transform: translateY(1px);
 }
 
 /* 👇 máscara */
@@ -298,16 +299,15 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 /* 👇 chevron */
 .hero-scroll-hint::after {
   content: '';
-  position: absolute;
+  display: block;
   width: 18px;
   height: 18px;
   border-right: 2.5px solid #1F2E2A;
   border-bottom: 2.5px solid #1F2E2A;
-  transform: translateX(-50%) rotate(45deg); /* 👈 corregido */
-  left: 50%;
-  top: 0;
+  transform: rotate(45deg);
+  animation: chevronFill 2s ease infinite;
 }
-
+  
  .name-sol-mobile {
   display: block;
   font-family: var(--font-serif);
@@ -317,7 +317,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   line-height: 0.88;
   position: absolute;
   bottom: -1rem;
-  left: 12px;
+  left: 10px;
   z-index: 10;
 }
 
@@ -334,14 +334,14 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
 @keyframes chevronFill {
   0% {
-    clip-path: inset(100% 0 0 0);
+    transform: rotate(45deg) translateY(-6px); /* 👈 arranca más arriba */
+    opacity: 0;
+  }
+  40% {
     opacity: 0.35;
   }
-  60% {
-    clip-path: inset(0% 0 0 0);
-    opacity: 0.35;
-  }
-  85%, 100% {
+  100% {
+    transform: rotate(45deg) translateY(6px); /* 👈 baja */
     opacity: 0;
   }
 }
