@@ -172,6 +172,15 @@
   background: linear-gradient(to bottom, #e6c3cc 0%, #F6F5F0 100%);
 }
 
+@media (min-width: 769px) {
+  .about-star {
+    top: 9px;
+  }
+
+  .about-flower {
+    right: -120px;
+  }
+}
 
 @media (max-width: 768px) {
   .about-section {
@@ -267,11 +276,11 @@
     left: -26px;
   }
 
-  .about-tape {
-    width: 72px;
-    bottom: -15px;
-    left: 0px;
-  }
+ .about-tape {
+  width: 72px;
+  bottom: -15px;
+  left: -12px; /* 👈 más a la izquierda */
+}
 
   .about-flower {
     width: 105px;
