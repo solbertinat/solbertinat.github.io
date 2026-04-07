@@ -48,10 +48,6 @@
   display: none;
 }
 
-.about-col-right p {
-  margin-bottom: 0.4em;
-}
-
 .about-image {
   display: flex;
   justify-content: center;
@@ -94,7 +90,7 @@
 
 .about-flower {
   width: 220px;
-  right: -110px;
+  left: 30px;
   top: 19.5%;
   animation: flowerSwing 0.8s steps(2, end) infinite alternate;
   filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.10));
@@ -125,7 +121,7 @@
 .about-col-right p {
   font-size: 15px;
   line-height: 1.65;
-  margin-bottom: 16px;
+  margin-bottom: 0; /* 👈 sin espacio extra */
 }
 
 .about-col-right p:first-child::first-letter {
@@ -274,7 +270,7 @@
   .about-tape {
     width: 72px;
     bottom: -15px;
-    left: -3px;
+    left: 2px;
   }
 
   .about-flower {
