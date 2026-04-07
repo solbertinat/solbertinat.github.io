@@ -40,6 +40,10 @@
 .hero-image-main:hover img { transform: scale(1.05); }
 .hero-image-main:hover::after { opacity: 1; }
 
+.name-sol {
+  display: none;
+}
+
 .hero-text {
   grid-column: 2;
   padding-top: 10rem;
@@ -96,6 +100,10 @@
 
 .hero-text a:hover { color: #eeff63; }
 .hero-text a:hover::after { transform: scaleX(0.4); }
+
+.name-bertinat {
+  display: block;
+}
 
 .hero-image-secondary {
   grid-column: 3;
@@ -185,169 +193,6 @@ body.animate-hero .hero-image-main { animation-delay: 0.1s; }
 body.animate-hero .hero-text { animation-delay: 0.35s; }
 body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
-
-
-
-@media (max-width: 768px) {
-  .hero {
-    display: flex !important;
-    flex-direction: column;
-    min-height: 100svh;
-    overflow: visible;
-    padding: 0;
-  }
-
-  .hero > * {
-    position: relative;
-    z-index: 1;
-  }
-
- .hero-image-main {
-    position: relative !important;
-    width: 100%;
-    max-width: 100%;
-    height: 58vh;
-    opacity: 1;
-    bottom: auto;
-    order: 1;
-    flex-shrink: 0;
-  }
-
-   .hero-image-main img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 40%;
-  }
-
- .hero-text h1 .name-sol {
-    display: block;
-    color: white;
-    font-size: clamp(8rem, 38vw, 14rem);
-    line-height: 0.88;
-    position: absolute;
-    bottom: 0;
-    left: 16px;
-    z-index: 2;
-  }
-
-  .hero-text h1 {
-    text-align: left;
-    margin-bottom: 0;
-    line-height: 0.9;
-    margin-top: 0;
-    position: static;
-  }
-
-  .hero-text h1 .name-bertinat {
-    display: block;
-    color: #1F2E2A;
-    font-size: clamp(8rem, 38vw, 14rem);
-    margin-top: 0;
-    padding-left: 0;
-    line-height: 0.88;
-  }
-
-  .hero-text {
-    grid-column: auto;
-    order: 2;
-    opacity: 1;
-    max-width: 100%;
-    padding: 0 20px 0 16px;
-    margin-top: 0;
-    position: static;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .hero-claim {
-    font-size: 1rem;
-    margin-top: 1.8rem;
-    margin-bottom: 0.4rem;
-    text-align: right;
-  }
-
-  .hero-roles {
-    font-size: 0.68rem;
-    letter-spacing: 0.13em;
-    margin-bottom: 0;
-    text-align: right;
-  }
-
-  .hero-links {
-    display: none;
-  }
-
-.hero-scroll-hint {
-    order: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
-    height: 8vh;
-    padding-bottom: 2rem;
-    font-size: 0;
-    color: transparent;
-  }
-
-  .hero-scroll-hint::before {
-    display: none;
-  }
-
-  .hero-scroll-hint::after {
-    content: '';
-    display: block;
-    width: 18px;
-    height: 18px;
-    border-right: 2.5px solid #1F2E2A;
-    border-bottom: 2.5px solid #1F2E2A;
-    transform: rotate(45deg);
-    animation: chevronDraw 2s ease infinite;
-  }
-
-  @keyframes chevronDraw {
-    0% {
-      clip-path: inset(0 0 100% 0);
-      opacity: 0.35;
-    }
-    60% {
-      clip-path: inset(0 0 0% 0);
-      opacity: 0.35;
-    }
-    85%, 100% {
-      clip-path: inset(0 0 0% 0);
-      opacity: 0;
-    }
-  }
-  
-  .hero-image-secondary {
-    display: none !important;
-  }
-
-  .hero::after {
-    height: 25vh;
-  }
-
-  body.animate-hero .hero-image-main,
-  body.animate-hero .hero-text,
-  body.animate-hero .hero-image-secondary {
-    animation: fadeUp 1s cubic-bezier(.19,1,.22,1) forwards;
-    animation-delay: 0s;
-  }
-
-  @keyframes arrowFade {
-    0%, 30% { opacity: 0; transform: rotate(45deg) translateY(-4px); }
-    70%, 100% { opacity: 0.35; transform: rotate(45deg) translateY(0); }
-  }
-}
-
-  @keyframes arrowFade {
-    0%, 40% { opacity: 0; }
-    70%, 100% { opacity: 0.3; }
-  }
-}
 @media (max-width: 768px) {
   .hero {
     display: flex !important;
@@ -467,7 +312,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 11'%3E%3Cpolyline points='0,0 10,11 20,0' fill='none' stroke='%231F2E2A' stroke-width='2'/%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
-    opacity: 0.35;
+    opacity: 0;
     animation: chevronDraw 2s ease infinite;
   }
 
@@ -488,15 +333,15 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
   @keyframes chevronDraw {
     0% {
-      clip-path: polygon(0 0, 2px 0, 18px 0, 100% 0);
+      clip-path: inset(0 0 100% 0);
       opacity: 0.35;
     }
-    70% {
-      clip-path: polygon(0 0, 50% 100%, 50% 100%, 100% 0);
+    60% {
+      clip-path: inset(0 0 0% 0);
       opacity: 0.35;
     }
-    90%, 100% {
-      clip-path: polygon(0 0, 50% 100%, 50% 100%, 100% 0);
+    85%, 100% {
+      clip-path: inset(0 0 0% 0);
       opacity: 0;
     }
   }
