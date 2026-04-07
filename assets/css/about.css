@@ -178,7 +178,7 @@
   }
 
   .about-flower {
-    right: -120px;
+    right: -20px;
   }
 }
 
@@ -278,8 +278,8 @@
 
  .about-tape {
   width: 72px;
-  bottom: -15px;
-  left: -12px; /* 👈 más a la izquierda */
+  bottom: -13px;
+  left: -18px; /* 👈 más a la izquierda */
 }
 
   .about-flower {
