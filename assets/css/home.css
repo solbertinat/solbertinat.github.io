@@ -304,21 +304,21 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 }
 
 .chevron-mask {
-  width: 26px;          
-  height: 26px;
+  width: 32px;          /* 👈 más grande */
+  height: 32px;
   transform: translateY(0.45rem);
   overflow: hidden;
 }
 
 .chevron {
- width: 100%;
+  width: 100%;
   height: 100%;
   stroke: #1F2E2A;
-  stroke-width: 2.5;
+  stroke-width: 2;      /* 👈 más fino */
   fill: none;
-  stroke-linecap: square;   /* 👈 menos redondeado */
-  stroke-linejoin: miter;   /* 👈 vértice más filoso */
-  animation: chevronFill 2s ease infinite;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  animation: chevronFill 3s ease infinite; /* 👈 más lenta */
 }
   
 @keyframes chevronFill {
