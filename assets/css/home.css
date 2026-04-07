@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 105vh;
+  min-height: 100vh;
   background-color: #F6F5F0;
   display: grid;
   grid-template-columns: 34% 46% 20%;
@@ -305,8 +305,8 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
 /* 👇 máscara (NO rota) */
 .chevron-mask {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   overflow: hidden; /* 👈 clave */
   display: block;
   animation: chevronFill 2s ease infinite;
@@ -322,16 +322,13 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   display: block;
 }
   
-  @keyframes chevronFill {
+ @keyframes chevronFill {
   0% {
-    clip-path: inset(100% 0 0 0); /* oculto arriba */
+    clip-path: inset(100% 0 0 0);
     opacity: 0;
   }
-  40% {
-    opacity: 0.35;
-  }
-  60% {
-    clip-path: inset(0% 0 0 0); /* lleno completo */
+  50% {
+    clip-path: inset(0% 0 0 0);
     opacity: 0.35;
   }
   100% {
