@@ -40,6 +40,10 @@
 .hero-image-main:hover img { transform: scale(1.05); }
 .hero-image-main:hover::after { opacity: 1; }
 
+.name-sol {
+  display: inline;
+}
+
 .hero-text {
   grid-column: 2;
   padding-top: 10rem;
@@ -231,7 +235,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     font-size: clamp(8rem, 38vw, 14rem);
     line-height: 0.88;
     position: absolute;
-    bottom: 0;
+    bottom: -2rem;
     left: 16px;
     z-index: 10;
   }
@@ -260,8 +264,8 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   .hero-text h1 .name-bertinat {
     display: block;
     color: #1F2E2A;
-    font-size: clamp(5rem, 25vw, 9rem);
-    padding-left: 16px;
+    font-size: clamp(2.5rem, 12vw, 5rem);
+    padding-left: 0;
     margin-top: 0;
     line-height: 0.88;
   }
@@ -314,15 +318,15 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
   @keyframes chevronFill {
     0% {
-      clip-path: inset(0 0 100% 0);
+      clip-path: inset(0% 0 0 0);
       opacity: 0.35;
     }
     60% {
-      clip-path: inset(0 0 0% 0);
+      clip-path: inset(100% 0 0 0);
       opacity: 0.35;
     }
     85%, 100% {
-      clip-path: inset(0 0 0% 0);
+      clip-path: inset(100% 0 0 0);
       opacity: 0;
     }
   }
@@ -341,4 +345,9 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     animation: fadeUp 1s cubic-bezier(.19,1,.22,1) forwards;
     animation-delay: 0s;
   }
+}
+
+@keyframes arrowFade {
+  0%, 40% { opacity: 0; }
+  70%, 100% { opacity: 0.3; }
 }
