@@ -282,21 +282,20 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   font-size: 0;
   color: transparent;
   position: relative;
-  transform: translateY(1px);
 }
 
-/* 👇 máscara (NO rota) */
+/* 👇 máscara */
 .hero-scroll-hint::before {
   content: '';
   position: absolute;
   width: 18px;
   height: 18px;
-  background: transparent;
   clip-path: inset(100% 0 0 0);
   animation: chevronFill 2s ease infinite;
+  pointer-events: none;
 }
 
-/* 👇 chevron (rotado) */
+/* 👇 chevron */
 .hero-scroll-hint::after {
   content: '';
   position: absolute;
@@ -304,14 +303,9 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   height: 18px;
   border-right: 2.5px solid #1F2E2A;
   border-bottom: 2.5px solid #1F2E2A;
-  transform: translateX(-50%) rotate(45deg);
-}
-
-  .hero-scroll-hint::before,
-.hero-scroll-hint::after {
-  top: 0;
+  transform: translateX(-50%) rotate(45deg); /* 👈 corregido */
   left: 50%;
-  transform: translateX(-50%);
+  top: 0;
 }
 
  .name-sol-mobile {
