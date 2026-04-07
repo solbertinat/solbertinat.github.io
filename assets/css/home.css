@@ -303,16 +303,14 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   padding-bottom: 2rem;
 }
 
-/* 👇 máscara (NO rota) */
 .chevron-mask {
   width: 22px;
   height: 22px;
-  overflow: hidden; /* 👈 clave */
-  display: block;
-  animation: chevronFill 2s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 👇 chevron (rotado, quieto) */
 .chevron {
   width: 18px;
   height: 18px;
@@ -322,13 +320,13 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   display: block;
 }
   
- @keyframes chevronFill {
+@keyframes chevronFill {
   0% {
-    clip-path: inset(100% 0 0 0);
+    clip-path: inset(0% 0 100% 0); /* 👈 oculto arriba */
     opacity: 0;
   }
   50% {
-    clip-path: inset(0% 0 0 0);
+    clip-path: inset(0% 0 0% 0); /* 👈 baja */
     opacity: 0.35;
   }
   100% {
