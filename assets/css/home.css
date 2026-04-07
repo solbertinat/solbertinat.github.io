@@ -189,6 +189,10 @@ body.animate-hero .hero-image-main { animation-delay: 0.1s; }
 body.animate-hero .hero-text { animation-delay: 0.35s; }
 body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
+.name-sol-mobile { display: none; }
+.name-sol-desktop { display: inline; }
+
+
 @media (max-width: 768px) {
   .hero {
     display: flex !important;
@@ -226,20 +230,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     object-fit: cover;
     object-position: center 40%;
   }
-
-  .name-sol {
-    display: block;
-    font-family: var(--font-serif);
-    font-weight: 280;
-    color: white;
-    font-size: clamp(8rem, 38vw, 14rem);
-    line-height: 0.88;
-    position: absolute;
-    bottom: -2rem;
-    left: 16px;
-    z-index: 10;
-  }
-
+  
   .hero-text {
     grid-column: auto;
     order: 2;
@@ -259,15 +250,6 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     margin-bottom: 0;
     line-height: 0.9;
     margin-top: 0;
-  }
-
-  .hero-text h1 .name-bertinat {
-    display: block;
-    color: #1F2E2A;
-    font-size: clamp(2.5rem, 12vw, 5rem);
-    padding-left: 0;
-    margin-top: 0;
-    line-height: 0.88;
   }
 
   .hero-claim {
@@ -316,20 +298,44 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     animation: chevronFill 2s ease infinite;
   }
 
-  @keyframes chevronFill {
-    0% {
-      clip-path: inset(0% 0 0 0);
-      opacity: 0.35;
-    }
-    60% {
-      clip-path: inset(100% 0 0 0);
-      opacity: 0.35;
-    }
-    85%, 100% {
-      clip-path: inset(100% 0 0 0);
-      opacity: 0;
-    }
+ .name-sol-mobile {
+  display: block;
+  font-family: var(--font-serif);
+  font-weight: 280;
+  color: white;
+  font-size: clamp(8rem, 38vw, 14rem);
+  line-height: 0.88;
+  position: absolute;
+  bottom: 1rem;
+  left: 16px;
+  z-index: 10;
+}
+
+.name-sol-desktop { display: none; }
+
+.hero-text h1 .name-bertinat {
+  display: block;
+  color: #1F2E2A;
+  font-size: clamp(3rem, 15vw, 6rem);
+  padding-left: 0;
+  margin-top: 0;
+  line-height: 0.88;
+}
+
+@keyframes chevronFill {
+  0% {
+    clip-path: inset(0% 0 0 0);
+    opacity: 0.35;
   }
+  60% {
+    clip-path: inset(100% 0 0 0);
+    opacity: 0.35;
+  }
+  85%, 100% {
+    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+  }
+}
 
   .hero-image-secondary {
     display: none !important;
@@ -346,6 +352,8 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     animation-delay: 0s;
   }
 }
+
+
 
 @keyframes arrowFade {
   0%, 40% { opacity: 0; }
