@@ -223,6 +223,19 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     object-position: center 40%;
   }
 
+  .name-sol {
+    display: block;
+    font-family: var(--font-serif);
+    font-weight: 280;
+    color: white;
+    font-size: clamp(8rem, 38vw, 14rem);
+    line-height: 0.88;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    z-index: 10;
+  }
+
   .hero-text {
     grid-column: auto;
     order: 2;
@@ -242,26 +255,14 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     margin-bottom: 0;
     line-height: 0.9;
     margin-top: 0;
-    position: relative;
-  }
-
-  .hero-text h1 .name-sol {
-    display: block;
-    color: white;
-    font-size: clamp(8rem, 38vw, 14rem);
-    line-height: 0.88;
-    position: absolute;
-    bottom: 58vh;
-    left: 16px;
-    z-index: 10;
   }
 
   .hero-text h1 .name-bertinat {
     display: block;
     color: #1F2E2A;
     font-size: clamp(5rem, 25vw, 9rem);
+    padding-left: 16px;
     margin-top: 0;
-    padding-left: 0;
     line-height: 0.88;
   }
 
@@ -313,15 +314,15 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
   @keyframes chevronFill {
     0% {
-      clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 50% 0%, 0% 0%);
+      clip-path: inset(0 0 100% 0);
       opacity: 0.35;
     }
     60% {
-      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+      clip-path: inset(0 0 0% 0);
       opacity: 0.35;
     }
     85%, 100% {
-      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);
+      clip-path: inset(0 0 0% 0);
       opacity: 0;
     }
   }
