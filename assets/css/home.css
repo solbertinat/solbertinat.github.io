@@ -317,7 +317,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
   fill: none;
   stroke-linecap: square;
   stroke-linejoin: miter;
-  animation: chevronFill 2.8s ease infinite;
+  animation: chevronFill 2.8s infinite;
 }
   
 @keyframes chevronFill {
@@ -325,14 +325,13 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     clip-path: inset(0% 0 100% 0);
     opacity: 0;
   }
-  75% { 
+
+  80% { /* 👈 entrada MUY lenta */
     clip-path: inset(0% 0 0% 0);
     opacity: 0.35;
   }
-  85% { 
-    opacity: 0.15;
-  }
-  100% {
+
+  100% { /* 👈 salida MUY rápida */
     opacity: 0;
   }
 }
