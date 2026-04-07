@@ -304,9 +304,9 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 }
 
 .chevron-mask {
-  width: 38px;          /* 👈 más grande */
-  height: 38px;
-  transform: translateY(0.45rem);
+  width: 44px;              /* 👈 más grande */
+  height: 44px;
+  transform: translateY(0.85rem); /* 👈 0.45 + 0.4 */
 }
 
 .chevron {
@@ -325,16 +325,13 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
     clip-path: inset(0% 0 100% 0);
     opacity: 0;
   }
-
-  65% { /* 👈 entrada más larga (más lenta) */
+  75% { 
     clip-path: inset(0% 0 0% 0);
     opacity: 0.35;
   }
-
-  80% { /* 👈 empieza a irse rápido */
-    opacity: 0.2;
+  85% { 
+    opacity: 0.15;
   }
-
   100% {
     opacity: 0;
   }
