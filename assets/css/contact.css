@@ -130,6 +130,10 @@
     pinkSwing 0.8s steps(2, end) infinite alternate 2.3s;
 }
 
+.contact-mobile-right {
+  display: none;
+}
+
 @keyframes pinkAppear { to { opacity: 1; } }
 @keyframes pinkSwing {
   0% { transform: rotate(-56deg); }
