@@ -437,21 +437,24 @@
   </div>
 </section>
 
+  <!-- animación teléfono -->
 <script>
   const contactSection = document.querySelector('.contact-section');
   const phone = document.querySelector('.contact-phone');
+  const pink = document.querySelector('.contact-pink');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         phone.classList.add('is-visible');
+        pink.classList.add('is-visible');
       }
     });
-  }, { threshold: 0.33 });
+  }, { threshold: 0.45 });
 
   observer.observe(contactSection);
 </script>
-
+  
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(
