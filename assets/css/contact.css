@@ -38,7 +38,7 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1rem;
   grid-column: 1;
   grid-row: 1;
   justify-content: flex-end;
@@ -95,6 +95,7 @@
   transform: rotate(-6deg);
   filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.10));
   z-index: 11;
+  margin-top: auto;
 }
 
 .contact-footer {
@@ -210,9 +211,10 @@
 
   .contact-note {
     width: 100%;
-    max-width: 320px;
+    max-width: 360px;
     transform: rotate(-4deg);
     margin-left: -16px;
+    margin-top: 0;
   }
 
   .contact-footer {
@@ -232,23 +234,24 @@
     grid-column: 2;
     grid-row: 2 / 4;
     overflow: visible;
+    padding-bottom: 2rem;
   }
 
   .contact-mobile-right .contact-phone {
     position: relative;
-    width: 120%;
+    width: 130%;
     max-width: none;
     height: auto;
     opacity: 0;
     transform: translateX(80px);
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
     margin-top: 0;
-    margin-left: 0;
+    margin-left: -10%;
   }
 
   .contact-mobile-right .contact-phone.is-visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(-10%);
   }
 
   .contact-mobile-right .contact-pink {
