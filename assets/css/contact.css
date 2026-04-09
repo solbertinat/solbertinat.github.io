@@ -42,7 +42,7 @@
   grid-column: 1;
   grid-row: 1;
   justify-content: flex-end;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 }
 
 .contact-items {
@@ -144,7 +144,7 @@
 .contact-pink.is-visible {
   opacity: 1;
   transform: rotate(-56deg);
-  animation: pinkSwing 0.8s steps(2, end) infinite alternate 0.9s;
+  animation: pinkSwing 0.8s steps(2, end) infinite alternate;
 }
 
 .contact-mobile-right {
@@ -160,7 +160,7 @@
   .contact-section {
     padding-top: 3rem;
     padding-bottom: 3rem;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .contact-inner {
@@ -175,7 +175,6 @@
   .contact-title {
     grid-column: 1 / -1;
     grid-row: 1;
-    order: unset;
     font-size: clamp(2.8rem, 12vw, 5rem);
     white-space: nowrap;
     text-align: right;
@@ -187,13 +186,12 @@
   .contact-items {
     grid-column: 1;
     grid-row: 2;
-    order: unset;
     position: static;
     transform: none;
     width: 100%;
     text-align: left;
     gap: 20px;
-    margin-top: 0;
+    margin-top: 1.5rem;
   }
 
   .contact-items a {
@@ -203,19 +201,18 @@
   .contact-left {
     grid-column: 1;
     grid-row: 3;
-    order: unset;
     max-width: 100%;
     gap: 1rem;
     justify-content: flex-start;
     padding-bottom: 0;
-    margin-top: 0;
+    margin-top: 0.5rem;
   }
 
   .contact-note {
     width: 100%;
-    max-width: 280px;
+    max-width: 320px;
     transform: rotate(-4deg);
-    margin-left: 0;
+    margin-left: -16px;
   }
 
   .contact-footer {
@@ -235,12 +232,11 @@
     grid-column: 2;
     grid-row: 2 / 4;
     overflow: visible;
-    order: unset;
   }
 
   .contact-mobile-right .contact-phone {
     position: relative;
-    width: 130%;
+    width: 120%;
     max-width: none;
     height: auto;
     opacity: 0;
@@ -269,11 +265,6 @@
   .contact-mobile-right .contact-pink.is-visible {
     opacity: 1;
     transform: rotate(-56deg);
-    animation: pinkSwing 0.8s steps(2, end) infinite alternate 0.9s;
+    animation: pinkSwing 0.8s steps(2, end) infinite alternate;
   }
 }
-  .contact-mobile-right .contact-pink.is-visible {
-    opacity: 1;
-    transform: rotate(-56deg);
-    animation: pinkSwing 0.8s steps(2, end) infinite alternate 0.9s;
-  }
