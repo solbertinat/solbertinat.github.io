@@ -24,36 +24,14 @@
         const target = document.querySelector(targetId);
         if (!target) return;
         e.preventDefault();
-
-        const contactOffset = targetId === '#contact' ? 20 : 0;
-        const targetPos = target.getBoundingClientRect().top + window.pageYOffset - contactOffset;
-        const start = window.pageYOffset;
-        const distance = targetPos - start;
-        const duration = 900;
-        let startTime = null;
-
-        function easeInOut(t) {
-          return t < 0.5
-            ? 2 * t * t
-            : 1 - Math.pow(-2 * t + 2, 2) / 2;
-        }
-
-        function animation(currentTime) {
-          if (!startTime) startTime = currentTime;
-          const timeElapsed = currentTime - startTime;
-          const progress = Math.min(timeElapsed / duration, 1);
-          window.scrollTo(0, start + distance * easeInOut(progress));
-          if (timeElapsed < duration) {
-            requestAnimationFrame(animation);
-          }
-        }
-
-        requestAnimationFrame(animation);
+        const contactOffset = targetId === '#contact' ? 150 : 0;
+        window.scrollTo(0, target.offsetTop - contactOffset);
       });
     });
   });
 </script>
-<body>
+  
+  <body>
 
 <!-- ========================
      HOME / HERO.
