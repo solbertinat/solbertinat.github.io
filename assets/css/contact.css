@@ -212,7 +212,7 @@
 
   .contact-note {
     width: 100%;
-    max-width: 360px;
+    max-width: 440px;
     transform: rotate(-4deg);
     margin-left: -16px;
     margin-top: 0;
@@ -240,7 +240,7 @@
 
   .contact-mobile-right .contact-phone {
     position: relative;
-    width: 130%;
+    width: 160%;
     max-width: none;
     height: auto;
     opacity: 0;
