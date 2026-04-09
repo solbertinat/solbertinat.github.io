@@ -189,17 +189,16 @@
     display: block;
   }
 
-  .about-title {
-    font-size: clamp(3.5rem, 20vw, 6rem);
-    position: static;
-    transform: none;
-    text-align: center;
-    padding-right: 0;
-    margin-bottom: 1.5rem;
-    display: block;
-    width: 100%;
-    color: #8c1d2c;
-  }
+ .about-title {
+  font-size: clamp(2.2rem, 11vw, 3.5rem);
+  position: static;
+  transform: none;
+  text-align: right;
+  width: 100%;
+  padding-right: 24px;
+  margin-bottom: 2.5rem;
+  color: #1F2E2A;
+}
 
   .about-inner {
     display: grid;
