@@ -66,6 +66,12 @@
   font-size: 1.25rem;
   line-height: 1.65;
   margin-bottom: 1.4rem;
+  opacity: 0;
+}
+
+.fonts-loaded .hero-claim {
+  opacity: 1;
+  transition: opacity 0.2s ease;
 }
 
 .hero-roles {
