@@ -2,7 +2,7 @@
 .contact-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding-top: 10rem;
+  padding-top: 4rem;
   position: relative;
 }
 
@@ -38,9 +38,16 @@
 }
 
 .contact-items {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   gap: 32px;
+  z-index: 12;
+  text-align: center;
+  width: 320px;
 }
 
 .contact-label {
@@ -76,7 +83,7 @@
 .contact-items a:hover::after { transform: scaleX(0.4); }
 
 .contact-note {
-  width: 380px;
+  width: 480px;
   transform: rotate(-6deg);
   filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.10));
   z-index: 11;
@@ -116,7 +123,7 @@
 .contact-pink {
   position: absolute;
   width: 80px;
-  top: 28%;
+  top: calc(50% - 350px);
   right: 360px;
   z-index: 10;
   opacity: 0;
