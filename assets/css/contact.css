@@ -29,7 +29,7 @@
   grid-column: 1;
   grid-row: 1;
   align-self: start;
-  padding-top: 4rem;
+  padding-top: 5rem;
 }
 
 .contact-left {
@@ -42,7 +42,7 @@
   grid-column: 1;
   grid-row: 1;
   justify-content: flex-end;
-  padding-bottom: 2rem;
+  padding-bottom: 0;
 }
 
 .contact-items {
@@ -208,8 +208,10 @@
     width: 100%;
     max-width: 340px;
     transform: rotate(-4deg);
-    margin-left: 0;
-    padding-left: 0;
+    margin-left: -24px;
+    position: relative;
+    left: 0 !important;
+    padding-left: 0 !important;
   }
 
   .contact-footer {
@@ -247,12 +249,12 @@
     transform: translateX(20%);
   }
   
-  .contact-mobile-right .contact-pink {
+ .contact-mobile-right .contact-pink {
     position: absolute;
-    left: 10%;
+    right: 5%;
+    left: auto;
     top: 0;
     width: 44px;
-    right: auto;
     opacity: 0;
     transform: rotate(-56deg);
     z-index: 2;
@@ -263,4 +265,3 @@
     transform: rotate(-56deg);
     animation: pinkSwing 0.8s steps(2, end) infinite alternate 0.9s;
   }
-}
