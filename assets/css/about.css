@@ -185,7 +185,7 @@
 @media (max-width: 768px) {
   .about-section {
     min-height: auto;
-    padding: 3rem 24px 5rem;
+    padding: 1.75rem 24px 5rem;
     display: block;
   }
 
@@ -195,8 +195,8 @@
   transform: none;
   text-align: right;
   width: 100%;
-  padding-right: 10px;
-  margin-bottom: 2.5rem;
+  padding-right: 5px;
+  margin-bottom: 1rem;
   color: #1F2E2A;
 }
 
