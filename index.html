@@ -25,7 +25,7 @@
       e.preventDefault();
       const start = window.pageYOffset;
       const end = target.getBoundingClientRect().top + start;
-      const contactOffset = targetId === '#contact' ? 200 : 0;
+      const contactOffset = targetId === '#contact' ? 150 : 0;
       const distance = end - start - contactOffset;
       const duration = 900;
       let startTime = null;
