@@ -42,7 +42,7 @@
   grid-column: 1;
   grid-row: 1;
   justify-content: flex-end;
-  padding-bottom: 6rem;
+  padding-bottom: 2rem;
 }
 
 .contact-items {
@@ -95,7 +95,8 @@
   transform: rotate(-6deg);
   filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.10));
   z-index: 11;
-  margin-top: auto;
+  align-self: flex-start;
+  margin-top: 60vh;
 }
 
 .contact-footer {
