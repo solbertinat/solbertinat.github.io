@@ -246,10 +246,10 @@
     opacity: 0;
     transform: translateX(80px);
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    margin-top: 0;
+    margin-top: -8rem;
     margin-left: -10%;
   }
-
+  
   .contact-mobile-right .contact-phone.is-visible {
     opacity: 1;
     transform: translateX(-10%);
