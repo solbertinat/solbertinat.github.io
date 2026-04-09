@@ -4,7 +4,7 @@
 
 .work {
   position: relative;
-  padding: 10rem 4rem 22rem;
+  padding: 10rem 4rem 8rem;
   background-color: #F8F7F3;
   overflow: visible;
 }
@@ -185,27 +185,6 @@
 /* =========================
    RESPONSIVE
 ========================= */
-@media (max-width: 1200px) {
-  .work-filters,
-  .work-grid {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .work-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .work-title {
-    position: static;
-    writing-mode: horizontal-tb;
-    transform: none;
-    font-size: clamp(3rem, 10vw, 6rem);
-    margin-bottom: 2rem;
-  }
-  .work-item.featured {
-    grid-column: span 2;
-  }
-}
-
 @media (max-width: 1200px) {
   .work-filters,
   .work-grid {
