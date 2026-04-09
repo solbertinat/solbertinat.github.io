@@ -24,7 +24,7 @@
         const target = document.querySelector(targetId);
         if (!target) return;
         e.preventDefault();
-        const contactOffset = targetId === '#contact' ? 40 : 0;
+        const contactOffset = targetId === '#contact' ? 5 : 0;
         window.scrollTo(0, target.offsetTop - contactOffset);
       });
     });
