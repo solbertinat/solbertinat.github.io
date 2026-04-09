@@ -190,12 +190,12 @@
   }
 
  .about-title {
-  font-size: clamp(2.2rem, 11vw, 3.5rem);
+  font-size: clamp(3.5rem, 18vw, 6rem);
   position: static;
   transform: none;
   text-align: right;
   width: 100%;
-  padding-right: 24px;
+  padding-right: 10px;
   margin-bottom: 2.5rem;
   color: #1F2E2A;
 }
