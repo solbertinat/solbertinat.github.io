@@ -38,9 +38,7 @@
   font-size: clamp(3.6rem, 7vw, 7rem);
   color: #1F2E2A;
   line-height: 0.88;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  white-space: nowrap;
 }
 
 .contact-items {
@@ -104,7 +102,7 @@
 .contact-phone {
   width: 440px;
   max-width: 100%;
-  position: relative;
+  position: absolute;
   right: -80px;
   z-index: 8;
   opacity: 0;
@@ -135,12 +133,16 @@
   z-index: 10;
   opacity: 0;
   filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.10));
+}
+
+.contact-pink.is-visible {
   animation:
-    pinkAppear 0.9s ease forwards 0.9s,
-    pinkSwing 0.8s steps(2, end) infinite alternate 1.1s;
+    pinkAppear 0.9s ease forwards 1.4s,
+    pinkSwing 0.8s steps(2, end) infinite alternate 2.3s;
 }
 
 @keyframes pinkAppear { to { opacity: 1; } }
+
 @keyframes pinkSwing {
   0% { transform: rotate(-56deg); }
   100% { transform: rotate(-44deg); }
@@ -160,6 +162,7 @@
 
   .contact-title {
     font-size: clamp(2.8rem, 12vw, 5rem);
+    white-space: nowrap;
   }
 
   .contact-items {
@@ -186,13 +189,15 @@
 
   .contact-phone {
     width: 240px;
-    right: 0;
-    transform: translateX(0);
-    opacity: 1;
-    transition: none;
+    position: relative;
+    right: auto;
+    opacity: 0;
+    transform: translateX(120px);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
   }
 
   .contact-phone.is-visible {
+    opacity: 1;
     transform: translateX(0);
   }
 
@@ -204,6 +209,12 @@
   .contact-pink {
     left: 35%;
     width: 50px;
+  }
+
+  .contact-pink.is-visible {
+    animation:
+      pinkAppear 0.9s ease forwards 1.4s,
+      pinkSwing 0.8s steps(2, end) infinite alternate 2.3s;
   }
 
   .contact-footer {
