@@ -161,7 +161,7 @@
 @media (max-width: 768px) {
   .contact-section {
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
     overflow: visible;
   }
 
@@ -216,6 +216,7 @@
     transform: rotate(-4deg);
     margin-left: -16px;
     margin-top: 0;
+    min-width: 280px;
   }
 
   .contact-footer {
@@ -246,7 +247,7 @@
     opacity: 0;
     transform: translateX(80px);
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    margin-top: -8rem;
+    margin-top: -10rem;
     margin-left: -10%;
   }
   
