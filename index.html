@@ -442,14 +442,21 @@
   <!-- animación teléfono -->
 <script>
   const contactSection = document.querySelector('.contact-section');
-  const phone = document.querySelector('.contact-phone');
-  const pink = document.querySelector('.contact-pink');
+  const mobilePhone = document.querySelector('.contact-mobile-right .contact-phone');
+  const mobilePink = document.querySelector('.contact-mobile-right .contact-pink');
+  const desktopPhone = document.querySelector('.contact-right .contact-phone');
+  const desktopPink = document.querySelector('.contact-right .contact-pink');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        phone.classList.add('is-visible');
-        pink.classList.add('is-visible');
+        if (window.innerWidth <= 768) {
+          if (mobilePhone) mobilePhone.classList.add('is-visible');
+          if (mobilePink) mobilePink.classList.add('is-visible');
+        } else {
+          if (desktopPhone) desktopPhone.classList.add('is-visible');
+          if (desktopPink) desktopPink.classList.add('is-visible');
+        }
       }
     });
   }, { threshold: 0.45 });
