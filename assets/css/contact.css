@@ -162,7 +162,7 @@
   }
 
   .contact-title {
-    font-size: clamp(3.5rem, 18vw, 6rem);
+    font-size: clamp(2.5rem, 13.6vw, 5,7rem);
     white-space: nowrap;
     text-align: right;
     width: 100%;
