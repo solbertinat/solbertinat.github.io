@@ -2,7 +2,7 @@
 .contact-section {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  padding-top: 2rem;
+  padding-top: 0.5rem;
   position: relative;
 }
 
@@ -25,7 +25,7 @@
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
 }
 
 .contact-title {
@@ -124,7 +124,7 @@
   position: absolute;
   width: 70px;
   top: calc(55% - 280px);
-  right: 350px;
+  right: 290px;
   z-index: 10;
   opacity: 0;
   filter: drop-shadow(4px 5px 0 rgba(0, 0, 0, 0.10));
@@ -132,16 +132,15 @@
 }
 
 .contact-pink.is-visible {
-  animation:
-    pinkAppear 0.9s ease forwards 1.4s,
-    pinkSwing 0.8s steps(2, end) infinite alternate 2.3s;
+  opacity: 1;
+  transform: rotate(-56deg);
+  animation: pinkSwing 0.8s steps(2, end) infinite alternate 0.9s;
 }
 
 .contact-mobile-right {
   display: none;
 }
 
-@keyframes pinkAppear { to { opacity: 1; } }
 @keyframes pinkSwing {
   0% { transform: rotate(-56deg); }
   100% { transform: rotate(-44deg); }
@@ -149,8 +148,9 @@
 
 @media (max-width: 768px) {
   .contact-section {
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 3rem;
+    overflow: hidden;
   }
 
   .contact-inner {
@@ -162,11 +162,13 @@
   }
 
   .contact-title {
-    font-size: clamp(2.8rem, 12vw, 5rem);
+    font-size: clamp(3.5rem, 182vw, 6rem);
     white-space: nowrap;
     text-align: right;
     width: 100%;
     grid-column: 1 / -1;
+    grid-row: 1;
+    margin-bottom: 1rem;
   }
 
   .contact-left {
@@ -215,19 +217,21 @@
     grid-column: 2;
     grid-row: 2;
     overflow: visible;
+    padding-top: 0;
   }
 
   .contact-mobile-right .contact-phone {
     position: relative;
     top: auto;
     right: auto;
-    width: 260%;
+    width: 300%;
     max-width: none;
     height: auto;
     opacity: 0;
-    transform: translateX(120px);
+    transform: translateX(140px);
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    margin-top: 4rem;
+    margin-top: 5rem;
+    margin-left: -60%;
   }
 
   .contact-mobile-right .contact-phone.is-visible {
@@ -237,8 +241,8 @@
 
   .contact-mobile-right .contact-pink {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10%;
+    top: 55%;
     width: 44px;
     right: auto;
     opacity: 0;
@@ -247,8 +251,8 @@
   }
 
   .contact-mobile-right .contact-pink.is-visible {
-    animation:
-      pinkAppear 0.9s ease forwards 1.4s,
-      pinkSwing 0.8s steps(2, end) infinite alternate 2.3s;
+    opacity: 1;
+    transform: rotate(-56deg);
+    animation: pinkSwing 0.8s steps(2, end) infinite alternate 0.9s;
   }
 }
