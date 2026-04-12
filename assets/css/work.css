@@ -39,9 +39,10 @@
     rgba(238, 255, 99, 0.08) 55%,
     rgba(238, 255, 99, 0) 70%
   );
-  top: 33%;
+  top: auto;
+  bottom: 200px;
   right: -900px;
-  transform: translateY(-50%);
+  transform: none;
   pointer-events: none;
   z-index: 1;
 }
@@ -229,7 +230,7 @@
   }
 
   .work-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 4px;
   }
 
