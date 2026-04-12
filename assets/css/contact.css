@@ -214,13 +214,15 @@
     width: 100%;
     max-width: 440px;
     transform: rotate(-4deg);
-    margin-left: -16px;
+    margin-left: -40px;
     margin-top: 0;
     min-width: 280px;
   }
 
   .contact-footer {
     font-size: 11px;
+    margin-top: 2rem;
+    align-self: flex-start;
   }
 
   .contact-right {
@@ -241,25 +243,25 @@
 
   .contact-mobile-right .contact-phone {
     position: relative;
-    width: 160%;
+    width: 180%;
     max-width: none;
     height: auto;
     opacity: 0;
     transform: translateX(80px);
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
     margin-top: -10rem;
-    margin-left: -10%;
+    margin-left: -40%;
   }
-  
+
   .contact-mobile-right .contact-phone.is-visible {
     opacity: 1;
-    transform: translateX(-10%);
+    transform: translateX(-40%);
   }
 
   .contact-mobile-right .contact-pink {
     position: absolute;
-    left: 5%;
-    top: 0;
+    left: -15%;
+    top: -2rem;
     width: 44px;
     right: auto;
     opacity: 0;
