@@ -262,9 +262,32 @@
 
   .work-circle {
     display: block;
-    top: 800px;
+    top: 500px;
     right: -600px;
     width: 1200px;
     height: 1200px;
+  }
+}
+
+  .work-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .work-item {
+    width: calc(100% / 3); /* mantiene lógica de 3 columnas */
+  }
+
+  .work-item.featured {
+    width: calc(200% / 3); /* equivalente a span 2 */
+  }
+
+  /* 👇 swap entre 12 y 13 */
+  .work-item:nth-child(12) {
+    order: 13;
+  }
+
+  .work-item:nth-child(13) {
+    order: 12;
   }
 }
