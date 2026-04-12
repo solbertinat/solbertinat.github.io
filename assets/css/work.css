@@ -42,7 +42,7 @@
     rgba(238, 255, 99, 0.08) 55%,
     rgba(238, 255, 99, 0) 70%
   );
-  top: 1400px;
+  top: 900px;
   right: -900px;
   pointer-events: none;
   z-index: 1;
