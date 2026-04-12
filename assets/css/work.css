@@ -42,7 +42,7 @@
     rgba(238, 255, 99, 0.08) 55%,
     rgba(238, 255, 99, 0) 70%
   );
-  top: 1800px;
+  top: 1400px;
   right: -900px;
   pointer-events: none;
   z-index: 1;
@@ -215,7 +215,11 @@
   }
 
   .work-circle {
-    display: none;
+    display: block;
+    top: 800px;
+    right: -600px;
+    width: 1200px;
+    height: 1200px;
   }
 
   .work-title {
@@ -248,5 +252,13 @@
   .work-item.featured .work-media {
     aspect-ratio: 3/4;
     height: auto;
+  }
+
+  .work-circle {
+    display: block;
+    top: 800px;
+    right: -600px;
+    width: 1200px;
+    height: 1200px;
   }
 }
