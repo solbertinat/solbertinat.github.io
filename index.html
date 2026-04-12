@@ -133,11 +133,22 @@
   </header>
 
   <div class="work-filters">
-    <button class="filter-btn active" data-filter="all">Todos</button>
-    <button class="filter-btn" data-filter="fotografia">Fotografía</button>
-    <button class="filter-btn" data-filter="estilismo">Estilismo</button>
-    <button class="filter-btn" data-filter="direccion">Dirección Creativa</button>
-  </div>
+  <button class="filter-btn active" data-filter="all" onclick="toggleCircle('all')">Todos</button>
+  <button class="filter-btn" data-filter="fotografia" onclick="toggleCircle('fotografia')">Fotografía</button>
+  <button class="filter-btn" data-filter="estilismo" onclick="toggleCircle('estilismo')">Estilismo</button>
+  <button class="filter-btn" data-filter="direccion" onclick="toggleCircle('direccion')">Dirección Creativa</button>
+</div>
+
+<script>
+function toggleCircle(filter) {
+  const circle = document.querySelector('.work-circle');
+  if (filter === 'all') {
+    circle.classList.remove('hidden');
+  } else {
+    circle.classList.add('hidden');
+  }
+}
+</script>
 
   <main class="work-grid">
 
