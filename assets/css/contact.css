@@ -247,14 +247,14 @@
 
   .contact-mobile-right .contact-phone {
     position: relative;
-    width: 275%;
+    width: 350%;
     max-width: none;
     height: auto;
     opacity: 0;
     transform: translateX(120px);
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    margin-top: -3rem;
-    margin-left: -20px;
+    margin-top: -1rem;
+    margin-left: -100px;
   }
 
   .contact-mobile-right .contact-phone.is-visible {
@@ -264,7 +264,7 @@
 
   .contact-mobile-right .contact-pink {
     position: absolute;
-    left: -5%;
+    left: -10%;
     top: -1rem;
     width: 50px;
     right: auto;
