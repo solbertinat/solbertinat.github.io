@@ -26,7 +26,10 @@
 }
 
 .work::after {
-  content: "";
+  display: none;
+}
+
+.work-circle {
   position: absolute;
   width: 2200px;
   height: 2200px;
@@ -39,13 +42,12 @@
     rgba(238, 255, 99, 0.08) 55%,
     rgba(238, 255, 99, 0) 70%
   );
-  top: auto;
-  bottom: 200px;
+  top: 1800px;
   right: -900px;
-  transform: none;
   pointer-events: none;
   z-index: 1;
 }
+
 
 /* =========================
    FILTROS
@@ -210,6 +212,10 @@
 @media (max-width: 768px) {
   .work {
     padding: 4rem 24px 8rem;
+  }
+
+  .work-circle {
+    display: none;
   }
 
   .work-title {
