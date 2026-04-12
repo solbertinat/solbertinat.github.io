@@ -160,7 +160,7 @@
 
 @media (max-width: 768px) {
   .contact-section {
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-bottom: 6rem;
     overflow: visible;
   }
@@ -170,7 +170,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     padding: 0 24px;
-    gap: 0.8rem 1rem;
+    gap: 0.4rem 1rem;
     min-height: auto;
   }
 
@@ -233,6 +233,52 @@
     display: none;
   }
 
+  .contact-mobile-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    grid-column: 2;
+    grid-row: 2 / 4;
+    overflow: visible;
+    padding-bottom: 2rem;
+  }
+
+  .contact-mobile-right .contact-phone {
+    position: relative;
+    width: 175%;
+    max-width: none;
+    height: auto;
+    opacity: 0;
+    transform: translateX(120px);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    margin-top: -6rem;
+    margin-left: 0%;
+  }
+
+  .contact-mobile-right .contact-phone.is-visible {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+  .contact-mobile-right .contact-pink {
+    position: absolute;
+    left: -10%;
+    top: -3rem;
+    width: 44px;
+    right: auto;
+    opacity: 0;
+    transform: rotate(-56deg);
+    z-index: 2;
+  }
+
+  .contact-mobile-right .contact-pink.is-visible {
+    opacity: 1;
+    transform: rotate(-56deg);
+    animation: pinkSwing 0.8s steps(2, end) infinite alternate;
+  }
+}
   .contact-mobile-right {
     display: flex;
     flex-direction: column;
