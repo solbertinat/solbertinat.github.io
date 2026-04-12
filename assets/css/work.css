@@ -48,6 +48,12 @@
   z-index: 1;
 }
 
+/* =========================
+   (AGREGADO) CÍRCULO HIDDEN
+========================= */
+.work-circle.hidden {
+  display: none;
+}
 
 /* =========================
    FILTROS
@@ -210,7 +216,7 @@
 }
 
 @media (max-width: 768px) {
-  .work {
+.work {
     padding: 4rem 24px 8rem;
   }
 
@@ -244,9 +250,9 @@
     gap: 4px;
   }
 
-  .work-item.featured {
+ .work-item.featured {
     grid-column: span 2;
-    grid-row: span 1;
+    grid-row: span 2; /* 👈 FIX */
   }
 
   .work-item.featured .work-media {
