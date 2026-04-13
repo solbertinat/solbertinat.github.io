@@ -381,6 +381,18 @@ function toggleCircle(filter) {
   </main>
 
   <div class="work-circle"></div>
+
+  <script>
+  if (window.innerWidth <= 768) {
+    const grid = document.querySelector('.work-grid');
+    const items = Array.from(grid.querySelectorAll('.work-item'));
+    const item12 = items[11];
+    const item13 = items[12];
+    if (item12 && item13) {
+      grid.insertBefore(item13, item12);
+    }
+  }
+</script>
 </section>
 
 <!-- =========================
