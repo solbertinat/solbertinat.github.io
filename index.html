@@ -3,14 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Sol Bertinat</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/home.css">
   <link rel="stylesheet" href="assets/css/about.css">
   <link rel="stylesheet" href="assets/css/work.css">
   <link rel="stylesheet" href="assets/css/contact.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -30,8 +28,8 @@
     });
   });
 </script>
-  
-  <body>
+
+<body>
 
 <!-- ========================
      HOME / HERO
@@ -62,14 +60,14 @@
     </div>
   </div>
   <div class="hero-scroll-hint">
-  <span class="chevron-mask">
-    <svg class="chevron" viewBox="0 0 24 24">
-      <path d="M6 9l6 6 6-6" />
-    </svg>
-  </span>
-</div>
+    <span class="chevron-mask">
+      <svg class="chevron" viewBox="0 0 24 24">
+        <path d="M6 9l6 6 6-6" />
+      </svg>
+    </span>
+  </div>
 </section>
-  
+
 <!-- =========================
      ABOUT
 ========================= -->
@@ -95,27 +93,28 @@
     </div>
 
     <div class="about-col-right">
-  <p class="about-p-desktop">
-    Trabajo en el campo de la fotografía, el estilismo y la dirección creativa,
-    desarrollando proyectos de moda y contenido visual desde una mirada integral,
-    donde el color y la composición ocupan un lugar central como recursos para construir
-    sentido y dar identidad a cada imagen.
-  </p>
-  <p>
-    Mi formación en Producción de Modas y Fotografía Profesional, junto con estudios en Administración de Empresas,
-    me permite abordar cada proyecto considerando tanto su dimensión creativa
-    como su viabilidad y contexto comercial.
-  </p>
-  <p>
-    He trabajado de manera freelance en producciones editoriales y comerciales,
-    participado como asistente en proyectos de moda y colaborado en el ámbito académico.
-    Me caracterizo por una forma de trabajo organizada, sensible y resolutiva,
-    con especial atención al proceso y al trabajo en equipo.
-  </p>
-  <a href="assets/docs/Sol_Bertinat_CV.pdf" class="cv-link" download>
-    CV disponible para descarga
-  </a>
-</div>
+      <p class="about-p-desktop">
+        Trabajo en el campo de la fotografía, el estilismo y la dirección creativa,
+        desarrollando proyectos de moda y contenido visual desde una mirada integral,
+        donde el color y la composición ocupan un lugar central como recursos para construir
+        sentido y dar identidad a cada imagen.
+      </p>
+      <p>
+        Mi formación en Producción de Modas y Fotografía Profesional, junto con estudios en Administración de Empresas,
+        me permite abordar cada proyecto considerando tanto su dimensión creativa
+        como su viabilidad y contexto comercial.
+      </p>
+      <p>
+        He trabajado de manera freelance en producciones editoriales y comerciales,
+        participado como asistente en proyectos de moda y colaborado en el ámbito académico.
+        Me caracterizo por una forma de trabajo organizada, sensible y resolutiva,
+        con especial atención al proceso y al trabajo en equipo.
+      </p>
+      <a href="assets/docs/Sol_Bertinat_CV.pdf" class="cv-link" download>
+        CV disponible para descarga
+      </a>
+    </div>
+
   </div>
 
   <a href="assets/docs/Sol_Bertinat_CV.pdf" class="cv-link cv-link-mobile" download>
@@ -123,7 +122,7 @@
   </a>
 
 </section>
-  
+
 <!-- =========================
      WORK
 ========================= -->
@@ -133,22 +132,11 @@
   </header>
 
   <div class="work-filters">
-  <button class="filter-btn active" data-filter="all" onclick="toggleCircle('all')">Todos</button>
-  <button class="filter-btn" data-filter="fotografia" onclick="toggleCircle('fotografia')">Fotografía</button>
-  <button class="filter-btn" data-filter="estilismo" onclick="toggleCircle('estilismo')">Estilismo</button>
-  <button class="filter-btn" data-filter="direccion" onclick="toggleCircle('direccion')">Dirección Creativa</button>
-</div>
-
-<script>
-function toggleCircle(filter) {
-  const circle = document.querySelector('.work-circle');
-  if (filter === 'all') {
-    circle.classList.remove('hidden');
-  } else {
-    circle.classList.add('hidden');
-  }
-}
-</script>
+    <button class="filter-btn active" data-filter="all" onclick="toggleCircle('all')">Todos</button>
+    <button class="filter-btn" data-filter="fotografia" onclick="toggleCircle('fotografia')">Fotografía</button>
+    <button class="filter-btn" data-filter="estilismo" onclick="toggleCircle('estilismo')">Estilismo</button>
+    <button class="filter-btn" data-filter="direccion" onclick="toggleCircle('direccion')">Dirección Creativa</button>
+  </div>
 
   <main class="work-grid">
 
@@ -381,18 +369,6 @@ function toggleCircle(filter) {
   </main>
 
   <div class="work-circle"></div>
-
-  <script>
-  if (window.innerWidth <= 768) {
-    const grid = document.querySelector('.work-grid');
-    const items = Array.from(grid.querySelectorAll('.work-item'));
-    const item12 = items[11];
-    const item13 = items[12];
-    if (item12 && item13) {
-      grid.insertBefore(item13, item12);
-    }
-  }
-</script>
 </section>
 
 <!-- =========================
@@ -439,7 +415,6 @@ function toggleCircle(filter) {
   </div>
 </section>
 
-  <!-- animación teléfono -->
 <script>
   const contactSection = document.querySelector('.contact-section');
   const mobilePhone = document.querySelector('.contact-mobile-right .contact-phone');
@@ -466,7 +441,8 @@ function toggleCircle(filter) {
   }, { threshold: 0.45 });
 
   observer.observe(contactSection);
-</script>  
+</script>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll(
@@ -484,6 +460,15 @@ function toggleCircle(filter) {
 </script>
 
 <script>
+  function toggleCircle(filter) {
+    const circle = document.querySelector('.work-circle');
+    if (filter === 'all') {
+      circle.classList.remove('hidden');
+    } else {
+      circle.classList.add('hidden');
+    }
+  }
+
   const filterBtns = document.querySelectorAll('.filter-btn');
   const workItems = document.querySelectorAll('.work-item');
 
@@ -516,24 +501,16 @@ function toggleCircle(filter) {
     });
   });
 </script>
+
 <script>
   if (window.innerWidth <= 768) {
-    const items = document.querySelectorAll('.work-item');
-
-    const hintObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const item = entry.target;
-          item.classList.add('hint');
-          setTimeout(() => {
-            item.classList.remove('hint');
-          }, 900);
-          hintObserver.unobserve(item);
-        }
-      });
-    }, { threshold: 0.6 });
-
-    items.forEach(item => hintObserver.observe(item));
+    const grid = document.querySelector('.work-grid');
+    const items = Array.from(grid.querySelectorAll('.work-item'));
+    const item12 = items[11];
+    const item13 = items[12];
+    if (item12 && item13) {
+      grid.insertBefore(item13, item12);
+    }
   }
 </script>
 
@@ -542,6 +519,6 @@ function toggleCircle(filter) {
     document.body.classList.add('fonts-loaded');
   });
 </script>
-  
+
 </body>
 </html>
