@@ -253,8 +253,8 @@
     opacity: 0;
     transform: translateX(120px);
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    margin-top: 0rem;
-    margin-left: -150px;
+    margin-top: -40rem;
+    margin-left: -165px;
   }
 
   .contact-mobile-right .contact-phone.is-visible {
@@ -264,8 +264,8 @@
 
   .contact-mobile-right .contact-pink {
     position: absolute;
-    left: -20%;
-    top: -2rem;
+    left: -50%;
+    top: 2rem;
     width: 50px;
     right: auto;
     opacity: 0;
