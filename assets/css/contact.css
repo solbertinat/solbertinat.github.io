@@ -217,8 +217,8 @@
     width: 100%;
     max-width: 440px;
     transform: rotate(-4deg);
-    margin-left: -40px;
-    margin-top: 0;
+    margin-left: -50px;
+    margin-top: 5rem;
     min-width: 280px;
   }
 
@@ -253,7 +253,7 @@
     opacity: 0;
     transform: translateX(120px);
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    margin-top: -40rem;
+    margin-top: -10rem;
     margin-left: -165px;
   }
 
@@ -264,8 +264,8 @@
 
   .contact-mobile-right .contact-pink {
     position: absolute;
-    left: -50%;
-    top: 2rem;
+    left: -60%;
+    top: 0rem;
     width: 50px;
     right: auto;
     opacity: 0;
@@ -276,7 +276,7 @@
   .contact-mobile-right .contact-pink.is-visible {
     opacity: 1;
     transform: rotate(-56deg);
-    animation: pinkSwing 0.8s steps(2, end) infinite alternate;
+    animation: pinkSwing 0.4s steps(2, end) infinite alternate;
   }
 
   .contact-mobile-right {
