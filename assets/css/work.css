@@ -273,36 +273,30 @@
     background-color: rgba(31, 46, 42, 0.45);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    animation: hintShow 5s ease forwards;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+
+  .work-item.featured:first-child .work-overlay.hint-visible {
+    opacity: 1;
+  }
+
+  .work-item.featured:first-child .work-name,
+  .work-item.featured:first-child .work-role,
+  .work-item.featured:first-child .work-year {
+    display: none;
   }
 
   .work-item.featured:first-child .work-overlay::after {
-    content: 'Ver más';
+    content: 'Hacé click en cualquier trabajo para ver más';
     display: inline-block;
     font-family: var(--font-sans);
-    font-size: 0.65rem;
-    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #eeff63;
-    border: 1px solid #eeff63;
-    padding: 6px 16px;
-    border-radius: 20px;
-    margin-top: 8px;
-  }
-
-  .work-item.featured:first-child .work-name {
-    color: #F8F7F3;
-  }
-
-  .work-item.featured:first-child .work-role,
-  .work-item.featured:first-child .work-year {
-    color: rgba(248, 247, 243, 0.7);
-  }
-
-  @keyframes hintShow {
-    0% { opacity: 0; }
-    15% { opacity: 1; }
-    75% { opacity: 1; }
-    100% { opacity: 0; }
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 1.5rem;
   }
 }
