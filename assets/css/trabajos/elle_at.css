@@ -169,8 +169,14 @@ body { scrollbar-width: none; }
   }
   .elleat-text {
     width: 100%;
+    max-width: 100%;
     order: 2;
     margin-top: 1rem;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+  .elleat-text h1 {
+    font-size: 2rem;
   }
   .layout_elleat {
     padding: 20px 0 80px;
