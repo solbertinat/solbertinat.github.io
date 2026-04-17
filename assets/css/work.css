@@ -291,9 +291,9 @@
     content: 'Hacé click en cualquier trabajo para ver más';
     display: inline-block;
     font-family: var(--font-sans);
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.12em;
-    text-transform: uppercase;
+    text-transform: none;
     color: #eeff63;
     text-align: center;
     line-height: 1.6;
