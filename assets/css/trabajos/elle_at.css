@@ -172,11 +172,11 @@ body { scrollbar-width: none; }
     max-width: 100%;
     order: 2;
     margin-top: 1rem;
-    padding: 0 8px;
+    margin-left: 0;
     box-sizing: border-box;
   }
   .elleat-text h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
   .layout_elleat {
     padding: 20px 0 80px;
