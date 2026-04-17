@@ -2,7 +2,6 @@
   --twenties-bg: #1F2E2A;
   --twenties-text: #c8d6e0;
 }
-
 body {
   background-color: var(--twenties-bg);
   color: var(--twenties-text);
@@ -50,25 +49,23 @@ body { scrollbar-width: none; }
   justify-content: flex-end;
   padding-right: 15vw;
 }
-
 .twenties-text {
   width: 500px;
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
-  text-align: right; 
+  text-align: right;
 }
-
 .twenties-text h1 {
   font-family: var(--font-serif);
   font-size: 60px;
   margin-bottom: 20px;
 }
-
 .twenties-meta {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 12px;
   font-size: 13px;
   letter-spacing: 0.12em;
@@ -77,7 +74,6 @@ body { scrollbar-width: none; }
   margin-bottom: 32px;
   text-align: right;
 }
-
 .twenties-text p {
   font-size: 16px;
   line-height: 1.7;
@@ -86,14 +82,12 @@ body { scrollbar-width: none; }
 /* =========================
    IMAGEN PORTADA
 ========================= */
-
 .twenties-cover-image {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
 }
-
 .twenties-cover-image img {
   height: 105vh;
   width: auto;
@@ -159,12 +153,10 @@ body { scrollbar-width: none; }
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
-
   .back-btn {
     top: 1rem;
     left: 1rem;
   }
-
   .twenties-cover {
     flex-direction: column;
     padding: 80px 24px 60px;
@@ -172,41 +164,34 @@ body { scrollbar-width: none; }
     justify-content: flex-start;
     align-items: flex-start;
   }
-
   .twenties-text {
     width: 100%;
+    text-align: right;
     order: 2;
   }
-
   .twenties-text h1 {
     font-size: 38px;
   }
-
   .twenties-cover-image {
     position: static;
     width: 100%;
     order: 1;
     margin-bottom: 2rem;
   }
-
   .twenties-cover-image img {
     width: 100%;
     height: auto;
     max-width: 100%;
     object-fit: cover;
   }
-
   .layout_twenties {
     padding: 60px 0;
   }
-
   .layout_twenties img {
     width: 100%;
     max-height: none;
   }
-
   .work-footer {
     padding: 2rem 24px;
   }
-
 }
