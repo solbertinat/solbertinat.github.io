@@ -520,31 +520,36 @@
   });
 </script>
 
-  <script>
+ <script>
   if (window.innerWidth <= 768) {
     const firstItem = document.querySelector('.work-item.featured:first-child');
     const overlay = firstItem ? firstItem.querySelector('.work-overlay') : null;
-    let hintShown = false;
 
-    const workSection = document.querySelector('.work');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !hintShown) {
-          hintShown = true;
-          setTimeout(() => {
-            overlay.classList.add('hint-visible');
-          }, 1000);
-        }
-      });
-    }, { threshold: 0.2 });
+    if (!sessionStorage.getItem('hintDismissed')) {
+      const workSection = document.querySelector('.work');
+      let hintShown = false;
 
-    if (workSection) observer.observe(workSection);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !hintShown) {
+            hintShown = true;
+            setTimeout(() => {
+              overlay.classList.add('hint-visible');
+              setTimeout(() => {
+                overlay.classList.remove('hint-visible');
+              }, 8000);
+            }, 1000);
+          }
+        });
+      }, { threshold: 0.2 });
 
-    if (firstItem) {
-      firstItem.addEventListener('click', () => {
-        overlay.classList.remove('hint-visible');
-        sessionStorage.setItem('hintDismissed', 'true');
-      }, { once: true });
+      if (workSection) observer.observe(workSection);
+
+      if (firstItem) {
+        firstItem.addEventListener('click', () => {
+          sessionStorage.setItem('hintDismissed', 'true');
+        }, { once: true });
+      }
     }
   }
 </script>
