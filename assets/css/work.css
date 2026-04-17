@@ -290,7 +290,7 @@
   .work-item.featured:first-child .work-overlay::after {
     content: 'Hacé click en cualquier trabajo para ver más';
     display: inline-block;
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
     font-size: 1rem;
     letter-spacing: 0.12em;
     text-transform: none;
