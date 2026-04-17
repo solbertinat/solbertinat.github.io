@@ -219,6 +219,9 @@ body { scrollbar-width: none; }
     text-align: left;
     padding: 3rem 24px;
   }
+  .bosco-text p {
+    text-align: left;
+  }
   .bosco-meta {
     justify-content: flex-start;
   }
@@ -236,4 +239,3 @@ body { scrollbar-width: none; }
     padding: 0 0 80px;
   }
 }
-
