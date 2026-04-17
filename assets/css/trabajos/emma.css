@@ -152,38 +152,54 @@ body { scrollbar-width: none; }
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
+
   .back-btn {
-    top: 1.2rem;
-    left: 1.2rem;
+    top: 1rem;
+    left: 1rem;
   }
+
   .emma-cover {
     flex-direction: column;
-    justify-content: flex-start;
     padding: 80px 24px 60px;
+    min-height: auto;
+    justify-content: flex-start;
     align-items: flex-start;
-    position: relative;
   }
+
+  .emma-text {
+    width: 100%;
+    order: 2;
+  }
+
+  .emma-text h1 {
+    font-size: 38px;
+  }
+
   .emma-cover-image {
     position: static;
+    width: 100%;
+    order: 1;
     margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
   }
+
   .emma-cover-image img {
     width: 100%;
     height: auto;
+    max-width: 100%;
+    object-fit: cover;
   }
-  .emma-text {
-    width: 100%;
-  }
+
   .layout_emma {
-    padding: 80px 0;
+    padding: 60px 0;
   }
+
   .layout_emma img {
     width: 100%;
     max-height: none;
   }
+
   .work-footer {
     padding: 2rem 24px;
   }
+
 }
