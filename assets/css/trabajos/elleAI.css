@@ -43,17 +43,36 @@ body { scrollbar-width: none; }
    PORTADA
 ========================= */
 .elleAI-cover {
-  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 25vw;
-  padding: 10rem;
+  justify-content: flex-end;
+  padding-right: 10vw;
+}
+
+.elleAI-cover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 40vw; /* 👈 menos ancho */
+  overflow: hidden;
+}
+
+.elleAI-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 65%; /* 👈 más recorte arriba */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.15s;
 }
 
 .elleAI-text {
   width: 480px;
+  flex-shrink: 0;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.9s ease forwards;
@@ -76,25 +95,6 @@ body { scrollbar-width: none; }
 .elleAI-text p {
   font-size: 16px;
   line-height: 1.7;
-}
-
-/* =========================
-   IMAGEN PORTADA
-========================= */
-.elleAI-cover-image {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-.elleAI-cover-image img {
-  height: 100vh;
-  width: auto;
-  object-fit: contain;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.9s ease forwards;
-  animation-delay: 0.15s;
 }
 
 /* =========================
@@ -122,7 +122,7 @@ body { scrollbar-width: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 0.5px solid rgba(107, 61, 34, 0.2);
+  border-top: 0.5px solid rgba(200, 214, 224, 0.2);
   box-sizing: border-box;
 }
 .work-footer-name {
