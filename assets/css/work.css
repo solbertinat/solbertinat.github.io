@@ -12,7 +12,7 @@
 .work-title { 
   position: absolute; 
   top: 0; 
-  left: calc(-3rem); /* 🔑 compensa el padding del contenedor */ 
+  left: calc(-3rem);
   font-family: var(--font-serif); 
   font-weight: 400; 
   font-size: clamp(9.126rem, 21.06vw, 31.59rem); 
@@ -48,9 +48,6 @@
   z-index: 1;
 }
 
-/* =========================
-   (AGREGADO) CÍRCULO HIDDEN
-========================= */
 .work-circle.hidden {
   display: none;
 }
@@ -136,6 +133,16 @@
   height: 100%;
 }
 
+.work-item.featured-right {
+  grid-column: 3 / span 2;
+  grid-row: span 2;
+}
+
+.work-item.featured-right .work-media {
+  aspect-ratio: unset;
+  height: 100%;
+}
+
 .work-item.hidden {
   display: none;
 }
@@ -213,6 +220,9 @@
   .work-item.featured {
     grid-column: span 2;
   }
+  .work-item.featured-right {
+    grid-column: span 2;
+  }
 }
 
 @media (max-width: 768px) {
@@ -250,12 +260,14 @@
     gap: 4px;
   }
 
-  .work-item.featured {
+  .work-item.featured,
+  .work-item.featured-right {
     grid-column: span 2;
     grid-row: span 2;
   }
 
-  .work-item.featured .work-media {
+  .work-item.featured .work-media,
+  .work-item.featured-right .work-media {
     aspect-ratio: unset;
     height: 100%;
   }
