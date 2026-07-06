@@ -86,8 +86,8 @@ body { scrollbar-width: none; }
   bottom: 0;
 }
 .brujas-cover-image img {
-  height: 105vh;
-  width: auto;
+  height: auto;
+  width: 30%;
   object-fit: contain;
   opacity: 0;
   transform: translateY(20px);
