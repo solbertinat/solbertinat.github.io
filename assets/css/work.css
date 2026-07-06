@@ -138,6 +138,11 @@
   grid-row: span 2;
 }
 
+.work-item.featured .work-media,
+.work-item.featured-right .work-media {
+  max-height: 98vh;
+}
+
 .work-item.featured-right .work-media {
   aspect-ratio: unset;
   height: 100%;
