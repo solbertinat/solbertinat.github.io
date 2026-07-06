@@ -271,10 +271,15 @@
     grid-row: span 2;
   }
 
+  .work-item.featured-right {
+    grid-column: 2 / span 2;
+  }
+
   .work-item.featured .work-media,
   .work-item.featured-right .work-media {
     aspect-ratio: unset;
     height: 100%;
+    max-height: 70vw;
   }
 
   .work-item:hover .work-overlay {
