@@ -121,7 +121,7 @@
 .about-col-right p {
   font-size: 15px;
   line-height: 1.65;
-  margin-bottom: 0; /* 👈 sin espacio extra */
+  margin-bottom: 0;
 }
 
 .about-col-right p:first-child::first-letter {
@@ -172,11 +172,14 @@
   background: linear-gradient(to bottom, #e6c3cc 0%, #F6F5F0 100%);
 }
 
+.about-first-p-cont {
+  display: none;
+}
+
 @media (min-width: 769px) {
   .about-star {
     top: 9px;
   }
-
   .about-flower {
     right: -20px;
   }
@@ -189,16 +192,16 @@
     display: block;
   }
 
- .about-title {
-  font-size: clamp(3.5rem, 18vw, 6rem);
-  position: static;
-  transform: none;
-  text-align: right;
-  width: 100%;
-  padding-right: 1px;
-  margin-bottom: 1rem;
-  color: #1F2E2A;
-}
+  .about-title {
+    font-size: clamp(3.5rem, 18vw, 6rem);
+    position: static;
+    transform: none;
+    text-align: right;
+    width: 100%;
+    padding-right: 1px;
+    margin-bottom: 1rem;
+    color: #1F2E2A;
+  }
 
   .about-inner {
     display: grid;
@@ -234,6 +237,14 @@
 
   .about-p-desktop {
     display: none !important;
+  }
+
+  .about-first-p-cont {
+    display: block;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify;
   }
 
   .about-first-p,
@@ -275,11 +286,11 @@
     left: -26px;
   }
 
- .about-tape {
-  width: 72px;
-  bottom: -13px;
-  left: -18px; /* 👈 más a la izquierda */
-}
+  .about-tape {
+    width: 72px;
+    bottom: -13px;
+    left: -18px;
+  }
 
   .about-flower {
     width: 105px;
