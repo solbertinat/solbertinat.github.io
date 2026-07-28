@@ -83,12 +83,12 @@ rgba(198, 224, 61, 0) 70%
 
 .filter-btn:hover {
   background-color: #c6e03d;
-  color: #073d6b;
+  color: #66012b;
 }
 
 .filter-btn.active {
   background-color: #c6e03d;
-  color: #073d6b;
+  color: #66012b;
 }
 
 /* =========================
