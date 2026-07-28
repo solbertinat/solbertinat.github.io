@@ -23,7 +23,7 @@
   font-family: var(--font-serif);
   font-weight: 320;
   font-size: clamp(3.6rem, 7vw, 7rem);
-  color: #1F2E2A;
+  color: #66012b;
   line-height: 0.88;
   white-space: nowrap;
   grid-column: 1;
@@ -87,7 +87,7 @@
   transform-origin: center;
 }
 
-.contact-items a:hover { color: #eeff63; }
+.contact-items a:hover { color: #c6e03d; }
 .contact-items a:hover::after { transform: scaleX(0.4); }
 
 .contact-note {
