@@ -57,7 +57,7 @@
   font-weight: 280;
   margin-bottom: 1rem;
   font-family: var(--font-serif);
-  color: #1F2E2A;
+  color: #66012b;
 }
 
 .hero-claim {
@@ -169,7 +169,7 @@
   background: linear-gradient(
     to bottom,
     rgba(246,245,240,0) 0%,
-    #e6c3cc 100%
+    #d9b0bb 100%
   );
   pointer-events: none;
   z-index: 0;
@@ -293,7 +293,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 
 .hero-text h1 .name-bertinat {
   display: block;
-  color: #1F2E2A;
+  color: #66012b;
   font-size: clamp(4rem, 20vw, 8rem);
   padding-left: 0;
   margin-top: 0;
@@ -318,7 +318,7 @@ body.animate-hero .hero-image-secondary { animation-delay: 0.55s; }
 .chevron {
   width: 100%;
   height: 100%;
-  stroke: #1F2E2A;
+  stroke: #66012b;
   stroke-width: 1.6;    /* 👈 más fino */
   fill: none;
   stroke-linecap: square;
