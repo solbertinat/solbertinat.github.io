@@ -2,7 +2,7 @@
 .about-section {
   width: 100%;
   min-height: 100vh;
-  background-color: #e6c3cc;
+  background-color: #d9b0bb;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -14,7 +14,7 @@
   font-family: var(--font-serif);
   font-weight: 400;
   font-size: clamp(5rem, 14vw, 18rem);
-  color: #1F2E2A;
+  color: #073d6b;
   line-height: 0.95;
   position: absolute;
   right: -0.5rem;
@@ -200,7 +200,7 @@
     width: 100%;
     padding-right: 1px;
     margin-bottom: 1rem;
-    color: #1F2E2A;
+    color: #073d6b;
   }
 
   .about-inner {
